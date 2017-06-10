@@ -1,3 +1,10 @@
+// Style
+// NB. This is just a compile file, don't put any actual style definitions here
+
+// Base
+@import 'vendor/flexboxgrid.min';
+@import 'vendor/owl.carousel.min';
+
 // Base
 @import 'base/colours';
 @import 'base/reset';
@@ -8,3 +15,5 @@
 
 
 // Components
+@import 'components/image-stack';
+@import 'components/section';
