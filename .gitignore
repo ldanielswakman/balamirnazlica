@@ -28,3 +28,15 @@ Icon
 
 /assets/avatars/*
 !/assets/avatars/index.html
+
+# Sublime files (local)
+# ---------------
+
+*.sublime-project
+*.sublime-workspace
+
+
+# Node modules (local)
+# ---------------
+
+/node_modules/
