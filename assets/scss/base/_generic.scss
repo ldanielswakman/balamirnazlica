@@ -1,0 +1,22 @@
+// Generic
+body {
+  background-color: $dark;
+  color: $white;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  font-family: 'Px Grotesk', sans-serif;
+  font-size: 112.5%; // 1rem = 18px (at 100% zoom)
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  color: $yellow;
+  font-weight: bold;
+}
