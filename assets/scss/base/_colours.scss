@@ -3,3 +3,15 @@ $dark: #4a4a41;
 $light: #d8d8ce;
 $white: #fffef3;
 $yellow: #e9ff15;
+
+
+.bg-dark {
+  background-color: $dark;
+}
+.bg-light {
+  background-color: $light;
+}
+
+.bg-gradient {
+  @include vertical-gradient();
+}

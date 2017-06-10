@@ -8,19 +8,33 @@
   <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
   <meta name="description" content="<?= $site->description()->html() ?>">
 
-  <?= css('assets/css/style.css') ?>
+  <?
+  $css_assets = (c::get('env') == 'DEV') ? [
+    // local assets
+    'assets/css/style.css'
+  ] : [
+    // production assets
+    'assets/css/style.css'
+  ];
+  $js_assets = (c::get('env') == 'DEV') ? [
+    // local assets
+    'assets/js/jquery-2.2.3.min.js',
+    'assets/js/owl.carousel.min.js',
+    'assets/js/scripts.js'
+  ] : [
+    // production assets
+    'assets/js/jquery-2.2.3.min.js',
+    'assets/js/owl.carousel.min.js',
+    'assets/js/scripts.js'
+  ];
+  ?>
+
+  <?= css($css_assets) ?>
+  <?= js($js_assets) ?>
 
 </head>
 <body>
 
-  <header class="header wrap wide" role="banner">
-    <div class="grid">
-
-      <div class="branding column">
-        <a href="<?= url() ?>" rel="home"><?= $site->title()->html() ?></a>
-      </div>
-
-      <?php snippet('menu') ?>
-
-    </div>
+  <header>
+    <? // snippet('menu') ?>
   </header>

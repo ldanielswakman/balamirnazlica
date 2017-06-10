@@ -13,3 +13,4 @@ of the system, please check out http://getkirby.com/docs/advanced/options
 */
 
 c::set('debug', true);
+c::set('env', 'DEV');
