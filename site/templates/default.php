@@ -1,19 +1,26 @@
 <?php snippet('header') ?>
 
-  <main class="main" role="main">
+<br><br>
 
-    <header class="wrap">
-      <h1><?= $page->title()->html() ?></h1>
-      <div class="intro text">
-        <?= $page->intro()->kirbytext() ?>
-      </div>
-      <hr />
-    </header>
-      
-    <div class="text wrap">
-      <?= $page->text()->kirbytext() ?>
+
+
+<main>
+
+  <? foreach ($pages->visible()->filterBy('template', 'category') as $cat): ?>
+    <? snippet('category-preview', ['cat' => $cat]); ?>
+  <? endforeach ?>
+
+  <header>
+    <h1><?= $page->title()->html() ?></h1>
+    <div>
+      <?= $page->intro()->kirbytext() ?>
     </div>
+  </header>
+    
+  <div>
+    <?= $page->text()->kirbytext() ?>
+  </div>
 
-  </main>
+</main>
 
 <?php snippet('footer') ?>

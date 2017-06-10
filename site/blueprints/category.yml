@@ -1,0 +1,23 @@
+title: Category
+pages: false
+files:
+  fields:
+    caption:
+      label: Caption
+      type: textarea
+      buttons: 
+    visibility:
+      label: Visible?
+      type: toggle
+      text: Yes/No
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  type: type
+
+  text:
+    label: Text
+    type:  textarea

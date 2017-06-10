@@ -1,0 +1,6 @@
+label: type
+type: select
+default: photography
+options:
+  photography: photography
+  video: video

@@ -1,0 +1,25 @@
+// Image Stack
+.image-stack {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 15rem;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+
+  & > * {
+    position: absolute;
+    z-index: 1;
+    max-width: calc(100% - 6rem);
+    max-height: calc(100% - 6rem);
+
+    &:hover {
+      z-index: 2;
+    }
+    figure {
+      border: 0.5rem solid $dark;
+    }
+  }
+}
