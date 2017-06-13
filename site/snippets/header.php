@@ -19,11 +19,13 @@
   $js_assets = (c::get('env') == 'DEV') ? [
     // local assets
     'assets/js/jquery-2.2.3.min.js',
+    'assets/js/jquery.smooth-scroll.min.js',
     'assets/js/owl.carousel.min.js',
     'assets/js/scripts.js'
   ] : [
     // production assets
     'assets/js/jquery-2.2.3.min.js',
+    'assets/js/jquery.smooth-scroll.min.js',
     'assets/js/owl.carousel.min.js',
     'assets/js/scripts.js'
   ];
@@ -35,6 +37,10 @@
 </head>
 <body>
 
-  <header>
+  <div class="loading-mask">
+    <? snippet('r-svg') ?>
+  </div>
+
+  <!-- <header>
     <? // snippet('menu') ?>
-  </header>
+  </header> -->

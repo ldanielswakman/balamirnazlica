@@ -6,6 +6,7 @@
 @import 'vendor/owl.carousel.min';
 
 // Base
+@import 'base/variables';
 @import 'base/mixins';
 @import 'base/colours';
 @import 'base/reset';
@@ -13,8 +14,10 @@
 
 
 // Elements
-
+@import 'elements/logo';
 
 // Components
 @import 'components/image-stack';
+@import 'components/nav';
 @import 'components/section';
+@import 'components/theatre';

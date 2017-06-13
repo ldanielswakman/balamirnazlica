@@ -853,15 +853,15 @@
   width: 100%; }
 
 .bg-dark {
-  background-color: #4a4a41; }
+  background-color: #303029; }
 
 .bg-light {
   background-color: #d8d8ce; }
 
 .bg-gradient {
-  background: -moz-linear-gradient(top, #4a4a41 0%, #d8d8ce 100%);
-  background: -webkit-linear-gradient(top, #4a4a41 0%, #d8d8ce 100%);
-  background: linear-gradient(to bottom, #4a4a41 0%, #d8d8ce 100%);
+  background: -moz-linear-gradient(top, #303029 0%, #d8d8ce 100%);
+  background: -webkit-linear-gradient(top, #303029 0%, #d8d8ce 100%);
+  background: linear-gradient(to bottom, #303029 0%, #d8d8ce 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=0 ); }
 
 /* --- Reset --- */
@@ -952,20 +952,126 @@ html, body {
 
 body {
   background-color: #d8d8ce;
-  color: #4a4a41;
+  color: #303029;
   min-width: 100%;
   min-height: 100%;
   font-family: 'Px Grotesk', sans-serif;
   font-size: 112.5%;
+  letter-spacing: 0.02rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased; }
+
+::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #e9ff15; }
+
+::selection {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #e9ff15; }
 
 a {
   text-decoration: none;
   color: inherit;
   color: #e9ff15;
   font-weight: bold; }
+
+.loading-mask {
+  position: fixed;
+  z-index: 5;
+  -webkit-display: flex;
+  -moz-display: flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #303029;
+  opacity: 1;
+  pointer-events: all;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  .loading-mask svg#loading_r {
+    position: relative;
+    -webkit-animation: rotateZ 2s cubic-bezier(1, 0, 0, 1) infinite;
+    -moz-animation: rotateZ 2s cubic-bezier(1, 0, 0, 1) infinite;
+    animation: rotateZ 2s cubic-bezier(1, 0, 0, 1) infinite;
+    fill: #e9ff15; }
+
+body.isLoaded .loading-mask {
+  opacity: 0;
+  pointer-events: none; }
+
+@-webkit-keyframes rotateZ {
+  0% {
+    transform: scaleX(1);
+    fill: #e9ff15; }
+  25% {
+    transform: scaleX(0); }
+  50% {
+    transform: scaleX(-1);
+    fill: #000; }
+  75% {
+    transform: scaleX(0); }
+  100% {
+    transform: scaleX(1);
+    fill: #e9ff15; } }
+
+@-moz-keyframes rotateZ {
+  0% {
+    transform: scaleX(1);
+    fill: #e9ff15; }
+  25% {
+    transform: scaleX(0); }
+  50% {
+    transform: scaleX(-1);
+    fill: #000; }
+  75% {
+    transform: scaleX(0); }
+  100% {
+    transform: scaleX(1);
+    fill: #e9ff15; } }
+
+@-o-keyframes rotateZ {
+  0% {
+    transform: scaleX(1);
+    fill: #e9ff15; }
+  25% {
+    transform: scaleX(0); }
+  50% {
+    transform: scaleX(-1);
+    fill: #000; }
+  75% {
+    transform: scaleX(0); }
+  100% {
+    transform: scaleX(1);
+    fill: #e9ff15; } }
+
+@keyframes rotateZ {
+  0% {
+    transform: scaleX(1);
+    fill: #e9ff15; }
+  25% {
+    transform: scaleX(0); }
+  50% {
+    transform: scaleX(-1);
+    fill: #000; }
+  75% {
+    transform: scaleX(0); }
+  100% {
+    transform: scaleX(1);
+    fill: #e9ff15; } }
+
+.logo .st0 {
+  fill: #fffef3; }
+
+.logo .st1 {
+  opacity: 0.7; }
 
 .image-stack {
   position: relative;
@@ -986,8 +1092,65 @@ a {
     .image-stack > * figure {
       border: 0.5rem solid #d8d8ce; }
 
+nav {
+  display: block;
+  padding-left: 12vw;
+  padding-right: 8vw;
+  text-align: right; }
+  nav ul {
+    -webkit-display: flex;
+    -moz-display: flex;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    -moz-justify-content: flex-end;
+    justify-content: flex-end;
+    padding: 2rem 0;
+    list-style: none; }
+    nav ul a {
+      display: block;
+      padding: 0.5rem 0 0.5rem 2rem;
+      color: rgba(216, 216, 206, 0.5);
+      font-weight: normal; }
+      nav ul a:hover {
+        color: #d8d8ce; }
+
 section {
   padding: calc(1rem + 1vh + 2vw); }
   @media screen and (min-width: 768px) {
     section {
       padding: calc(1rem + 1vh + 4vw); } }
+
+.theatre {
+  position: relative;
+  background: #303029;
+  min-height: 100vh; }
+  .theatre .logo {
+    position: absolute;
+    top: 1rem;
+    left: 12vw;
+    z-index: 2;
+    width: 6rem;
+    margin-left: -2.75rem; }
+  .theatre .theatre__quote {
+    position: absolute;
+    left: 4vw;
+    top: 60vh;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+    max-width: 35rem;
+    color: #fffef3;
+    font-size: 2rem; }
+  .theatre .owl-carousel {
+    height: max-80vh; }
+  .theatre .theatre__slide {
+    width: 100vw; }
+    @media screen and (min-width: 769px) {
+      .theatre .theatre__slide {
+        padding-left: 12vw;
+        padding-right: 8vw; } }
+    .theatre .theatre__slide figure {
+      max-height: 80vh; }
+      @media screen and (min-width: 769px) {
+        .theatre .theatre__slide figure {
+          width: 80vw; } }

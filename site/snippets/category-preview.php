@@ -5,7 +5,7 @@
         <? $images = $cat->images()->filterBy('visibility', '!=', 'false'); ?>
         <? foreach ($images->shuffle()->limit(5) as $img): ?>
           <? $style = "margin-top: " . (rand(0,6)-4) . "rem; margin-left: " . (rand(0,12)-4) . "rem;" ?>
-          <a href="javascript:void(0)" style="<?= $style ?>"><figure><img src="<?= thumb($img, ['width' => 350])->url() ?>" alt="" /></figure></a>
+          <a href="#<?= $img->name() ?>" style="<?= $style ?>"><figure><img src="<?= thumb($img, ['width' => 350])->url() ?>" alt="" /></figure></a>
         <? endforeach ?> 
       </div>
     </div>

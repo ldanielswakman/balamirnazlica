@@ -8,15 +8,61 @@ body {
 
   font-family: 'Px Grotesk', sans-serif;
   font-size: 112.5%; // 1rem = 18px (at 100% zoom)
+  letter-spacing: 0.02rem;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
 }
 
+
+::-moz-selection {
+  background-color: rgba($black, 0.05);
+  color: $yellow;
+}
+::selection {
+  background-color: rgba($black, 0.05);
+  color: $yellow;
+}
+
+
 a {
   text-decoration: none;
   color: inherit;
   color: $yellow;
   font-weight: bold;
+}
+
+.loading-mask {
+  position: fixed;
+  z-index: 5;
+  @include prefix(display, flex);
+  @include prefix(justify-content, center);
+  @include prefix(align-items, center);
+  width: 100%;
+  height: 100%;
+  background-color: $dark;
+  opacity: 1;
+  pointer-events: all;
+  @include prefix(transition, all 0.3s ease);
+
+  svg#loading_r {
+    position: relative;
+    @include prefix(animation, rotateZ 2s cubic-bezier(1,0,0,1) infinite);
+
+    fill: $yellow;
+  }
+}
+body.isLoaded .loading-mask {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+@include keyframes(rotateZ) {
+    0% { transform: scaleX(1); fill: $yellow; }
+   25% { transform: scaleX(0); }
+   50% { transform: scaleX(-1); fill: $black; }
+   75% { transform: scaleX(0); }
+  100% { transform: scaleX(1); fill: $yellow; }
 }

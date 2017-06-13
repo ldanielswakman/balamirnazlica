@@ -1,0 +1,48 @@
+.theatre {
+  position: relative;
+  background: $dark;
+  min-height: 100vh;
+
+  .logo {
+    position: absolute;
+    top: 1rem;
+    left: 12vw;
+    z-index: 2;
+    width: 6rem;
+    margin-left: -2.75rem;
+
+    // @media screen and (min-width: $vp_tablet) {
+    //   width: 6rem;
+    //   margin-left: -2.75rem;
+    // }
+  }
+  .theatre__quote {
+    position: absolute;
+    left: 4vw;
+    top: 60vh;
+    z-index: 2;
+    width: 100%;
+    padding: 1rem;
+    max-width: 35rem;
+    color: $white;
+    font-size: 2rem;
+  }
+  .owl-carousel {
+    height: max-80vh;
+  }
+  .theatre__slide {
+    width: 100vw;
+
+    @media screen and (min-width: $vp_tablet) {
+      padding-left: 12vw;
+      padding-right: 8vw;
+    }
+    figure {
+      max-height: 80vh;
+
+      @media screen and (min-width: $vp_tablet) {
+        width: 80vw;
+      }
+    }
+  }
+}

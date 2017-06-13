@@ -1,9 +1,7 @@
-<nav class="navigation column" role="navigation">
-  <ul class="menu">
-    <?php foreach($pages->visible() as $item): ?>
-    <li class="menu-item<?= r($item->isOpen(), ' is-active') ?>">
-      <a href="<?= $item->url() ?>"><?= $item->title()->html() ?></a>
-    </li>
-    <?php endforeach ?>
+<nav>
+  <ul>
+    <li><a href="<?= (page()->isHomepage()) ? '' : site()->url() ?>#index">Index</a></li>
+    <li><a href="<?= (page()->isHomepage()) ? '' : site()->url() ?>#about">About</a></li>
+    <li><a href="<?= (page()->isHomepage()) ? '' : site()->url() ?>#connect">Connect</a></li>
   </ul>
 </nav>

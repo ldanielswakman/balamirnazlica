@@ -1,0 +1,24 @@
+nav {
+  display: block;
+  padding-left: 12vw;
+  padding-right: 8vw;
+  text-align: right;
+
+  ul {
+    @include prefix(display, flex);
+    @include prefix(justify-content, flex-end);
+    padding: 2rem 0;
+    list-style: none;
+
+    a {
+      display: block;
+      padding: 0.5rem 0 0.5rem 2rem;
+      color: rgba($light, 0.5);
+      font-weight: normal;
+
+      &:hover {
+        color: $light;
+      }
+    }
+  }
+}
