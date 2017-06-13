@@ -864,6 +864,9 @@
   background: linear-gradient(to bottom, #303029 0%, #d8d8ce 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=0 ); }
 
+.c-grey {
+  color: #9b9b8a; }
+
 /* --- Reset --- */
 html,
 body,
@@ -927,6 +930,7 @@ footer,
 header,
 nav,
 section,
+footer,
 video,
 object {
   display: block; }
@@ -975,6 +979,13 @@ a {
   color: inherit;
   color: #e9ff15;
   font-weight: bold; }
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  max-width: 40rem; }
+  p + p {
+    margin-top: 1rem; }
 
 .loading-mask {
   position: fixed;
@@ -1073,6 +1084,9 @@ body.isLoaded .loading-mask {
 .logo .st1 {
   opacity: 0.7; }
 
+footer {
+  background: rgba(0, 0, 0, 0.05); }
+
 .image-stack {
   position: relative;
   display: flex;
@@ -1114,11 +1128,18 @@ nav {
       nav ul a:hover {
         color: #d8d8ce; }
 
-section {
+section, footer {
   padding: calc(1rem + 1vh + 2vw); }
   @media screen and (min-width: 768px) {
-    section {
+    section, footer {
       padding: calc(1rem + 1vh + 4vw); } }
+  section.section--category, footer.section--category {
+    margin: calc(3rem + 4vh + 8vw) 0; }
+    section.section--category h2, footer.section--category h2 {
+      text-transform: uppercase;
+      font-weight: normal;
+      letter-spacing: 0.2rem;
+      font-size: 1.25rem; }
 
 .theatre {
   position: relative;
@@ -1139,8 +1160,10 @@ section {
     width: 100%;
     padding: 1rem;
     max-width: 35rem;
-    color: #fffef3;
-    font-size: 2rem; }
+    color: #fffef3; }
+    .theatre .theatre__quote p {
+      font-size: 2rem;
+      line-height: 2.5rem; }
   .theatre .owl-carousel {
     height: max-80vh; }
   .theatre .theatre__slide {

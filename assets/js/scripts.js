@@ -31,3 +31,17 @@ $(document).ready(function(){
     startPosition: 'URLHash'
   });
 });
+
+
+
+
+
+// Picture thumbnail to theatre
+$(document).ready(function() {
+  $('.image-stack a').click(function(e) {
+    $.smoothScroll({ speed: 800, scrollTarget: $('#theatre') });
+  });
+});
+function scrollToTheatre() {
+  $.smoothScroll({ speed: 400, scrollTarget: $('#theatre') });
+}

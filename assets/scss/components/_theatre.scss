@@ -25,7 +25,11 @@
     padding: 1rem;
     max-width: 35rem;
     color: $white;
-    font-size: 2rem;
+
+    p {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
   }
   .owl-carousel {
     height: max-80vh;

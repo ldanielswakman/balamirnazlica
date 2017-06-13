@@ -33,6 +33,16 @@ a {
   font-weight: bold;
 }
 
+p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  max-width: 40rem;
+
+  & + p {
+    margin-top: 1rem;
+  }
+}
+
 .loading-mask {
   position: fixed;
   z-index: 5;

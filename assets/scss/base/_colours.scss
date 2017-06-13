@@ -16,3 +16,7 @@ $yellow: #e9ff15;
 .bg-gradient {
   @include vertical-gradient();
 }
+
+.c-grey {
+  color: lighten($dark, 40%);
+}

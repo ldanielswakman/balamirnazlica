@@ -7,7 +7,7 @@
   $all_images = $categories->images()->filterBy('visibility', '!=', 'false');
   ?>
 
-  <div class="theatre">
+  <div class="theatre" id="theatre">
 
     <? snippet('logo-svg') ?>
 
@@ -39,16 +39,16 @@
     <? endforeach ?>
   </div>
 
-  <header>
-    <h1><?= $page->title()->html() ?></h1>
-    <div>
-      <?= $page->intro()->kirbytext() ?>
+  <section id="about">
+    <div class="row">
+      <div class="col-sm-3 col-sm-offset-1">
+        <img style="max-width: 150%; margin-left: -3rem; margin-top: 3rem;" src="<?= $site->find('about')->images()->first()->url() ?>" alt="" />
+      </div>
+      <div class="col-sm-8">
+        <?= $site->find('about')->text()->kirbytext() ?>
+      </div>
     </div>
-  </header>
-    
-  <div>
-    <?= $page->text()->kirbytext() ?>
-  </div>
+  </section>
 
 </main>
 
