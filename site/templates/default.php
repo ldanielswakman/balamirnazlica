@@ -42,7 +42,7 @@
   <section id="about">
     <div class="row">
       <div class="col-sm-3 col-sm-offset-1">
-        <img style="max-width: 150%; margin-left: -3rem; margin-top: 3rem;" src="<?= $site->find('about')->images()->first()->url() ?>" alt="" />
+          <img class="js-prlx" style="z-index: 0; max-width: 150%; margin-left: -3rem; margin-top: 3rem;" src="<?= $site->find('about')->images()->first()->url() ?>" alt="" />
       </div>
       <div class="col-sm-8">
         <?= $site->find('about')->text()->kirbytext() ?>

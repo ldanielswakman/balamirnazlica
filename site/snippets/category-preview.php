@@ -6,8 +6,14 @@
 
         <? $images = $cat->images()->filterBy('visibility', '!=', 'false'); ?>
         <? foreach ($images->shuffle()->limit(5) as $img): ?>
-          <? $style = "margin-top: " . (rand(0,8)-4) . "rem; margin-left: " . (rand(0,24)-12) . "rem;" ?>
-          <a href="#<?= $img->name() ?>"  onclick="scrollToTheatre()" style="<?= $style ?>"><figure><img src="<?= thumb($img, ['width' => 350])->url() ?>" alt="" /></figure></a>
+
+          <? $style = "top: " . (rand(0,8)-4) . "rem; left: " . (rand(0,15)) . "rem;" ?>
+          <a class="js-prlx" data-prlx-factor="<?= (rand(0,8)/8)*0.5 ?>" href="#<?= $img->name() ?>"  onclick="scrollToTheatre()" style="<?= $style ?>">
+            <figure>
+              <img src="<?= thumb($img, ['width' => 350])->url() ?>" alt="" />
+            </figure>
+          </a>
+
         <? endforeach ?> 
 
       </div>
