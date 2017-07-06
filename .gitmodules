@@ -4,3 +4,6 @@
 [submodule "panel"]
 	path = panel
 	url = https://github.com/getkirby/panel.git
+[submodule "site/fields/fieldtoggle"]
+	path = site/fields/fieldtoggle
+	url = https://github.com/medienbaecker/kirby-fieldtoggle/
