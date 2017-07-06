@@ -1181,6 +1181,10 @@ nav {
       font-weight: normal; }
       nav ul a:hover {
         color: #d8d8ce; }
+  nav.is_stuck ul a {
+    color: rgba(48, 48, 41, 0.5); }
+    nav.is_stuck ul a:hover {
+      color: #303029; }
 
 section, footer {
   padding: calc(1rem + 1vh + 2vw); }
@@ -1197,11 +1201,12 @@ section, footer {
 
 .theatre {
   position: relative;
-  background: #303029; }
+  background: #303029;
+  color: #d8d8ce; }
   .theatre .theatre__quote {
     position: absolute;
     left: 4vw;
-    top: 60vh;
+    top: 65vh;
     z-index: 2;
     width: calc(100% - 4vw);
     padding: 1rem;
@@ -1225,13 +1230,18 @@ section, footer {
           font-size: 2rem;
           line-height: 2.5rem; } }
   .theatre .owl-carousel {
+    padding: 20vh 0;
     height: max-80vh; }
+    @media screen and (min-width: 769px) {
+      .theatre .owl-carousel {
+        padding: 0; } }
+    @media screen and (max-width: 768px) {
+      .theatre .owl-carousel .owl-stage-outer {
+        background-color: rgba(0, 0, 0, 0.25); } }
   .theatre .theatre__slide {
-    margin: 20vh 0;
     width: 100vw; }
     @media screen and (min-width: 769px) {
       .theatre .theatre__slide {
-        margin: 0;
         padding-left: 12vw;
         padding-right: 4vw; } }
     .theatre .theatre__slide figure {
@@ -1239,6 +1249,20 @@ section, footer {
       @media screen and (min-width: 769px) {
         .theatre .theatre__slide figure {
           width: 84vw; } }
+    .theatre .theatre__slide .video-wrapper {
+      display: block;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%; }
+      .theatre .theatre__slide .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        margin: auto;
+        max-width: 100%; }
   .theatre .owl-nav {
     position: absolute;
     top: 0;

@@ -19,6 +19,7 @@ $(document).ready(function() {
 // Sticky Kit
 $(document).ready(function() {
   $('.js-stick-in-parent').stick_in_parent();
+  $('.js-stick-in-body').stick_in_parent({ parent: 'body' });
 });
 
 

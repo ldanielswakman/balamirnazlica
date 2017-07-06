@@ -1,6 +1,7 @@
-label: type
+label: Type
 type: select
 default: photography
+required: true
 options:
   photography: photography
   video: video

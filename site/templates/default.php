@@ -17,10 +17,8 @@
 
     <? snippet('theatre', ['carousel_images' => $carousel_images]) ?>
 
-  </div>
-
-  <div class="bg-dark js-stick-in-parent">
     <? snippet('nav') ?>
+
   </div>
 
   <aside>
