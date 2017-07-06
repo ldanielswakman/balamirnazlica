@@ -2,4 +2,7 @@ Title: Home
 
 ----
 
-Quote: Sometimes I feel like I can look at the sun and just dry up like a peach
+Quote: 
+
+Sometimes I feel like I can look at the sun and just dry up like a peach
+<!--<small class="c-yellow" style="margin-left: 1rem;">— Balamir Nazlica, audiovisual artist</small>-->

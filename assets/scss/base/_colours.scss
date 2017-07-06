@@ -17,6 +17,9 @@ $yellow: #e9ff15;
   @include vertical-gradient();
 }
 
+.c-yellow {
+  color: $yellow;
+}
 .c-grey {
   color: lighten($dark, 40%);
 }

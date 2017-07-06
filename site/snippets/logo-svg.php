@@ -1,4 +1,4 @@
-<svg version="1.1" class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 80.9 58.6" style="enable-background:new 0 0 80.9 58.6;" xml:space="preserve">
+<svg version="1.1" class="logo__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 80.9 58.6" style="enable-background:new 0 0 80.9 58.6;" xml:space="preserve">
 <g>
   <path class="st0" d="M40.6,17.2V0h7.1c1.5,0,2.7,0.4,3.7,1.3c0.9,0.9,1.4,2,1.4,3.3c0,1.5-0.7,2.6-2,3.3v0c0.7,0.3,1.3,0.8,1.9,1.5
     s0.8,1.5,0.8,2.5c0,3.5-2.1,5.3-6.3,5.3H40.6z M43.5,7.1h3.8c0.8,0,1.5-0.2,1.9-0.6c0.4-0.4,0.7-0.9,0.7-1.6c0-0.7-0.2-1.3-0.7-1.6

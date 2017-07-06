@@ -21,6 +21,7 @@
     'assets/js/jquery-2.2.3.min.js',
     'assets/js/jquery.smooth-scroll.min.js',
     'assets/js/owl.carousel.min.js',
+    'assets/js/sticky-kit.min.js',
     'assets/js/scripts.js'
   ] : [
     // production assets
@@ -28,6 +29,7 @@
     '//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js',
     '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js',
     'assets/js/owl.carousel.min.js',
+    'assets/js/sticky-kit.min.js',
     'assets/js/scripts.js'
   ];
   ?>

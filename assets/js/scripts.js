@@ -16,19 +16,26 @@ $(document).ready(function() {
 
 
 
+// Sticky Kit
+$(document).ready(function() {
+  $('.js-stick-in-parent').stick_in_parent();
+});
+
+
 
 // Owl Carousel
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
     items: 1,
     autoWidth: true,
-    nav: false,
+    nav: true,
     dotsEach: 1,
     autoplay: true,
     autoplayTimeout: 6000,
     lazyload: true,
     URLhashListener: true,
-    startPosition: 'URLHash'
+    startPosition: 'URLHash',
+    navText: ['', '']
   });
 });
 

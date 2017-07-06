@@ -1,0 +1,19 @@
+.button {
+  background-color: $white;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  color: rgba($dark, 0.6);
+
+  &:hover {
+    background-color: $yellow;
+    color: rgba($dark, 0.6);
+  }
+  &.button--primary {
+    background-color: $yellow;
+    color: rgba($dark, 0.6);
+
+    &:hover {
+      background-color: $white;
+    }
+  }
+}
