@@ -854,15 +854,15 @@
 
 @font-face {
   font-family: 'Px Grotesk';
-  src: url("fonts/PxGrotesk-Regular.eot");
-  src: url("fonts/PxGrotesk-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/PxGrotesk-Regular.woff") format("woff"), url("fonts/PxGrotesk-Regular.ttf") format("truetype");
+  src: url("../fonts/PxGrotesk-Regular.eot");
+  src: url("../fonts/PxGrotesk-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PxGrotesk-Regular.woff") format("woff"), url("../fonts/PxGrotesk-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Px Grotesk';
-  src: url("fonts/PxGrotesk-Bold.eot");
-  src: url("fonts/PxGrotesk-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/PxGrotesk-Bold.woff") format("woff"), url("fonts/PxGrotesk-Bold.ttf") format("truetype");
+  src: url("../fonts/PxGrotesk-Bold.eot");
+  src: url("../fonts/PxGrotesk-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PxGrotesk-Bold.woff") format("woff"), url("../fonts/PxGrotesk-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; }
 
@@ -1114,9 +1114,10 @@ body.isLoaded .loading-mask {
   top: 1rem;
   left: 1rem;
   z-index: 2;
-  width: 6rem; }
+  width: 6rem;
+  opacity: 0.7; }
   .logo .st0 {
-    fill: #d8d8ce; }
+    fill: #fffef3; }
   .logo .st1 {
     opacity: 0.7; }
   @media screen and (min-width: 769px) {
@@ -1161,6 +1162,8 @@ footer {
       z-index: 2; }
 
 nav {
+  position: relative;
+  z-index: 2;
   display: block;
   padding-left: 12vw;
   padding-right: 4vw;
@@ -1249,20 +1252,48 @@ section, footer {
       @media screen and (min-width: 769px) {
         .theatre .theatre__slide figure {
           width: 84vw; } }
-    .theatre .theatre__slide .video-wrapper {
-      display: block;
+    .theatre .theatre__slide .figure--video__link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-display: flex;
+      -moz-display: flex;
+      display: flex;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      cursor: url("../images/play-icon.png"), pointer; }
+      .theatre .theatre__slide .figure--video__link:hover svg {
+        display: none; }
+      .theatre .theatre__slide .figure--video__link svg {
+        width: 6rem; }
+    .theatre .theatre__slide figure.video--isActive .figure--video__link {
+      display: none; }
+    .theatre .theatre__slide .figure--video__wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
       width: 100%;
       height: 0;
       padding-bottom: 56.25%; }
-      .theatre .theatre__slide .video-wrapper iframe {
+      .theatre .theatre__slide .figure--video__wrapper iframe {
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 3;
         width: 100%;
         height: 100%;
         display: block;
         margin: auto;
         max-width: 100%; }
+    .theatre .theatre__slide figure.video--isActive .figure--video__wrapper {
+      display: block; }
   .theatre .owl-nav {
     position: absolute;
     top: 0;

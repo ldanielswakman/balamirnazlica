@@ -8,7 +8,7 @@
         <? foreach ($images->shuffle()->limit(5) as $img): ?>
 
           <? $style = "top: " . (rand(0,8)-4) . "rem; left: " . (rand(0,20)-5) . "rem;" ?>
-          <a href="#<?= $img->name() ?>"  onclick="scrollToTheatre()" style="<?= $style ?>">
+          <a href="#<?= $img->name() ?>" onclick="scrollToTheatre()" style="<?= $style ?>">
             <figure>
               <img src="<?= thumb($img, ['width' => 350])->url() ?>" alt="" />
             </figure>

@@ -55,9 +55,35 @@
       @media screen and (min-width: $vp_tablet) {
         width: 84vw;
       }
+      &.video--isActive {
+      }
     }
-    .video-wrapper {
-      display: block;
+    .figure--video__link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include prefix(display, flex);
+      @include prefix(justify-content, center);
+      @include prefix(align-items, center);
+      width: 100%;
+      height: 100%;
+      cursor: url('../images/play-icon.png'), pointer;
+
+      &:hover svg {
+        display: none;
+      }
+      svg {
+        width: 6rem;
+      }
+    }
+    figure.video--isActive .figure--video__link {
+      display: none;
+    }
+    .figure--video__wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
       width: 100%;
       height: 0;
       padding-bottom: 56.25%; // 16:9 aspect ratio
@@ -66,6 +92,7 @@
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 3;
         width: 100%;
         height: 100%;
 
@@ -74,7 +101,11 @@
         max-width: 100%;
       }
     }
+    figure.video--isActive .figure--video__wrapper {
+      display: block;
+    }
   }
+
 
   // Navigation left/right interaction
   .owl-nav {

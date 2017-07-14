@@ -31,13 +31,16 @@ $(document).ready(function(){
     autoWidth: true,
     nav: true,
     dotsEach: 1,
-    autoplay: true,
-    autoplayTimeout: 6000,
+    // autoplay: true,
+    // autoplayTimeout: 6000,
     lazyload: true,
     URLhashListener: true,
     startPosition: 'URLHash',
     navText: ['', '']
   });
+  $(".owl-carousel").on('changed.owl.carousel', function(event) {
+      stopVideos();
+  })
 });
 
 
@@ -49,6 +52,17 @@ $(document).ready(function(){
 // Picture thumbnail to theatre
 function scrollToTheatre() {
   $.smoothScroll({ speed: 400, scrollTarget: $('#theatre') });
+}
+function playVideo($link) {
+  $link.closest('figure').addClass('video--isActive');
+  $iframe = $link.closest('figure').find('iframe');
+  if($iframe) {
+    $iframe.attr('src', $iframe.attr('data-src'));
+  }
+}
+function stopVideos() {
+  $('#theatre').find('figure').removeClass('video--isActive');
+  $('#theatre').find('iframe').attr('src', '');
 }
 
 
