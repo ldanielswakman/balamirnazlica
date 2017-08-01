@@ -1,11 +1,38 @@
-<section class="section--category">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-2">
+<? $images = $cat->images()->filterBy('visibility', '!=', 'false'); ?>
 
+<section class="section--category">
+  <a href="<?= $cat->url() ?>" class="row">
+
+    <div class="section--category__title js-prlx" data-prlx-factor="0.1">
+      <h2><?= $cat->title()->html() ?></h2>
+    </div>
+
+    <div class="section--category__gradient">
+      <? snippet('angled-gradient-svg') ?>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 <? ecco($key % 2 !== 0, ' last-sm col-sm-offset-1') ?>">
+
+      <? $img = $images->shuffle()->first() ?>
+      <figure>
+        <img src="<?= thumb($img, ['width' => 800])->url() ?>" alt="" />
+      </figure>
+
+    </div>
+
+    <div class="col-xs-10 col-xs-offset-1 col-sm-4 u-relative u-z2">
+
+      <p class="section--category__p">
+        <?= excerpt($cat->text()->kirbytext(), 100) ?>
+      </p>
+
+    </div>
+
+    <? if(false) : ?>
+    <div class="col-xs-12 col-sm-6 col-sm-offset-2">
       <div class="image-stack">
 
-        <? $images = $cat->images()->filterBy('visibility', '!=', 'false'); ?>
-        <? foreach ($images->shuffle()->limit(5) as $img): ?>
+        <? foreach ($images->shuffle()->limit(5) as $img) : ?>
 
           <? $style = "top: " . (rand(0,8)-4) . "rem; left: " . (rand(0,20)-5) . "rem;" ?>
           <a href="#<?= $img->name() ?>" onclick="scrollToTheatre()" style="<?= $style ?>">
@@ -14,22 +41,11 @@
             </figure>
           </a>
 
-        <? endforeach ?> 
+        <? endforeach ?>
 
-      </div>
-
+      </div>  
     </div>
-    <div class="col-xs-12 col-sm-3" style="position: relative; z-index: 2;">
+    <? endif ?>
 
-      <h2><?= $cat->title()->html() ?></h2>
-      <p class="c-grey"><?= $cat->type()->html() ?>, <?= $images->count() ?> item<?= ($images->count() == 1) ? '' : 's' ?></p>
-      <br>
-
-      <?= $cat->text()->kirbytext() ?>
-      <br>
-
-      <a href="<?= $cat->url() ?>">See all</a>
-
-    </div> 
-  </div>
+  </a>
 </section>

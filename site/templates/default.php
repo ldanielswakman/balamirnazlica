@@ -36,8 +36,8 @@
   </section>
 
   <div id="index">
-    <? foreach ($categories as $cat): ?>
-      <? snippet('category-preview', ['cat' => $cat]); ?>
+    <? $i=0; foreach ($categories as $cat): ?>
+      <? snippet('category-preview', ['key' => $i, 'cat' => $cat]); $i++; ?>
     <? endforeach ?>
   </div>
 
