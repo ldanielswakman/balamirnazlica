@@ -140,7 +140,8 @@
       }
     }
     .owl-prev {
-      cursor: url('../images/arrow-left.png'), pointer;
+      // cursor: url('../images/arrow-left.png'), pointer;
+      cursor: w-resize;
 
       &:before {
         @include horizontal-gradient(rgba($light, 0.2), rgba($light, 0));
@@ -153,7 +154,8 @@
     .owl-next {
       left: auto;
       right: 0;
-      cursor: url('../images/arrow-right.png'), pointer;
+      // cursor: url('../images/arrow-right.png'), pointer;
+      cursor: e-resize;
 
       &:before {
         @include horizontal-gradient(rgba($light, 0), rgba($light, 0.2));

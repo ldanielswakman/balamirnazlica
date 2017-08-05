@@ -2,8 +2,8 @@
 section {
   padding: calc(1rem + 2vh + 2vw);
 
-  @media screen and (min-width: 768px) {
-    padding: calc(4rem + 3vh + 2vw);
+  @media screen and (min-width: $vp_tablet) {
+    padding: calc(6rem + 3vh + 3vw);
   }
   &.section--category {
     // margin: calc(3rem + 4vh + 8vw) 0;
@@ -34,7 +34,14 @@ section {
       font-weight: normal;
       letter-spacing: 0.5rem;
       font-size: 3.5rem;
+      font-size: calc(1rem + 3vw);
       color: $yellow;
+
+      @media screen and (max-width: $vp_tablet) {
+        h2 {
+          @include prefix(transform, rotate(90deg));
+        }
+      }
     }
     .section--category__gradient {
       position: absolute;
@@ -64,6 +71,12 @@ section {
       &:after {
         margin-top: 3rem;
       }
+    }
+    figure img {
+      @include prefix(clip-path, polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%));
+    }
+    &.section--alt figure img {
+      @include prefix(clip-path, polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%));
     }
   }
 }

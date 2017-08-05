@@ -1,6 +1,6 @@
 <? $images = $cat->images()->filterBy('visibility', '!=', 'false'); ?>
 
-<section class="section--category">
+<section class="section--category <? ecco($key % 2 !== 0, 'section--alt') ?>">
   <a href="<?= $cat->url() ?>" class="row">
 
     <div class="section--category__title js-prlx" data-prlx-factor="0.1">
@@ -23,7 +23,7 @@
     <div class="col-xs-10 col-xs-offset-1 col-sm-4 u-relative u-z2">
 
       <p class="section--category__p">
-        <?= excerpt($cat->text()->kirbytext(), 100) ?>
+        <?= excerpt($cat->text()->kirbytext(), 200) ?>
       </p>
 
     </div>

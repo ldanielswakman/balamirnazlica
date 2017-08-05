@@ -6,5 +6,9 @@ fields:
     type:  text
 
   quote:
-    label: Quote
+    label: Opening quote
+    type:  textarea
+
+  about_text:
+    label: 'About' oneliner
     type:  textarea

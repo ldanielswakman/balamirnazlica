@@ -9,3 +9,17 @@
 .u-z3 { z-index: 3; }
 .u-z4 { z-index: 4; }
 .u-z5 { z-index: 5; }
+
+.u-inlineblock {
+  display: inline-block;
+}
+
+.u-aligncenter {
+  text-align: center;
+}
+
+.u-flex-vcenter {
+  @include prefix(display, flex);
+  @include prefix(justify-content, center);
+  @include prefix(align-items, center);
+}

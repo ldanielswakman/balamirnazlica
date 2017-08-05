@@ -2,7 +2,8 @@ Title: Home
 
 ----
 
-Quote: 
+Quote: Sometimes I feel like I can look at the sun and just dry up like a peach
 
-Sometimes I feel like I can look at the sun and just dry up like a peach
-<!--<small class="c-yellow" style="margin-left: 1rem;">— Balamir Nazlica, audiovisual artist</small>-->
+----
+
+About-text: Balamir is an audiovisual artist and continues to work on what he calls Unconcealment series

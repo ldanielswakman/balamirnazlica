@@ -7,15 +7,19 @@
   $carousel_images = $categories->images()->filterBy('visibility', '!=', 'false');
   ?>
 
-  <div class="theatre" id="theatre">
+  <div class="bg-dark">
 
     <a href="<?= $site->url() ?>" class="logo"><? snippet('logo-svg') ?></a>
 
-    <div class="theatre__quote">
-      <?= $page->quote()->kirbytext() ?>
-    </div>
+    <div class="theatre js-prlx" data-prlx-factor="-0.2" id="theatre">
 
-    <? snippet('theatre', ['carousel_images' => $carousel_images]) ?>
+      <div class="theatre__quote">
+        <?= $page->quote()->kirbytext() ?>
+      </div>
+
+      <? snippet('theatre', ['carousel_images' => $carousel_images]) ?>
+
+    </div>
 
     <? snippet('nav') ?>
 
@@ -25,12 +29,15 @@
     <? snippet('logo-svg') ?>
   </aside>
 
-  <section class="bg-gradient" style="min-height: 60vh;">
+  <section class="bg-gradient u-flex-vcenter" style="min-height: 80vh;">
     <div class="row">
-      <div class="col-sm-4 col-sm-offset-4">
+      <!-- <div class="col-sm-4 col-sm-offset-3">
         <figure>
           <img src="<?= $site->find('about')->images()->first()->url() ?>" alt="" />
         </figure>
+      </div> -->
+      <div class="col-xs-12 u-aligncenter js-prlx" data-prlx-factor="0.3">
+        <p style="font-size: 2rem; line-height: 2rem; max-width: 50rem;" class="u-inlineblock c-light"><?= html($page->about_text()) ?></p>
       </div>
     </div>
   </section>
