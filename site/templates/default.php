@@ -36,7 +36,7 @@
           <img src="<?= $site->find('about')->images()->first()->url() ?>" alt="" />
         </figure>
       </div> -->
-      <div class="col-xs-12 u-aligncenter js-prlx" data-prlx-factor="0.3">
+      <div class="col-xs-12 u-aligncenter js-prlx" data-prlx-factor="0.5">
         <p style="font-size: 2rem; line-height: 2rem; max-width: 50rem;" class="u-inlineblock c-light"><?= html($page->about_text()) ?></p>
       </div>
     </div>

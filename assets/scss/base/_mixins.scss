@@ -34,3 +34,24 @@
   @-o-keyframes #{$animationName} { @content; }
   @keyframes #{$animationName} { @content; }
 }
+
+
+
+
+// Add 
+@mixin paragraph-angles($color: $dark, $thickness: 1px) {
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 6rem;
+    margin-left: calc(50% - 3rem);
+    border-bottom: $thickness solid $color;
+    @include prefix(transform, rotate(5deg));
+  }
+  &:before {
+    margin-bottom: 3rem;
+  }
+  &:after {
+    margin-top: 3rem;
+  }
+}

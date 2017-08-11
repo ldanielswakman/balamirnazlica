@@ -7,9 +7,7 @@
       <h2><?= $cat->title()->html() ?></h2>
     </div>
 
-    <div class="section--category__gradient">
-      <? snippet('angled-gradient-svg') ?>
-    </div>
+    <div class="gradient-angle"></div>
 
     <div class="col-xs-12 col-sm-6 <? ecco($key % 2 !== 0, ' last-sm col-sm-offset-1') ?>">
 

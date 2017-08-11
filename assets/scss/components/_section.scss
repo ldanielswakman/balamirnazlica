@@ -33,6 +33,7 @@ section {
       text-transform: uppercase;
       font-weight: normal;
       letter-spacing: 0.5rem;
+      font-family: "Sweden Sans";
       font-size: 3.5rem;
       font-size: calc(1rem + 3vw);
       color: $yellow;
@@ -43,34 +44,17 @@ section {
         }
       }
     }
-    .section--category__gradient {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100%;
 
-      svg { width: 100%; }
+    &:not(.section--alt) .gradient-angle {
+      left: 50%;
+      @include prefix(transform, scale(-1));
     }
     .section--category__p {
       @include prefix(display, flex);
       @include prefix(flex-direction, column);
       @include prefix(align-self, center);
-
-      &:before, &:after {
-        content: "";
-        display: block;
-        width: 6rem;
-        margin-left: calc(50% - 3rem);
-        border-bottom: 1px solid $dark;
-        @include prefix(transform, rotate(5deg));
-      }
-      &:before {
-        margin-bottom: 3rem;
-      }
-      &:after {
-        margin-top: 3rem;
-      }
+      opacity: 0.8;
+      @include paragraph-angles();
     }
     figure img {
       @include prefix(clip-path, polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%));
@@ -78,5 +62,9 @@ section {
     &.section--alt figure img {
       @include prefix(clip-path, polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%));
     }
+  }
+
+  h1 {
+    @include paragraph-angles($yellow, 2px);
   }
 }

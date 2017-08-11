@@ -1,0 +1,12 @@
+// Gradient angle
+.gradient-angle {
+  position: absolute;
+  top: 3%;
+  left: 0;
+  width: 50%;
+  height: 120%;
+  opacity: 0.3;
+
+  @include horizontal-gradient($white, rgba($white, 0));
+  @include prefix(clip-path, polygon(0% 0%, 100% 15%, 100% 60%, 0% 100%));
+}

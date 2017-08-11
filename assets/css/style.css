@@ -887,6 +887,34 @@
   -moz-align-items: center;
   align-items: center; }
 
+.u-pb0 {
+  padding-bottom: 0; }
+
+.u-pt0 {
+  padding-top: 0; }
+
+.u-pv0 {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.u-font-4x {
+  font-size: 4rem; }
+
+.u-op0 {
+  opacity: 0; }
+
+.u-op30 {
+  opacity: 0.3; }
+
+.u-op50 {
+  opacity: 0.5; }
+
+.u-op70 {
+  opacity: 0.7; }
+
+.u-op100 {
+  opacity: 1; }
+
 @font-face {
   font-family: 'Px Grotesk';
   src: url("../fonts/PxGrotesk-Regular.eot");
@@ -1017,7 +1045,7 @@ body {
   color: #303029;
   min-width: 100%;
   min-height: 100%;
-  font-family: 'Bagnard', sans-serif;
+  font-family: 'Cotham Sans', sans-serif;
   font-size: 112.5%;
   letter-spacing: 0.02rem;
   -webkit-font-smoothing: antialiased;
@@ -1181,6 +1209,25 @@ aside {
   aside .logo-svg .st0 {
     fill: #303029; }
 
+.gradient-angle {
+  position: absolute;
+  top: 3%;
+  left: 0;
+  width: 50%;
+  height: 120%;
+  opacity: 0.3;
+  background: -moz-linear-gradient(left, #fffef3 0%, rgba(255, 254, 243, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #fffef3 0%, rgba(255, 254, 243, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #fffef3 0%, rgba(255, 254, 243, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
+  /* IE6-9 */
+  -webkit-clip-path: polygon(0% 0%, 100% 15%, 100% 60%, 0% 100%);
+  -moz-clip-path: polygon(0% 0%, 100% 15%, 100% 60%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 15%, 100% 60%, 0% 100%); }
+
 footer {
   background: rgba(0, 0, 0, 0.05); }
 
@@ -1265,6 +1312,7 @@ section, footer {
       text-transform: uppercase;
       font-weight: normal;
       letter-spacing: 0.5rem;
+      font-family: "Sweden Sans";
       font-size: 3.5rem;
       font-size: calc(1rem + 3vw);
       color: #e9ff15; }
@@ -1273,14 +1321,11 @@ section, footer {
           -webkit-transform: rotate(90deg);
           -moz-transform: rotate(90deg);
           transform: rotate(90deg); } }
-    section.section--category .section--category__gradient, footer.section--category .section--category__gradient {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100%; }
-      section.section--category .section--category__gradient svg, footer.section--category .section--category__gradient svg {
-        width: 100%; }
+    section.section--category:not(.section--alt) .gradient-angle, footer.section--category:not(.section--alt) .gradient-angle {
+      left: 50%;
+      -webkit-transform: scale(-1);
+      -moz-transform: scale(-1);
+      transform: scale(-1); }
     section.section--category .section--category__p, footer.section--category .section--category__p {
       -webkit-display: flex;
       -moz-display: flex;
@@ -1290,7 +1335,8 @@ section, footer {
       flex-direction: column;
       -webkit-align-self: center;
       -moz-align-self: center;
-      align-self: center; }
+      align-self: center;
+      opacity: 0.8; }
       section.section--category .section--category__p:before, footer.section--category .section--category__p:before, section.section--category .section--category__p:after, footer.section--category .section--category__p:after {
         content: "";
         display: block;
@@ -1312,6 +1358,19 @@ section, footer {
       -webkit-clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
       -moz-clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
       clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%); }
+  section h1:before, footer h1:before, section h1:after, footer h1:after {
+    content: "";
+    display: block;
+    width: 6rem;
+    margin-left: calc(50% - 3rem);
+    border-bottom: 2px solid #e9ff15;
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    transform: rotate(5deg); }
+  section h1:before, footer h1:before {
+    margin-bottom: 3rem; }
+  section h1:after, footer h1:after {
+    margin-top: 3rem; }
 
 .theatre {
   position: relative;

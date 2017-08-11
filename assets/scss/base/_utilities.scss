@@ -23,3 +23,24 @@
   @include prefix(justify-content, center);
   @include prefix(align-items, center);
 }
+
+.u-pb0 {
+  padding-bottom: 0;
+}
+.u-pt0 {
+  padding-top: 0;
+}
+.u-pv0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.u-font-4x {
+  font-size: 4rem;
+}
+
+.u-op0 { opacity: 0; }
+.u-op30 { opacity: 0.3; }
+.u-op50 { opacity: 0.5; }
+.u-op70 { opacity: 0.7; }
+.u-op100 { opacity: 1; }
