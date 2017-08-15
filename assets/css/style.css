@@ -1405,6 +1405,14 @@ section, footer {
         .theatre .theatre__quote p {
           font-size: 2.5rem;
           line-height: 2.5rem; } }
+    .theatre .theatre__quote a.intro-link {
+      display: block;
+      padding: 1rem;
+      text-align: center; }
+      .theatre .theatre__quote a.intro-link svg {
+        width: 1.5rem; }
+      .theatre .theatre__quote a.intro-link svg polygon {
+        fill: currentColor; }
   .theatre .owl-carousel {
     padding: 20vh 0;
     height: max-80vh; }
@@ -1420,11 +1428,9 @@ section, footer {
       .theatre .theatre__slide {
         padding-left: 12vw;
         padding-right: 4vw; } }
-    .theatre .theatre__slide figure {
-      max-height: 80vh; }
-      @media screen and (min-width: 769px) {
-        .theatre .theatre__slide figure {
-          width: 84vw; } }
+    @media screen and (min-width: 769px) {
+      .theatre .theatre__slide figure {
+        width: 84vw; } }
     .theatre .theatre__slide .figure--video__link {
       position: absolute;
       top: 0;

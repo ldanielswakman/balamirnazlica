@@ -38,9 +38,13 @@
   <section id="top" class="u-pb0">
     <div class="row">
       <div class="col-xs-11 col-sm-5">
-        <figure>
+        <!-- <figure>
           <img src="<?= thumb($page->images()->shuffle()->first(), ['width' => 600])->url() ?>" alt="" />
-        </figure>
+        </figure> -->
+
+        <br><br><br>
+        <div class="u-op70"><?= $page->text()->kirbytext() ?></div>
+
       </div>
       <div class="col-xs-11 col-xs-offset-1 col-sm-6 col-sm-offset-1 u-aligncenter">
 
@@ -57,22 +61,22 @@
     </div>
   </section>
 
-  <section class="u-pv0" style="padding-top: 3rem; padding-bottom: 3rem;">
+  <!-- <section class="u-pv0" style="padding-top: 3rem; padding-bottom: 3rem;">
 
     <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
       <div class="u-op70"><?= $page->text()->kirbytext() ?></div>
     </div>
-  </section>
+  </section> -->
 
-  <section class="u-pt0">
+  <section style="padding: 0; padding-top: 5rem;">
 
-    <div class="row">
+    <div class="row" style="padding: 1rem;">
 
       <? foreach ($p_images as $img): ?>
         <div class="col-xs-6 col-md-4">
-          <a href="#<?= $img->name() ?>"  onclick="scrollToTheatre()" style="display: block; padding: 2rem;">
+          <a href="#<?= $img->name() ?>" onclick="scrollToTheatre()" style="display: block; padding-bottom: 1rem;">
             <figure>
-              <img src="<?= thumb($img, ['width' => 350])->url() ?>" alt="" />
+              <img src="<?= thumb($img, ['width' => 600])->url() ?>" alt="" />
             </figure>
           </a>
         </div>

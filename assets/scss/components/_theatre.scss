@@ -29,6 +29,18 @@
         line-height: 2.5rem;
       }
     }
+    a.intro-link {
+      display: block;
+      padding: 1rem;
+      text-align: center;
+
+      svg {
+        width: 1.5rem;
+      }
+      svg polygon {
+        fill: currentColor;
+      }
+    }
   }
   .owl-carousel {
     padding: 20vh 0;
@@ -51,7 +63,7 @@
       padding-right: 4vw;
     }
     figure {
-      max-height: 80vh;
+      // max-height: 80vh;
 
       @media screen and (min-width: $vp_tablet) {
         width: 84vw;
