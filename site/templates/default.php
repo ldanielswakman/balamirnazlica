@@ -17,7 +17,7 @@
         <?= $page->quote()->kirbytext() ?>
       </div>
 
-      <? snippet('theatre', ['carousel_images' => $carousel_images]) ?>
+      <? snippet('theatre', ['carousel_images' => $carousel_images->shuffle()]) ?>
 
     </div>
 

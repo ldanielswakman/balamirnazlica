@@ -2,14 +2,14 @@
 
 <div class="owl-carousel">
 
-  <? foreach ($carousel_images->shuffle() as $item): ?>
+  <? foreach ($carousel_images as $item): ?>
 
     <? $isVideo = ($item->video_url()->isNotEmpty() && preg_match('#(\d+)$#', $item->video_url(), $matches)) ? true : false ?>
 
     <div class="theatre__slide" data-hash="<?= $item->name() ?>">
 
       <figure<?= ecco($isVideo, ' class="figure--video"') ?>>
-        <img src="<?= $item->url() ?>" alt="" />
+        <img src="<?= thumb($item, ['width' => 1600])->url() ?>" alt="" />
 
         <!-- If Video -->
         <? if ($isVideo == true) : ?>

@@ -9,7 +9,7 @@
 
     <div class="gradient-angle"></div>
 
-    <div class="col-xs-12 col-sm-6 <? ecco($key % 2 !== 0, ' last-sm col-sm-offset-1') ?>">
+    <div class="col-xs-10 col-sm-6 <? ecco($key % 2 !== 0, ' last-sm col-xs-offset-2 col-sm-offset-1') ?>">
 
       <? $img = $images->shuffle()->first() ?>
       <figure>

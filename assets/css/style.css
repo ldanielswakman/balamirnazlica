@@ -1045,7 +1045,7 @@ body {
   color: #303029;
   min-width: 100%;
   min-height: 100%;
-  font-family: 'Cotham Sans', sans-serif;
+  font-family: "Replica-Regular";
   font-size: 112.5%;
   letter-spacing: 0.02rem;
   -webkit-font-smoothing: antialiased;
@@ -1312,7 +1312,7 @@ section, footer {
       text-transform: uppercase;
       font-weight: normal;
       letter-spacing: 0.5rem;
-      font-family: "Sweden Sans";
+      font-family: "Replica-Regular";
       font-size: 3.5rem;
       font-size: calc(1rem + 3vw);
       color: #e9ff15; }
@@ -1383,7 +1383,7 @@ section, footer {
     z-index: 2;
     width: calc(100% - 4vw);
     padding: 1rem;
-    max-width: 35rem;
+    max-width: 45rem;
     color: #fffef3;
     -webkit-transform: translateY(10rem);
     -moz-transform: translateY(10rem);
@@ -1391,7 +1391,10 @@ section, footer {
     -webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1);
     -moz-transition: transform 2s cubic-bezier(0, 0, 0, 1);
     transition: transform 2s cubic-bezier(0, 0, 0, 1);
-    opacity: 0; }
+    opacity: 0;
+    -webkit-text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    -moz-text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }
     @media screen and (min-width: 769px) {
       .theatre .theatre__quote {
         top: 45vh; } }
@@ -1400,7 +1403,7 @@ section, footer {
       line-height: 1.5rem; }
       @media screen and (min-width: 769px) {
         .theatre .theatre__quote p {
-          font-size: 2rem;
+          font-size: 2.5rem;
           line-height: 2.5rem; } }
   .theatre .owl-carousel {
     padding: 20vh 0;

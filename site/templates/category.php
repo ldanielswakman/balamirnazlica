@@ -1,4 +1,4 @@
-<? $p_images = $page->images()->filterBy('visibility', '!=', 'false'); ?>
+<? $p_images = $page->images()->filterBy('visibility', '!=', 'false')->sortBy('sort', 'asc'); ?>
 
 <? snippet('header') ?>
 
