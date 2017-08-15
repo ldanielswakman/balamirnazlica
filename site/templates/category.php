@@ -48,7 +48,7 @@
         $title = $page->title()->value();
         $n = floor(strlen( $title ) / 2);
         ?>
-        <h1 class="c-yellow u-font-4x" style="letter-spacing: 0.2em;">
+        <h1 class="c-yellow u-font-4x" style="letter-spacing: 0.2em; text-shadow: 0 0 50px rgba(0, 0, 0, 0.2);">
           <?= strtoupper( mb_substr($title, 0, $n) ); ?><br>
           <?= strtoupper( mb_substr($title, $n) ); ?>  
         </h1>

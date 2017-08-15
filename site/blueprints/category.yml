@@ -34,6 +34,11 @@ fields:
     label: Text
     type:  textarea
 
+  cover_image:
+    label: Cover image
+    type: select
+    options: images
+
   item_descr:
     type: info
     text: >

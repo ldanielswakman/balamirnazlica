@@ -4,7 +4,7 @@
 
   <?
   $categories = $pages->visible()->filterBy('template', 'category');
-  $carousel_images = $categories->images()->filterBy('visibility', '!=', 'false');
+  $carousel_images = $categories->images()->filterBy('visibility', '!=', 'false')->shuffle()->limit(6);
   ?>
 
   <div class="bg-dark">
@@ -17,7 +17,7 @@
         <?= $page->quote()->kirbytext() ?>
       </div>
 
-      <? snippet('theatre', ['carousel_images' => $carousel_images->shuffle()]) ?>
+      <? snippet('theatre', ['carousel_images' => $carousel_images]) ?>
 
     </div>
 

@@ -31,7 +31,7 @@
 
 </div>
 
-<? $mw = 100 / $carousel_images->count() ?>
+<? $mw = ($carousel_images->count() > 0) ? 100 / $carousel_images->count() : 100 ?>
 <style>
   .theatre .owl-dot span {
     max-width: <?= $mw ?>vw;
