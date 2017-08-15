@@ -1,23 +1,14 @@
 // Typography
 @font-face {
-  font-family: 'Px Grotesk';
-  src: url('../fonts/PxGrotesk-Regular.eot');
-  src: url('../fonts/PxGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/PxGrotesk-Regular.woff') format('woff'),
-       url('../fonts/PxGrotesk-Regular.ttf') format('truetype');
+  font-family: 'Replica';
+  src: url('../fonts/Replica-Regular.eot');
+  src: url('../fonts/Replica-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Replica-Regular.woff') format('woff'),
+    url('../fonts/Replica-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Px Grotesk';
-  src: url('../fonts/PxGrotesk-Bold.eot');
-  src: url('../fonts/PxGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/PxGrotesk-Bold.woff') format('woff'),
-       url('../fonts/PxGrotesk-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
 
-$type_headline: 'Replica-Regular';
+$type_headline: 'Replica';
 // $type_text: 'Cotham Sans', sans-serif;
