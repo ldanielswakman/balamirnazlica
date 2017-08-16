@@ -10,4 +10,4 @@ Description: This is Kirby's Starterkit.
 
 ----
 
-Copyright: ©(date: Year) (link: http://getkirby.com text: Balamir Nazlica)
+Copyright: ©(date: Year) Balamir Nazlica

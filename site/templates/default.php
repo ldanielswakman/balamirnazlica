@@ -11,7 +11,7 @@
 
     <a href="<?= $site->url() ?>" class="logo"><? snippet('logo-svg') ?></a>
 
-    <div class="theatre js-prlx" data-prlx-factor="-0.2" id="theatre">
+    <div class="theatre" id="theatre">  <!-- js-prlx" data-prlx-factor="-0.2 -->
 
       <div class="theatre__quote">
         <?= $page->quote()->kirbytext() ?>

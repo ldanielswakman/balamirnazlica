@@ -38,7 +38,7 @@
   <?= js($js_assets) ?>
 
 </head>
-<body>
+<body class="page--<?= $page->template() ?>">
 
   <div class="loading-mask">
     <? snippet('r-svg') ?>

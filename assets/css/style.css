@@ -1066,6 +1066,9 @@ p {
   p + p {
     margin-top: 1rem; }
 
+.row {
+  margin: auto; }
+
 .loading-mask {
   position: fixed;
   z-index: 5;
@@ -1222,7 +1225,17 @@ aside {
   clip-path: polygon(0% 0%, 100% 15%, 100% 60%, 0% 100%); }
 
 footer {
-  background: rgba(0, 0, 0, 0.05); }
+  background: -moz-linear-gradient(left, rgba(233, 255, 21, 0) 0%, #e9ff15 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(233, 255, 21, 0) 0%, #e9ff15 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(233, 255, 21, 0) 0%, #e9ff15 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
+  /* IE6-9 */
+  -webkit-clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+  -moz-clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%); }
 
 .image-stack {
   position: relative;
@@ -1372,7 +1385,7 @@ section, footer {
   .theatre .theatre__quote {
     position: absolute;
     left: 4vw;
-    top: 65vh;
+    top: 70vh;
     z-index: 2;
     width: calc(100% - 4vw);
     padding: 1rem;
@@ -1384,16 +1397,25 @@ section, footer {
     -webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1);
     -moz-transition: transform 2s cubic-bezier(0, 0, 0, 1);
     transition: transform 2s cubic-bezier(0, 0, 0, 1);
-    opacity: 0;
+    -webkit-transition-delay: 1s;
+    -moz-transition-delay: 1s;
+    transition-delay: 1s;
     -webkit-text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     -moz-text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }
     @media screen and (min-width: 769px) {
       .theatre .theatre__quote {
-        top: 45vh; } }
+        top: 55vh; } }
     .theatre .theatre__quote p {
       font-size: 1.25rem;
-      line-height: 1.5rem; }
+      line-height: 1.5rem;
+      -webkit-transition: opacity 3s cubic-bezier(0, 0, 0, 1);
+      -moz-transition: opacity 3s cubic-bezier(0, 0, 0, 1);
+      transition: opacity 3s cubic-bezier(0, 0, 0, 1);
+      -webkit-transition-delay: 1s;
+      -moz-transition-delay: 1s;
+      transition-delay: 1s;
+      opacity: 0; }
       @media screen and (min-width: 769px) {
         .theatre .theatre__quote p {
           font-size: 2.5rem;
@@ -1421,9 +1443,19 @@ section, footer {
       .theatre .theatre__slide {
         padding-left: 12vw;
         padding-right: 4vw; } }
-    @media screen and (min-width: 769px) {
-      .theatre .theatre__slide figure {
-        width: 84vw; } }
+    .theatre .theatre__slide figure {
+      -webkit-display: flex;
+      -moz-display: flex;
+      display: flex;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center; }
+      @media screen and (min-width: 769px) {
+        .theatre .theatre__slide figure {
+          width: 84vw; } }
     .theatre .theatre__slide .figure--video__link {
       position: absolute;
       top: 0;
@@ -1567,5 +1599,9 @@ section, footer {
 body.isLoaded .theatre__quote {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1; }
+  transform: translateY(0); }
+  body.isLoaded .theatre__quote p {
+    opacity: 1; }
+
+body.page--default .theatre__slide figure {
+  max-height: 80vh; }

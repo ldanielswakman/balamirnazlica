@@ -68,7 +68,7 @@
     </div>
   </section> -->
 
-  <section style="padding: 0; padding-top: 5rem;">
+  <section style="padding: 5rem 0;">
 
     <div class="row" style="padding: 1rem;">
 
