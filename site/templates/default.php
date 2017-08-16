@@ -51,16 +51,24 @@
     <? endforeach ?>
   </div>
 
+  <? $p_about = $site->find('about') ?>
   <section id="about">
-    <div class="row">
+    <div class="row u-relative">
+
+      <div class="section--category__title js-prlx" data-prlx-factor="0.1">
+        <h2 class="c-white"><?= strtoupper($site->title()->html()) ?></h2>
+      </div>
+
       <div class="col-sm-3 col-sm-offset-1">
-        <figure class="js-prlx" style="margin-left: -3rem; margin-top: 3rem; max-width: 65vw;">
-          <img style="max-width: 150%;" src="<?= $site->find('about')->images()->first()->url() ?>" alt="" />
+        <!-- <figure class="js-prlx" style="margin-left: -3rem; margin-top: 3rem; max-width: 65vw;"> -->
+        <figure>
+          <img src="<?= $p_about->images()->first()->url() ?>" alt="" />  <!-- style="max-width: 150%;" -->
         </figure>
       </div>
       <div class="col-sm-8" style="position: relative; z-index: 2;">
-        <?= $site->find('about')->text()->kirbytext() ?>
+        <?= $p_about->text()->kirbytext() ?>
       </div>
+
     </div>
   </section>
 

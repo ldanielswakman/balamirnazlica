@@ -2,4 +2,8 @@ footer {
   @extend section;
   @include horizontal-gradient(rgba($yellow, 0), rgba($yellow, 1));
   @include prefix(clip-path, polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%));
+
+  a {
+    color: $dark;
+  }
 }

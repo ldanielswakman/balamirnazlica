@@ -1,4 +1,4 @@
-<nav class="js-stick-in-body">
+<nav class="js-stick-in-body u-z3">
   <ul>
     <li><a href="<?= (page()->isHomepage()) ? '' : site()->url() ?>#index">Index</a></li>
     <li><a href="<?= (page()->isHomepage()) ? '' : site()->url() ?>#about">About</a></li>

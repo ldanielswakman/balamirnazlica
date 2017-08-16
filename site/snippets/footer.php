@@ -1,8 +1,11 @@
-  <footer>
+  <footer id="connect">
     <div class="row">
 
-      <div class="col-xs-12 col-sm-6 u-op30">
-        <?= $site->copyright()->kirbytext() ?>
+      <div class="col-xs-12 col-sm-6">
+        <br><br>
+        <a href="https://www.instagram.com/balamirnazlica/" target="_blank">Instagram</a><br>
+        <a href="mailto:info@balamirnazlica.com" target="_blank">Email</a><br><br>
+        <div class="u-op30"><?= $site->copyright()->kirbytext() ?></div>
       </div>
 
       <div class="col-xs-12 col-sm-6">

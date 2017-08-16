@@ -19,32 +19,6 @@ section {
 
       & > * { @include prefix(display, flex); }
     }
-    .section--category__title {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 2;
-      @include prefix(display, flex);
-      @include prefix(justify-content, center);
-      @include prefix(align-items, center);
-      width: 100%;
-      height: 100%;
-
-      text-transform: uppercase;
-      font-weight: normal;
-      letter-spacing: 0.5rem;
-      font-family: $type_headline;
-      font-size: 3.5rem;
-      font-size: calc(1rem + 3vw);
-      color: $yellow;
-
-      @media screen and (max-width: $vp_tablet) {
-        h2 {
-          @include prefix(transform, rotate(90deg));
-        }
-      }
-    }
-
     &:not(.section--alt) .gradient-angle {
       left: 50%;
       @include prefix(transform, scale(-1));
@@ -53,14 +27,39 @@ section {
       @include prefix(display, flex);
       @include prefix(flex-direction, column);
       @include prefix(align-self, center);
-      opacity: 0.8;
       @include paragraph-angles();
     }
     figure img {
       @include prefix(clip-path, polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%));
     }
     &.section--alt figure img {
-      @include prefix(clip-path, polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%));
+    @include prefix(clip-path, polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%));
+    }
+  }
+  
+  .section--category__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    @include prefix(display, flex);
+    @include prefix(justify-content, center);
+    @include prefix(align-items, center);
+    width: 100%;
+    height: 100%;
+
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.5rem;
+    font-family: $type_headline;
+    font-size: 3.5rem;
+    font-size: calc(1rem + 3vw);
+    color: $yellow;
+
+    @media screen and (max-width: $vp_tablet) {
+      h2 {
+        @include prefix(transform, rotate(90deg));
+      }
     }
   }
 
