@@ -33,7 +33,7 @@ $(document).ready(function(){
     dotsEach: 1,
     autoplay: true,
     autoplayTimeout: 6000,
-    lazyload: true,
+    lazyLoad: true,
     URLhashListener: true,
     startPosition: 'URLHash',
     navText: ['', '']

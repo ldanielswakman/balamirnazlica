@@ -9,7 +9,7 @@
     <div class="theatre__slide" data-hash="<?= $item->name() ?>">
 
       <figure<?= ecco($isVideo, ' class="figure--video"') ?>>
-        <img src="<?= thumb($item, ['width' => 1600])->url() ?>" alt="" />
+        <img class="owl-lazy" data-src="<?= thumb($item, ['width' => 1600])->url() ?>" alt="<?= $item->item_title()->html() ?>" />
 
         <!-- If Video -->
         <? if ($isVideo == true) : ?>
