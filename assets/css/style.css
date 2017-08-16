@@ -1581,15 +1581,20 @@ section, footer {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
         /* IE6-9 */ }
   .theatre .owl-dots {
-    padding-left: 12vw;
-    padding-right: 4vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 1rem;
+    max-width: 100vw;
     -webkit-display: flex;
     -moz-display: flex;
     display: flex;
     -webkit-justify-content: center;
     -moz-justify-content: center;
     justify-content: center; }
+    @media screen and (min-width: 769px) {
+      .theatre .owl-dots {
+        padding-left: 12vw;
+        padding-right: 4vw; } }
   .theatre .owl-dot {
     padding: 1rem 0; }
     .theatre .owl-dot span {
