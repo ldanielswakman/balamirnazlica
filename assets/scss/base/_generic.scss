@@ -6,7 +6,8 @@ body {
   min-width: 100%;
   min-height: 100%;
 
-  font-family: $type_headline;
+  font-family: $type_text;
+  font-weight: 300;
   font-size: 112.5%; // 1rem = 18px (at 100% zoom)
   letter-spacing: 0.02rem;
 

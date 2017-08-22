@@ -1043,6 +1043,7 @@ body {
   min-width: 100%;
   min-height: 100%;
   font-family: "Replica";
+  font-weight: 300;
   font-size: 112.5%;
   letter-spacing: 0.02rem;
   -webkit-font-smoothing: antialiased;
@@ -1391,7 +1392,7 @@ section, footer {
   .theatre .theatre__quote {
     position: absolute;
     left: 4vw;
-    top: 70vh;
+    top: 60vh;
     z-index: 2;
     width: calc(100% - 4vw);
     padding: 1rem;
@@ -1424,8 +1425,8 @@ section, footer {
       opacity: 0; }
       @media screen and (min-width: 769px) {
         .theatre .theatre__quote p {
-          font-size: 2.5rem;
-          line-height: 2.5rem; } }
+          font-size: 2rem;
+          line-height: 2rem; } }
     .theatre .theatre__quote a.intro-link {
       display: block;
       padding: 1rem;
@@ -1444,6 +1445,7 @@ section, footer {
       .theatre .owl-carousel .owl-stage-outer {
         background-color: rgba(0, 0, 0, 0.25); } }
   .theatre .theatre__slide {
+    opacity: 0.9;
     width: 100vw; }
     @media screen and (min-width: 769px) {
       .theatre .theatre__slide {
@@ -1615,4 +1617,4 @@ body.isLoaded .theatre__quote {
     opacity: 1; }
 
 body.page--default .theatre__slide figure {
-  max-height: 80vh; }
+  max-height: calc(100vh - 7rem); }

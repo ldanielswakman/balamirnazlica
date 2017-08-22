@@ -6,7 +6,7 @@
   .theatre__quote {
     position: absolute;
     left: 4vw;
-    top: 70vh;
+    top: 60vh;
     z-index: 2;
     width: calc(100% - 4vw);
     padding: 1rem;
@@ -28,8 +28,8 @@
       opacity: 0;
 
       @media screen and (min-width: $vp_tablet) {
-        font-size: 2.5rem;
-        line-height: 2.5rem;
+        font-size: 2rem;
+        line-height: 2rem;
       }
     }
     a.intro-link {
@@ -59,6 +59,7 @@
     }
   }
   .theatre__slide {
+    opacity: 0.9;
     width: 100vw;
 
     @media screen and (min-width: $vp_tablet) {
@@ -222,5 +223,5 @@ body.isLoaded .theatre__quote {
   }
 }
 body.page--default .theatre__slide figure {
-  max-height: 80vh;
+  max-height: calc(100vh - 7rem);
 }

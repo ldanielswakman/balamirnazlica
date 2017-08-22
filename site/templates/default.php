@@ -15,9 +15,6 @@
 
       <div class="theatre__quote">
         <?= $page->quote()->kirbytext() ?>
-
-        <a href="#index" class="intro-link" data-scrspeed="3000"><? snippet('arrow-down-svg') ?></a>
-
       </div>
 
       <? snippet('theatre', ['carousel_images' => $carousel_images]) ?>
