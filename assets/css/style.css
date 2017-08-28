@@ -920,9 +920,9 @@
   opacity: 1; }
 
 @font-face {
-  font-family: 'Replica';
-  src: url("../fonts/Replica-Regular.eot");
-  src: url("../fonts/Replica-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Replica-Regular.woff") format("woff"), url("../fonts/Replica-Regular.ttf") format("truetype");
+  font-family: 'Prophet';
+  src: url("../fonts/Prophet-Medium.eot.eot");
+  src: url("../fonts/Prophet-Medium.eot.eot?#iefix") format("embedded-opentype"), url("../fonts/Prophet-Medium.eot.woff") format("woff"), url("../fonts/Prophet-Medium.eot.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -1042,7 +1042,7 @@ body {
   color: #303029;
   min-width: 100%;
   min-height: 100%;
-  font-family: "Replica";
+  font-family: "Maison Neue";
   font-weight: 300;
   font-size: 112.5%;
   letter-spacing: 0.02rem;
@@ -1282,7 +1282,7 @@ nav {
       display: block;
       padding: 0.5rem 0 0.5rem 2rem;
       color: rgba(224, 224, 215, 0.5);
-      font-weight: normal; }
+      font-weight: 300; }
       nav ul a:hover {
         color: #e0e0d7; }
   nav.is_stuck ul a {
@@ -1362,7 +1362,7 @@ section, footer {
     text-transform: uppercase;
     font-weight: normal;
     letter-spacing: 0.5rem;
-    font-family: "Replica";
+    font-family: "Prophet";
     font-size: 3.5rem;
     font-size: calc(1rem + 3vw);
     color: #e9ff15; }
@@ -1414,6 +1414,7 @@ section, footer {
       .theatre .theatre__quote {
         top: 55vh; } }
     .theatre .theatre__quote p {
+      font-family: "Prophet";
       font-size: 1.25rem;
       line-height: 1.5rem;
       -webkit-transition: opacity 3s cubic-bezier(0, 0, 0, 1);

@@ -1,15 +1,15 @@
 // Typography
 @font-face {
-  font-family: 'Replica';
-  src: url('../fonts/Replica-Regular.eot');
-  src: url('../fonts/Replica-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Replica-Regular.woff') format('woff'),
-    url('../fonts/Replica-Regular.ttf') format('truetype');
+  font-family: 'Prophet';
+  src: url('../fonts/Prophet-Medium.eot.eot');
+  src: url('../fonts/Prophet-Medium.eot.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Prophet-Medium.eot.woff') format('woff'),
+    url('../fonts/Prophet-Medium.eot.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 
-$type_headline: 'Replica';
-$type_text: $type_headline;
-// $type_text: 'Cotham Sans', sans-serif;
+$type_headline: 'Prophet';
+$type_text: 'Maison Neue';
+// $type_text: 'Maison Neue', 'Cotham Sans', sans-serif;

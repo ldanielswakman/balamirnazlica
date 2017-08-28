@@ -21,6 +21,7 @@
       top: 55vh;
     }
     p {
+      font-family: $type_headline;
       font-size: 1.25rem;
       line-height: 1.5rem;
       @include prefix(transition, opacity 3s cubic-bezier(0, 0, 0, 1));
