@@ -1,4 +1,4 @@
-Title: Test
+Title: Soaked
 
 ----
 
@@ -10,7 +10,7 @@ Text:
 
 ----
 
-Cover-image: 
+Cover-image: soaked_basin.jpg
 
 ----
 
