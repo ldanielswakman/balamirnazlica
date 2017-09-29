@@ -46,16 +46,13 @@ function splitString($str) {
     </section>
   </div>
 
-  <section style="padding: 5rem 0;">
+  <section class="category-index">
 
     <div class="row" style="padding: 1rem;">
 
       <? foreach ($p_images as $img): ?>
         <div class="col-xs-6 col-md-4">
-          <a href="#<?= $img->name() ?>" onclick="scrollToTheatre()" style="display: block; padding-bottom: 1rem;">
-            <figure>
-              <img src="<?= thumb($img, ['width' => 600])->url() ?>" alt="" />
-            </figure>
+          <a href="#<?= $img->name() ?>" class="category-index__item" onclick="scrollToTheatre()" style="background-image: url('<?= thumb($img, ['width' => 600])->url() ?>')">
           </a>
         </div>
       <? endforeach ?>
@@ -66,7 +63,7 @@ function splitString($str) {
   <div class="bg-gradient-inv" style="min-height: 30vh";>
   </div>
 
-  <div class="bg-dark">
+  <div class="bg-dark u-pb-2">
 
     <div class="theatre js-prlx" data-prlx-factor="-0.2" id="theatre">
 

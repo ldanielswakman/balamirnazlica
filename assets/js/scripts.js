@@ -34,8 +34,8 @@ $(document).ready(function(){
     autoplay: true,
     autoplayTimeout: 6000,
     lazyLoad: true,
-    URLhashListener: false,
-    startPosition: '',
+    URLhashListener: true,
+    startPosition: 'URLHash',
     navText: ['', '']
   });
   $(".owl-carousel").on('changed.owl.carousel', function(event) {
@@ -50,8 +50,13 @@ $(document).ready(function(){
 
 
 // Picture thumbnail to theatre
+$(document).ready(function() {
+  $('.category-index__item').click(function(e) {
+    scrollToTheatre();
+  });
+});
 function scrollToTheatre() {
-  $.smoothScroll({ speed: 400, scrollTarget: $('#theatre') });
+  $.smoothScroll({ speed: 800, scrollTarget: $('#theatre') });
 }
 function playVideo($link) {
   $link.closest('figure').addClass('video--isActive');
