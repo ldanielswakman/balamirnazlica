@@ -1,9 +1,9 @@
 <? $images = $cat->images()->filterBy('visibility', '!=', 'false'); ?>
 
-<section class="section--category <? ecco($key % 2 !== 0, 'section--alt') ?>">
+<section id="<?= $cat->slug() ?>" class="section--category <? ecco($key % 2 !== 0, 'section--alt') ?>">
   <a href="<?= $cat->url() ?>" class="row">
 
-    <div class="section--category__title js-prlx" data-prlx-factor="0.1">
+    <div class="section--category__title js-prlx" data-prlx-factor="0.15">
       <h2><?= $cat->title()->html() ?></h2>
     </div>
 

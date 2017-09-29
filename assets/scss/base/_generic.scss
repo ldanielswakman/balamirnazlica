@@ -92,3 +92,11 @@ body.isLoaded .loading-mask {
    75% { transform: scaleX(0); }
   100% { transform: scaleX(1); fill: $yellow; }
 }
+
+
+.bg-bubbles {
+  background-color: $dark;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

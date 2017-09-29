@@ -1,0 +1,29 @@
+header {
+  padding: 5vh 10vw;
+  @include prefix(display, flex);
+  @include prefix(flex-direction, row);
+  @include prefix(justify-content, space-between);
+  @include prefix(align-items, space-between);
+
+  & > * {
+    @include prefix(display, flex);
+    @include prefix(align-items, center);
+    @include prefix(flex-basis, 25%);
+  }
+
+  .header__col-menu a {
+    margin-right: 1rem;
+
+    @include tabletAndUp() {
+      order: 0;
+    }
+  }
+  .header__col-logo {
+    @include prefix(justify-content, center);
+    @include prefix(flex-basis, 50%);
+  }
+  .header__col-actions {
+    @include prefix(justify-content, flex-end);
+
+  }
+}

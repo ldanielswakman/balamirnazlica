@@ -1,5 +1,5 @@
 // Colours
-$dark: #303029; // 4a4a41;
+$dark: #191914; // 303029; // 4a4a41;
 $light: #e0e0d7; // #d8d8ce
 $white: #fffef3;
 $black: #000;
@@ -15,6 +15,9 @@ $yellow: #e9ff15;
 
 .bg-gradient {
   @include vertical-gradient();
+}
+.bg-gradient-inv {
+  @include vertical-gradient($light, $dark);
 }
 
 .c-yellow {

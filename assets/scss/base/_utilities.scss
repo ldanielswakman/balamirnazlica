@@ -18,6 +18,11 @@
   text-align: center;
 }
 
+.u-flex-row-spbetween {
+  @include prefix(display, flex);
+  @include prefix(align-items, space-between);
+
+}
 .u-flex-vcenter {
   @include prefix(display, flex);
   @include prefix(justify-content, center);

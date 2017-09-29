@@ -1,21 +1,12 @@
-<?php snippet('header') ?>
+<? snippet('head') ?>
 
 <main>
 
-  <?
-  $categories = $pages->visible()->filterBy('template', 'category');
-  $carousel_images = $categories->images()->filterBy('visibility', '!=', 'false')->shuffle()->limit(6);
-  ?>
+  <div class="bg-bubbles">
 
-  <div class="bg-dark">
+    <? snippet('header', ['types' => $types]) ?>
 
-    <a href="<?= $site->url() ?>" class="logo"><? snippet('logo-svg') ?></a>
-
-    <div class="theatre" id="theatre">  <!-- js-prlx" data-prlx-factor="-0.2 -->
-
-      <div class="theatre__quote">
-        <?= $page->quote()->kirbytext() ?>
-      </div>
+    <div class="theatre" id="theatre">
 
       <? snippet('theatre', ['carousel_images' => $carousel_images]) ?>
 
@@ -42,11 +33,19 @@
     </div>
   </section>
 
-  <div id="index">
-    <? $i=0; foreach ($categories as $cat): ?>
-      <? snippet('category-preview', ['key' => $i, 'cat' => $cat]); $i++; ?>
-    <? endforeach ?>
-  </div>
+  <? foreach($types as $type) : ?>
+    <div class="type-index" id="<?= $type ?>">
+      <div class="type-index__header js-stick-in-parent">
+        <h3><?= $type ?> //</h3>
+        <? foreach ($categories->filterBy('type', $type) as $cat): ?>
+          <a href="<?= $cat->url() ?>"><?= $cat->title() ?></a>
+        <? endforeach ?>
+      </div>
+      <? $i=0; foreach ($categories->filterBy('type', $type) as $cat): ?>
+        <? snippet('category-preview', ['key' => $i, 'cat' => $cat]); $i++; ?>
+      <? endforeach ?>
+    </div>
+  <? endforeach ?>
 
   <? $p_about = $site->find('about') ?>
   <section id="about">
@@ -71,4 +70,4 @@
 
 </main>
 
-<?php snippet('footer') ?>
+<? snippet('footer') ?>

@@ -1,49 +1,14 @@
-<!doctype html>
-<html lang="<?= site()->language() ? site()->language()->code() : 'en' ?>">
-<head>
-
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-  <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
-  <meta name="description" content="<?= $site->description()->html() ?>">
-
-  <?
-  $css_assets = (c::get('env') == 'DEV') ? [
-    // local assets
-    'assets/css/style.css'
-  ] : [
-    // production assets
-    'assets/css/style.css'
-  ];
-  $js_assets = (c::get('env') == 'DEV') ? [
-    // local assets
-    'assets/js/jquery-2.2.3.min.js',
-    'assets/js/jquery.smooth-scroll.min.js',
-    'assets/js/owl.carousel.min.js',
-    'assets/js/sticky-kit.min.js',
-    'assets/js/scripts.js'
-  ] : [
-    // production assets
-    '//code.jquery.com/jquery-2.2.3.min.js',
-    '//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js',
-    '//cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js',
-    'assets/js/owl.carousel.min.js',
-    'assets/js/sticky-kit.min.js',
-    'assets/js/scripts.js'
-  ];
-  ?>
-
-  <?= css($css_assets) ?>
-  <?= js($js_assets) ?>
-
-</head>
-<body class="page--<?= $page->template() ?>">
-
-  <div class="loading-mask">
-    <? snippet('r-svg') ?>
+<header>
+  <div class="header__col-menu">
+    <? $i=0; foreach ($types as $type): ?>
+      <a href="<?= ($page->isHomePage()) ? '' : $site->url() ?>#<?= $type ?>"><?= $type ?></a></li>
+    <? endforeach ?>
   </div>
-
-  <!-- <header>
-    <? // snippet('menu') ?>
-  </header> -->
+  <div class="header__col-logo">
+    <a href="<?= $site->url() ?>" class="logo"><? snippet('logo-svg') ?></a>
+  </div>
+  <div class="header__col-actions">
+    <a href="<?= (page()->isHomepage()) ? '' : site()->url() ?>#about">about</a></li>
+    <a class="button button--primary" href="<?= (page()->isHomepage()) ? '' : site()->url() ?>#connect">Connect</a></li>
+  </div>
+</header>

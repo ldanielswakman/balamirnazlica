@@ -1,0 +1,17 @@
+Title: Test
+
+----
+
+Type: music
+
+----
+
+Text: 
+
+----
+
+Cover-image: 
+
+----
+
+Item-descr: 

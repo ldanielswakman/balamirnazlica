@@ -2,12 +2,8 @@ Title: Balamir Nazlica
 
 ----
 
-Author: Bastian Allgeier GmbH
+Author: L Daniel Swakman
 
 ----
 
 Description: This is Kirby's Starterkit.
-
-----
-
-Copyright: ©(date: Year) Balamir Nazlica

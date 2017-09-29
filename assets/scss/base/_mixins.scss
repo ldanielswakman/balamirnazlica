@@ -35,6 +35,12 @@
   @keyframes #{$animationName} { @content; }
 }
 
+// Media query mixin
+@mixin tabletAndUp() {
+  @media screen and (min-width: 48em) {
+    @content;
+  }
+}
 
 
 

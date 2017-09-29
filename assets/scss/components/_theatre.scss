@@ -1,6 +1,5 @@
 .theatre {
   position: relative;
-  background: $dark;
   color: $light;
 
   .theatre__quote {
@@ -48,7 +47,7 @@
   }
   .owl-carousel {
     padding: 20vh 0;
-    height: max-80vh;
+    // height: max-80vh;
 
     @media screen and (min-width: $vp_tablet) {
       padding: 0;
@@ -61,19 +60,17 @@
   }
   .theatre__slide {
     opacity: 0.9;
-    width: 100vw;
+    width: 80vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
 
-    @media screen and (min-width: $vp_tablet) {
-      padding-left: 12vw;
-      padding-right: 4vw;
-    }
     figure {
       @include prefix(display, flex);
       @include prefix(justify-content, center);
       @include prefix(align-items, center);
 
       @media screen and (min-width: $vp_tablet) {
-        width: 84vw;
+        width: 80vw;
       }
     }
     .figure--video__link {
