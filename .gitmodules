@@ -7,3 +7,6 @@
 [submodule "site/fields/fieldtoggle"]
 	path = site/fields/fieldtoggle
 	url = https://github.com/medienbaecker/kirby-fieldtoggle/
+[submodule "site/plugins/responsive-images"]
+	path = site/plugins/responsive-images
+	url = https://github.com/jancbeck/kirby-responsive-images.git
