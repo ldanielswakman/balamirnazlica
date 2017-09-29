@@ -6,7 +6,7 @@
 
     <? $isVideo = ($item->video_url()->isNotEmpty() && preg_match('#(\d+)$#', $item->video_url(), $matches)) ? true : false ?>
 
-    <div class="theatre__slide" data-hash="<?= $item->name() ?>">
+    <div class="theatre__slide"><!-- data-hash="<?= $item->name() ?>" -->
 
       <figure<?= ecco($isVideo, ' class="figure--video"') ?>>
         <img class="owl-lazy" data-src="<?= thumb($item, ['width' => 1600])->url() ?>" alt="<?= $item->item_title()->html() ?>" />

@@ -31,12 +31,11 @@ $(document).ready(function(){
     // autoWidth: true,
     nav: true,
     dots: false,
-    // dotsEach: 1,
     autoplay: true,
     autoplayTimeout: 6000,
     lazyLoad: true,
-    URLhashListener: true,
-    startPosition: 'URLHash',
+    URLhashListener: false,
+    startPosition: '',
     navText: ['', '']
   });
   $(".owl-carousel").on('changed.owl.carousel', function(event) {

@@ -1,0 +1,34 @@
+.type-preview {
+  .type-preview__header {
+    padding: 1rem;
+    background: $light;
+    z-index: 3;
+
+    @include tabletAndUp() {
+      @include prefix(display, flex);
+      @include prefix(flex-direction, row);
+      @include prefix(justify-content, center);
+      @include prefix(align-items, center);
+    }
+    h3 {
+      margin-bottom: 0.5rem;
+      margin-right: 1rem;
+      font-size: 1.5rem;
+      opacity: 0.15;
+
+      @include tabletAndUp() {
+        font-size: 2rem;
+        margin-bottom: 0;
+      }
+    }
+    .type-preview__list {
+      @include prefix(display, flex);
+    }
+    a {
+      color: inherit;
+    }
+    a + a {
+      margin-left: 1rem;
+    }
+  }
+}

@@ -1,29 +1,37 @@
 header {
+  position: relative;
+  z-index: 3;
   padding: 5vh 10vw;
-  @include prefix(display, flex);
-  @include prefix(flex-direction, row);
-  @include prefix(justify-content, space-between);
-  @include prefix(align-items, space-between);
+  text-align: center;
 
-  & > * {
-    @include prefix(display, flex);
+  .row {
+    width: calc(100% + 1rem);
+    margin: 0 -0.5rem;
     @include prefix(align-items, center);
-    @include prefix(flex-basis, 25%);
-  }
-
-  .header__col-menu a {
-    margin-right: 1rem;
-
-    @include tabletAndUp() {
-      order: 0;
-    }
   }
   .header__col-logo {
-    @include prefix(justify-content, center);
-    @include prefix(flex-basis, 50%);
+    text-align: center;
+  }
+  .header__col-menu {
+    margin: 1.5rem 0;
+
+    a + a {
+      margin-left: 1rem;
+    }
+
+    @include tabletAndUp() {
+      margin: 0;
+      text-align: left;
+    }
   }
   .header__col-actions {
-    @include prefix(justify-content, flex-end);
 
+    @include tabletAndUp() {
+      text-align: right;
+    }
+
+    a {
+      color: $white;
+    }
   }
 }

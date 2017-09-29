@@ -20,4 +20,12 @@
       background-color: $white;
     }
   }
+  &.button--primary {
+    background-color: $white;
+    color: rgba($dark, 0.6);
+
+    &:hover {
+      background-color: $yellow;
+    }
+  }
 }
