@@ -13,7 +13,11 @@
 
       <? $img = $images->shuffle()->first() ?>
       <figure>
-        <img src="<?= thumb($img, ['width' => 800])->url() ?>" alt="" />
+        <? if($img): ?>
+          <img src="<?= thumb($img, ['width' => 800])->url() ?>" alt="" />
+        <? else: ?>
+          <img src="http://via.placeholder.com/800x400" alt="" />
+        <? endif?>
       </figure>
 
     </div>

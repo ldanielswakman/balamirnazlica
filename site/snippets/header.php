@@ -9,6 +9,6 @@
   </div>
   <div class="header__col-actions">
     <a href="<?= (page()->isHomepage()) ? '' : site()->url() ?>#about">about</a></li>
-    <a class="button button--primary" href="<?= (page()->isHomepage()) ? '' : site()->url() ?>#connect">Connect</a></li>
+    <a class="button button--primary" href="<?= (page()->isHomepage()) ? '' : site()->url() ?>#connect">connect</a></li>
   </div>
 </header>
