@@ -33,17 +33,20 @@
 
   <? foreach($types as $type) : ?>
     <div class="type-preview" id="<?= $type ?>">
+
       <div class="type-preview__header js-stick-in-parent">
         <h3><?= $type ?> //</h3>
         <div class="type-preview__list">
-        <? foreach ($categories->filterBy('type', $type) as $cat): ?>
+        <? foreach ($categories->filterBy('template', 'category-' . $type) as $cat): ?>
           <a href="<?= $cat->url() ?>"><?= $cat->title() ?></a>
         <? endforeach ?>
         </div>
       </div>
-      <? $i=0; foreach ($categories->filterBy('type', $type) as $cat): ?>
+
+      <? $i=0; foreach ($categories->filterBy('template', 'category-' . $type) as $cat): ?>
         <? snippet('category-preview', ['key' => $i, 'cat' => $cat]); $i++; ?>
       <? endforeach ?>
+
     </div>
   <? endforeach ?>
 

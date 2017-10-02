@@ -9,18 +9,21 @@
     letter-spacing: 0.1rem;
   }
 </style>
-<h4>Main pages</h4>
-<? foreach($pages->pluck('type', ',', true) as $type) : ?>
 
-  <h5><?= strtoupper($type) ?></h5>
+<? $category_pages = $pages->filterBy('template', '*=', 'category'); ?>
+
+<h4>Main pages</h4>
+<? foreach($category_pages->pluck('template', ',', true) as $type) : ?>
+
+  <h5><?= strtoupper(str_replace('category-', '', $type)) ?></h5>
 
   <ul class="nav nav-list sidebar-list">
 
-    <? foreach($pages->filterBy('type', $type) as $p) : ?>
+    <? foreach($category_pages->filterBy('template', $type) as $p) : ?>
       <li>
         <a class="draggable<? e($p->isInvisible(), ' invisible'); ?>" data-helper="<? __($p->title(), 'attr') ?>" data-text="<? __($p->dragText()) ?>" href="<? __($p->url('edit')) ?>">
           <?= $p->icon() ?>
-          <? ecco($p->template() == 'category', '<span style="display: inline-block; font-size: 1.25em; position: relative; transform: translateY(-0.125em);">', '<span>') ?><? __($p->title()) ?></span>
+          <span><? __($p->title()) ?></span>
           <small class="marginalia shiv shiv-left shiv-white"><? __($p->displayNum()) ?></small>
         </a>
         <a class="option" data-context="<? __($p->url('context')) ?>" href="#options"><? i('ellipsis-h') ?></a>
@@ -33,10 +36,8 @@
 <br>
 <h4>Other pages</h4>
 
-<? $excluded = $pages->filterBy('template', 'category') ?>
-
 <ul class="nav nav-list sidebar-list">
-  <? foreach($pages->not($excluded) as $p) : ?>
+  <? foreach($pages->not($category_pages) as $p) : ?>
     <li>
       <a class="draggable<? e($p->isInvisible(), ' invisible'); ?>" data-helper="<? __($p->title(), 'attr') ?>" data-text="<? __($p->dragText()) ?>" href="<? __($p->url('edit')) ?>">
         <?= $p->icon() ?>

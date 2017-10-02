@@ -1,0 +1,35 @@
+title: Category - Photography
+pages: false
+icon: clone
+files:
+  sortable: true
+  fields:
+    item_title:
+      label: Title
+      type: text
+    caption:
+      label: Caption
+      type: textarea
+      buttons: 
+    visibility:
+      label: Visible?
+      type: toggle
+      text: Yes/No
+      default: Yes
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  text:
+    label: Text
+    type:  textarea
+
+  cover_image:
+    label: Cover image
+    type: select
+    options: images
+
+  item_descr:
+    extends: item-descr

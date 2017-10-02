@@ -1,0 +1,17 @@
+title: Category - Music
+pages: false
+icon: clone
+
+fields:
+  title:
+    label: Title
+    type:  text
+
+  text:
+    label: Text
+    type:  textarea
+
+  cover_image:
+    label: Cover image
+    type: select
+    options: images
