@@ -15,3 +15,8 @@ fields:
     label: Cover image
     type: select
     options: images
+
+  embeds:
+    label: Soundcloud embeds
+    type: textarea
+    help: Paste the embed codes of Soundcloud here

@@ -8,6 +8,10 @@ Type: music
 
 Text: 
 
+(image: soaked_basin.jpg)
+
+Two albums & an EP
+
 ----
 
 Cover-image: soaked_basin.jpg
@@ -15,3 +19,11 @@ Cover-image: soaked_basin.jpg
 ----
 
 Item-descr: 
+
+----
+
+Embeds: 
+
+<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/62140980&amp;color=%23e9ff15&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+
+<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1432999&amp;color=%23e9ff15&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
