@@ -88,12 +88,15 @@ c::set('routes', [
         $code = 400;
 
       } else {
+
+        $subject = (strlen($form->data('subject')) > 0) ? $form->data('subject') : 'Contact Form Message';
+
         // If validation and guards passed, execute the action.
         $form->emailAction([
           'to' => 'd.swakman@gmail.com',
-          'from' => 'website@balamirnazlica.com',
+          'from' => 'contactform@balamirnazlica.com',
           'replyTo' => $form->data('email'),
-          'subject' => $form->data('subject')
+          'subject' => $subject,
         ])
         ->logAction([
           'file' => kirby()->roots()->site() . '/email.log',
