@@ -876,6 +876,9 @@
 .u-aligncenter {
   text-align: center; }
 
+.u-alignright {
+  text-align: right; }
+
 .u-flex-row-spbetween {
   -webkit-display: flex;
   -moz-display: flex;
@@ -1196,23 +1199,58 @@ body.isLoaded .loading-mask {
   background-color: #fffef3;
   margin-left: 1rem;
   padding: 0.5rem 1rem calc(0.5rem + 0.25rem) calc(1rem + 0.25rem);
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: rgba(25, 25, 20, 0.6);
+  font: inherit;
+  cursor: pointer;
   -webkit-clip-path: polygon(0.25rem 0%, 100% 0%, 100% 100%, 0% calc(100% - 0.25rem));
   -moz-clip-path: polygon(0.25rem 0%, 100% 0%, 100% 100%, 0% calc(100% - 0.25rem));
   clip-path: polygon(0.25rem 0%, 100% 0%, 100% 100%, 0% calc(100% - 0.25rem)); }
   .button:hover {
     background-color: #e9ff15;
     color: rgba(25, 25, 20, 0.6); }
-  .button.button--primary {
-    background-color: #e9ff15;
-    color: rgba(25, 25, 20, 0.6); }
-    .button.button--primary:hover {
-      background-color: #fffef3; }
+  .button.button--dark {
+    background-color: #191914;
+    color: #fffef3; }
+    .button.button--dark:hover {
+      background-color: #191914; }
   .button.button--primary {
     background-color: #fffef3;
     color: rgba(25, 25, 20, 0.6); }
     .button.button--primary:hover {
       background-color: #e9ff15; }
+
+.field {
+  width: 100%;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  border-bottom: 2px solid rgba(25, 25, 20, 0.5);
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  font: inherit; }
+  .field:focus {
+    outline: none;
+    border-bottom-color: #191914; }
+  .field::-webkit-input-placeholder {
+    color: rgba(25, 25, 20, 0.25); }
+  .field:-moz-placeholder {
+    color: rgba(25, 25, 20, 0.25); }
+  .field::-moz-placeholder {
+    color: rgba(25, 25, 20, 0.25); }
+  .field:-ms-input-placeholder {
+    color: rgba(25, 25, 20, 0.25); }
+  .field.field--error {
+    background: rgba(25, 25, 20, 0.1); }
+
+.uniform__potty {
+  position: absolute;
+  left: -9999px; }
 
 .logo {
   display: inline-block;

@@ -17,6 +17,9 @@
 .u-aligncenter {
   text-align: center;
 }
+.u-alignright {
+  text-align: right;
+}
 
 .u-flex-row-spbetween {
   @include prefix(display, flex);

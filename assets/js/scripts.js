@@ -118,3 +118,61 @@ function translateY3d($obj, value) {
   $obj.css('-o-transform', translate);
   $obj.css('transform', translate);
 };
+
+
+
+
+
+
+
+// Contact form: contact form interactions
+$(document).ready(function() {
+
+  // Async form submit
+  $('form.contact-form').on('submit', function(e) {
+    e.preventDefault();
+    postContactForm( $(this) );
+  });
+
+});
+
+// Contact form: post form
+function postContactForm(form_obj) {
+  // Defining variables
+  $active_form = form_obj;
+  url = $active_form.attr('action');
+  form_data = $active_form.serialize();
+  $errors_container = form_obj.find('.contact-form__errors');
+
+  // Remove previous states & errors
+  $errors_container.html('');
+  $active_form.find('input, textarea').removeClass('field--error');
+  $active_form.find('#cover_progress').removeClass('u-hide');
+
+  console.log(form_data);
+
+  $.post(url, form_data, function(data) {
+    
+    console.log(data);
+
+    $active_form.find('#cover_progress').addClass('u-hide');
+    if(data.success === true) {
+      
+      $active_form.find('#cover_progress').addClass('u-hide');
+      $active_form.find('#cover_success').removeClass('u-hide');
+
+    } else {
+
+      $html = '';
+      $.each(data.errors, function(i, j) {
+        $active_form.find('[name="'+i+'"]').addClass('field--error');
+        $html += '- ' + data.errors[i] + '<br>';
+      });
+      if(data.code === 500) {
+        $html += 'Something went wrong — please try again later.';
+      }
+      $errors_container.html($html);
+
+    }
+  });
+}

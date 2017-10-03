@@ -1,0 +1,37 @@
+.field {
+  width: 100%;
+  background: none;
+  @include prefix(appearance, none);
+  border: none;
+  border-bottom: 2px solid rgba($dark, 0.5);
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+  font: inherit;
+
+  &:focus {
+    outline: none;
+    border-bottom-color: $dark;
+  }
+  &::-webkit-input-placeholder {
+    color: rgba($dark, 0.25);
+  }
+  &:-moz-placeholder {
+    color: rgba($dark, 0.25);
+  }
+  &::-moz-placeholder {
+    color: rgba($dark, 0.25);
+  }
+  &:-ms-input-placeholder {  
+    color: rgba($dark, 0.25);
+  }
+
+  &.field--error {
+    background: rgba($dark, 0.1);
+  }
+}
+
+// Uniform field
+.uniform__potty {
+  position: absolute;
+  left: -9999px;
+}

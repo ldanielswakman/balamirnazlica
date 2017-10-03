@@ -4,7 +4,11 @@
   background-color: $white;
   margin-left: 1rem;
   padding: 0.5rem 1rem calc(0.5rem + #{$oddity}) calc(1rem + #{$oddity});
+  border: none;
+  @include prefix(appearance, none);
   color: rgba($dark, 0.6);
+  font: inherit;
+  cursor: pointer;
 
   @include prefix(clip-path, polygon(#{$oddity} 0%, 100% 0%, 100% 100%, 0% calc(100% - #{$oddity})));
 
@@ -12,12 +16,12 @@
     background-color: $yellow;
     color: rgba($dark, 0.6);
   }
-  &.button--primary {
-    background-color: $yellow;
-    color: rgba($dark, 0.6);
+  &.button--dark {
+    background-color: $dark;
+    color: $white;
 
     &:hover {
-      background-color: $white;
+      background-color: $dark;
     }
   }
   &.button--primary {

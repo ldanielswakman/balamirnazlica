@@ -10,3 +10,6 @@
 [submodule "site/plugins/responsive-images"]
 	path = site/plugins/responsive-images
 	url = https://github.com/jancbeck/kirby-responsive-images.git
+[submodule "site/plugins/uniform"]
+	path = site/plugins/uniform
+	url = https://github.com/mzur/kirby-uniform.git
