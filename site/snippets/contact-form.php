@@ -1,23 +1,40 @@
 <form class="contact-form" action="<?= $page->url() ?>/contactform_post" method="POST">
 
-  <input type="text" class="field" placeholder="name" name="name"><br>
+  <div class="contact-form__content">
 
-  <input type="email" class="field" placeholder="email" name="email"><br>
+    <input type="text" class="field" placeholder="name" name="name"><br>
 
-  <input type="text" class="field" placeholder="subject" name="subject"><br>
+    <input type="email" class="field" placeholder="email" name="email"><br>
 
-  <textarea class="field" placeholder="message" rows="4" name="message"></textarea>
+    <input type="text" class="field" placeholder="subject" name="subject"><br>
 
-  <?= csrf_field(); ?>
+    <textarea class="field" placeholder="message" rows="4" name="message"></textarea>
 
-  <?= honeypot_field(); ?>
+    <?= csrf_field(); ?>
 
-  <br><br>
+    <?= honeypot_field(); ?>
 
-  <div class="u-alignright">
-    <button type="submit" class="button button--dark">Send</button>
+    <br><br>
+
+    <div class="u-alignright">
+      <button type="submit" class="button button--dark">Send</button>
+    </div>
+
+    <div class="contact-form__errors"></div>
+
   </div>
 
-  <div class="contact-form__errors"></div>
+  <div class="contact-form__progress">
+    <? snippet('spinner-svg') ?>
+    <small class="u-op50">Sending...</small>
+  </div>
+
+  <div class="contact-form__success">
+    <? snippet('check-svg') ?>
+    <small class="u-op50">Message sent</small>
+    <br>
+    <br>
+    <strong>Thank you!</strong> 
+  </div>
 
 </form>

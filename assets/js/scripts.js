@@ -147,7 +147,7 @@ function postContactForm(form_obj) {
   // Remove previous states & errors
   $errors_container.html('');
   $active_form.find('input, textarea').removeClass('field--error');
-  $active_form.find('#cover_progress').removeClass('u-hide');
+  $active_form.addClass('isProgress');
 
   console.log(form_data);
 
@@ -155,11 +155,10 @@ function postContactForm(form_obj) {
     
     console.log(data);
 
-    $active_form.find('#cover_progress').addClass('u-hide');
+    $active_form.removeClass('isProgress');
     if(data.success === true) {
       
-      $active_form.find('#cover_progress').addClass('u-hide');
-      $active_form.find('#cover_success').removeClass('u-hide');
+      $active_form.addClass('isSuccess');
 
     } else {
 
