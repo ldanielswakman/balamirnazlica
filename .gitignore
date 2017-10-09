@@ -40,3 +40,10 @@ Icon
 # ---------------
 
 /node_modules/
+
+
+# Error & Uniform Email logs (server)
+# ---------------
+
+error_log
+site/email.log
