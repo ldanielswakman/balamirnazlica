@@ -2,46 +2,71 @@
   position: relative;
   color: $light;
 
-  .theatre__quote {
-    position: absolute;
-    left: 4vw;
-    top: 60vh;
-    z-index: 2;
-    width: calc(100% - 4vw);
-    padding: 1rem;
-    max-width: 45rem;
-    color: $white;
-    @include prefix(transform, translateY(10rem));
-    @include prefix(transition, transform 2s cubic-bezier(0, 0, 0, 1));
-    @include prefix(transition-delay, 1s);
-    @include prefix(text-shadow, 0 0 1rem rgba(0, 0, 0, 0.2));
+  &.theatre--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: $dark;
 
-    @media screen and (min-width: $vp_tablet) {
-      top: 55vh;
+    @include prefix(transition, all 0.3s ease);
+    @include prefix(transform, translateY(-5rem));
+    opacity: 0;
+    pointer-events: none;
+
+    &.isActive {
+      @include prefix(transform, translateY(0));
+      opacity: 1;
+      pointer-events: all;
+
     }
-    p {
-      font-family: $type_headline;
-      font-size: 1.25rem;
-      line-height: 1.5rem;
-      @include prefix(transition, opacity 3s cubic-bezier(0, 0, 0, 1));
-      @include prefix(transition-delay, 1s);
-      opacity: 0;
 
-      @media screen and (min-width: $vp_tablet) {
-        font-size: 2rem;
-        line-height: 2rem;
+    .theatre__slide {
+      opacity: 1;
+      height: 95vh;
+
+      figure {
+        height: 100%;
       }
     }
-    a.intro-link {
+    .theatre--overlay__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 6;
       display: block;
-      padding: 1rem;
-      text-align: center;
+      margin: 1rem;
+      padding: 2rem;
+      color: $white;
+      opacity: 0.7;
+      @include prefix(transition, all 0.3s ease);
 
-      svg {
-        width: 1.5rem;
+      &:before, 
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 3rem;
+        border-bottom: 1px solid $white;
+        @include prefix(transition, all 0.3s ease);
+        @include prefix(transform-origin, center);
+        @include prefix(transform, rotate(45deg));
       }
-      svg polygon {
-        fill: currentColor;
+      &:after {
+        @include prefix(transform, rotate(-45deg));
+      }
+
+      &:hover {
+        opacity: 1;
+        @include prefix(transform, translateY(-2.5px));
+
+        &:before,
+        &:after {
+          border-bottom-width: 5px;
+        }
       }
     }
   }
@@ -63,6 +88,7 @@
     width: 100vw;
 
     figure {
+      max-height: 100vh;
       @include prefix(display, flex);
       @include prefix(justify-content, center);
       @include prefix(align-items, center);
@@ -137,7 +163,7 @@
       left: 0;
       width: 20%;
       height: 100%;
-      pointer-events: all;
+      pointer-events: none;
       opacity: 1;
       @include prefix(transition, all 0.3s ease);
 
@@ -159,11 +185,11 @@
       cursor: w-resize;
 
       &:before {
-        @include horizontal-gradient(rgba($light, 0.2), rgba($light, 0));
+        @include horizontal-gradient(rgba($light, 0.15), rgba($light, 0));
         @include prefix(transform, skewY(20deg) translateY(0));
       }
       &:hover:before {
-        @include horizontal-gradient(rgba($light, 0.4), rgba($light, 0));
+        @include horizontal-gradient(rgba($light, 0.3), rgba($light, 0));
       }
     }
     .owl-next {
@@ -173,13 +199,17 @@
       cursor: e-resize;
 
       &:before {
-        @include horizontal-gradient(rgba($light, 0), rgba($light, 0.2));
+        @include horizontal-gradient(rgba($light, 0), rgba($light, 0.15));
         @include prefix(transform, skewY(20deg) translateY(-30%));
       }
       &:hover:before {
-        @include horizontal-gradient(rgba($light, 0), rgba($light, 0.4));
+        @include horizontal-gradient(rgba($light, 0), rgba($light, 0.3));
       }
     }
+  }
+  &.isActive .owl-prev,
+  &.isActive .owl-next {
+    pointer-events: all;
   }
 
   // Navigation 'dots'
@@ -212,12 +242,6 @@
     &:hover span {
       background-color: rgba($white, 0.1);
     }
-  }
-}
-body.isLoaded .theatre__quote {
-  @include prefix(transform, translateY(0));
-  p {
-    opacity: 1;
   }
 }
 body.page--default .theatre__slide figure {

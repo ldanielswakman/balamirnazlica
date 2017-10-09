@@ -14,6 +14,14 @@ function splitString($str) {
 
 <main>
 
+  <div class="theatre theatre--overlay" id="theatre">
+
+    <? snippet('theatre', ['carousel_images' => $p_images]) ?>
+
+    <a href="javascript:closeTheatre()" class="theatre--overlay__close"></a>
+
+  </div>
+
   <div class="u-relative">
 
     <div class="gradient-angle" style="height: 90vh;"></div>
@@ -51,31 +59,16 @@ function splitString($str) {
 
     <div class="row" style="padding: 1rem;">
 
-      <? foreach ($p_images as $img): ?>
+      <? $i=0; foreach ($p_images as $img): ?>
         <div class="col-xs-6 col-md-4">
-          <a href="#<?= $img->name() ?>" class="category-index__item" onclick="scrollToTheatre()" style="background-image: url('<?= thumb($img, ['width' => 600])->url() ?>')">
+          <a href="#<?= $i ?>" class="category-index__item" onclick="scrollToTheatre()" style="background-image: url('<?= thumb($img, ['width' => 600])->url() ?>')">
           </a>
         </div>
-      <? endforeach ?>
+      <? $i++; endforeach ?>
 
     </div>
   </section>
 
-  <div class="bg-gradient-inv" style="min-height: 30vh";>
-  </div>
-
-  <div class="bg-dark u-pb-2">
-
-    <div class="theatre js-prlx" data-prlx-factor="-0.2" id="theatre">
-
-      <? snippet('theatre', ['carousel_images' => $p_images]) ?>
-
-    </div>
-
-  </div>
-
 </main>
-
-<div class="bg-dark">
 
 <? snippet('footer') ?>

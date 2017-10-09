@@ -52,6 +52,7 @@ $(document).ready(function(){
 // Picture thumbnail to theatre
 $(document).ready(function() {
   $('.category-index__item').click(function(e) {
+    $('.theatre--overlay').addClass('isActive');
     scrollToTheatre();
   });
 });
@@ -71,6 +72,12 @@ function stopVideos() {
 }
 
 
+
+
+// Close Theatre
+function closeTheatre() {
+  $('.theatre--overlay').removeClass('isActive');
+}
 
 
 

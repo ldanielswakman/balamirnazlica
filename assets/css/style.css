@@ -1556,53 +1556,73 @@ section, footer {
 .theatre {
   position: relative;
   color: #e0e0d7; }
-  .theatre .theatre__quote {
-    position: absolute;
-    left: 4vw;
-    top: 60vh;
-    z-index: 2;
-    width: calc(100% - 4vw);
-    padding: 1rem;
-    max-width: 45rem;
-    color: #fffef3;
-    -webkit-transform: translateY(10rem);
-    -moz-transform: translateY(10rem);
-    transform: translateY(10rem);
-    -webkit-transition: transform 2s cubic-bezier(0, 0, 0, 1);
-    -moz-transition: transform 2s cubic-bezier(0, 0, 0, 1);
-    transition: transform 2s cubic-bezier(0, 0, 0, 1);
-    -webkit-transition-delay: 1s;
-    -moz-transition-delay: 1s;
-    transition-delay: 1s;
-    -webkit-text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-    -moz-text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
-    text-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); }
-    @media screen and (min-width: 769px) {
-      .theatre .theatre__quote {
-        top: 55vh; } }
-    .theatre .theatre__quote p {
-      font-family: "Prophet";
-      font-size: 1.25rem;
-      line-height: 1.5rem;
-      -webkit-transition: opacity 3s cubic-bezier(0, 0, 0, 1);
-      -moz-transition: opacity 3s cubic-bezier(0, 0, 0, 1);
-      transition: opacity 3s cubic-bezier(0, 0, 0, 1);
-      -webkit-transition-delay: 1s;
-      -moz-transition-delay: 1s;
-      transition-delay: 1s;
-      opacity: 0; }
-      @media screen and (min-width: 769px) {
-        .theatre .theatre__quote p {
-          font-size: 2rem;
-          line-height: 2rem; } }
-    .theatre .theatre__quote a.intro-link {
+  .theatre.theatre--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background: #191914;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: translateY(-5rem);
+    -moz-transform: translateY(-5rem);
+    transform: translateY(-5rem);
+    opacity: 0;
+    pointer-events: none; }
+    .theatre.theatre--overlay.isActive {
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all; }
+    .theatre.theatre--overlay .theatre__slide {
+      opacity: 1;
+      height: 95vh; }
+      .theatre.theatre--overlay .theatre__slide figure {
+        height: 100%; }
+    .theatre.theatre--overlay .theatre--overlay__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 6;
       display: block;
-      padding: 1rem;
-      text-align: center; }
-      .theatre .theatre__quote a.intro-link svg {
-        width: 1.5rem; }
-      .theatre .theatre__quote a.intro-link svg polygon {
-        fill: currentColor; }
+      margin: 1rem;
+      padding: 2rem;
+      color: #fffef3;
+      opacity: 0.7;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .theatre.theatre--overlay .theatre--overlay__close:before, .theatre.theatre--overlay .theatre--overlay__close:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 3rem;
+        border-bottom: 1px solid #fffef3;
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        -webkit-transform-origin: center;
+        -moz-transform-origin: center;
+        transform-origin: center;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg); }
+      .theatre.theatre--overlay .theatre--overlay__close:after {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg); }
+      .theatre.theatre--overlay .theatre--overlay__close:hover {
+        opacity: 1;
+        -webkit-transform: translateY(-2.5px);
+        -moz-transform: translateY(-2.5px);
+        transform: translateY(-2.5px); }
+        .theatre.theatre--overlay .theatre--overlay__close:hover:before, .theatre.theatre--overlay .theatre--overlay__close:hover:after {
+          border-bottom-width: 5px; }
   .theatre .owl-carousel {
     padding-top: 5vh;
     padding-bottom: 20vh; }
@@ -1616,6 +1636,7 @@ section, footer {
     opacity: 0.9;
     width: 100vw; }
     .theatre .theatre__slide figure {
+      max-height: 100vh;
       -webkit-display: flex;
       -moz-display: flex;
       display: flex;
@@ -1685,7 +1706,7 @@ section, footer {
       left: 0;
       width: 20%;
       height: 100%;
-      pointer-events: all;
+      pointer-events: none;
       opacity: 1;
       -webkit-transition: all 0.3s ease;
       -moz-transition: all 0.3s ease;
@@ -1703,11 +1724,11 @@ section, footer {
     .theatre .owl-nav .owl-prev {
       cursor: w-resize; }
       .theatre .owl-nav .owl-prev:before {
-        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0.2) 0%, rgba(224, 224, 215, 0) 100%);
+        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0.15) 0%, rgba(224, 224, 215, 0) 100%);
         /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0.2) 0%, rgba(224, 224, 215, 0) 100%);
+        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0.15) 0%, rgba(224, 224, 215, 0) 100%);
         /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(224, 224, 215, 0.2) 0%, rgba(224, 224, 215, 0) 100%);
+        background: linear-gradient(to right, rgba(224, 224, 215, 0.15) 0%, rgba(224, 224, 215, 0) 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
         /* IE6-9 */
@@ -1715,11 +1736,11 @@ section, footer {
         -moz-transform: skewY(20deg) translateY(0);
         transform: skewY(20deg) translateY(0); }
       .theatre .owl-nav .owl-prev:hover:before {
-        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0.4) 0%, rgba(224, 224, 215, 0) 100%);
+        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0.3) 0%, rgba(224, 224, 215, 0) 100%);
         /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0.4) 0%, rgba(224, 224, 215, 0) 100%);
+        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0.3) 0%, rgba(224, 224, 215, 0) 100%);
         /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(224, 224, 215, 0.4) 0%, rgba(224, 224, 215, 0) 100%);
+        background: linear-gradient(to right, rgba(224, 224, 215, 0.3) 0%, rgba(224, 224, 215, 0) 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
         /* IE6-9 */ }
@@ -1728,11 +1749,11 @@ section, footer {
       right: 0;
       cursor: e-resize; }
       .theatre .owl-nav .owl-next:before {
-        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.2) 100%);
+        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.15) 100%);
         /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.2) 100%);
+        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.15) 100%);
         /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.2) 100%);
+        background: linear-gradient(to right, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.15) 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
         /* IE6-9 */
@@ -1740,14 +1761,17 @@ section, footer {
         -moz-transform: skewY(20deg) translateY(-30%);
         transform: skewY(20deg) translateY(-30%); }
       .theatre .owl-nav .owl-next:hover:before {
-        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.4) 100%);
+        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.3) 100%);
         /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.4) 100%);
+        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.3) 100%);
         /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.4) 100%);
+        background: linear-gradient(to right, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.3) 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
         /* IE6-9 */ }
+  .theatre.isActive .owl-prev,
+  .theatre.isActive .owl-next {
+    pointer-events: all; }
   .theatre .owl-dots {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -1774,13 +1798,6 @@ section, footer {
       background-color: #fffef3; }
     .theatre .owl-dot:hover span {
       background-color: rgba(255, 254, 243, 0.1); }
-
-body.isLoaded .theatre__quote {
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  transform: translateY(0); }
-  body.isLoaded .theatre__quote p {
-    opacity: 1; }
 
 body.page--default .theatre__slide figure {
   max-height: calc(100vh - 7rem); }
