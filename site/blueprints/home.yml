@@ -1,14 +1,36 @@
 title: Page
 
+icon: home
+
+pages: false
+
 fields:
   title:
     label: Title
     type:  text
 
-  quote:
-    label: Opening quote
-    type:  textarea
+  headline1:
+    label: >
+      Promotional banner
+      <span style="font-weight: normal; padding-left: 0;">(optional)</span>
+    type: headline
+    numbered: false
+    help: Leave the title/text fields below empty to hide entire banner
 
-  about_text:
-    label: 'About' oneliner
-    type:  textarea
+  banner_title:
+    label: Promotional Banner Title
+    type: text
+
+  banner_text:
+    label: Promotional Banner Text
+    type: textarea
+
+  banner_image:
+    label: Promotional Banner Image
+    type: image
+    width: 1/2
+
+  banner_link:
+    label: Promotional Banner  Button
+    type: page
+    width: 1/2

@@ -1,0 +1,17 @@
+.banner {
+  @extend section;
+  @include horizontal-gradient(rgba($yellow, 0.5), rgba($yellow, 1));
+  @include prefix(clip-path, polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 10vh)));
+
+  @include prefix(transition, all 0.6s ease);
+
+  &.isHidden {
+    height: 0;
+    padding: 0 !important;
+    overflow: hidden;
+    opacity: 0;
+  }
+  a {
+    color: $dark;
+  }
+}

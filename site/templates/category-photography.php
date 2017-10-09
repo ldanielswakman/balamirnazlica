@@ -18,7 +18,7 @@ function splitString($str) {
 
     <? snippet('theatre', ['carousel_images' => $p_images]) ?>
 
-    <a href="javascript:closeTheatre()" class="theatre--overlay__close"></a>
+    <a href="javascript:closeTheatre()" class="close-button"></a>
 
   </div>
 

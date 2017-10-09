@@ -7,3 +7,19 @@ Quote: The atmospheric tunes were punctuated by pianos and exciting synthesized 
 ----
 
 About-text: Balamir is an audiovisual artist and continues to work on what he calls Unconcealment series
+
+----
+
+Banner-title: Promotional Title!
+
+----
+
+Banner-text: Where I please. Being the first in the Irish Sea. Wrapping your fingers 'round my neck. I got a message I can't read. Im Looking Away BECAUSE! i did And you can't. Spinning around as you gaze at the sun. Rewritten by machine and new technology,. This isn't happening. Video killed the radio star.. I walk through walls. I'm not here. That's not me. What did you tell them?
+
+----
+
+Banner-image: cover.jpg
+
+----
+
+Banner-link: soaked

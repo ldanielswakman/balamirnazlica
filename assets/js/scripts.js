@@ -24,6 +24,7 @@ $(document).ready(function() {
 
 
 
+
 // Owl Carousel
 $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
@@ -42,9 +43,6 @@ $(document).ready(function(){
       stopVideos();
   })
 });
-
-
-
 
 
 
@@ -77,6 +75,14 @@ function stopVideos() {
 // Close Theatre
 function closeTheatre() {
   $('.theatre--overlay').removeClass('isActive');
+}
+
+
+
+
+// Close Theatre
+function closeBanner() {
+  $('.banner').addClass('isHidden');
 }
 
 
@@ -129,8 +135,26 @@ function translateY3d($obj, value) {
 
 
 
+// Update URL hash
+function updateHash(href) {
+  if(history.pushState) {
+    history.pushState(null, null, href);
+  }
+  else {
+    location.hash = href;
+  }
+}
 
 
+
+
+
+
+
+
+
+
+// ----------- *** ----------- //
 
 // Contact form: contact form interactions
 $(document).ready(function() {

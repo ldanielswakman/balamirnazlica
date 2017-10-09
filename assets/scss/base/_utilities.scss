@@ -32,6 +32,12 @@
   @include prefix(align-items, center);
 }
 
+.u-pt-1 {
+  padding-top: calc(1rem + 2vh + 2vw);
+}
+.u-pt-2 {
+  padding-top: calc(2rem + 4vh + 4vw);
+}
 .u-pb-1 {
   padding-bottom: calc(1rem + 2vh + 2vw);
 }

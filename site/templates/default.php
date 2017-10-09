@@ -4,6 +4,8 @@
 
   <div class="bg-bubbles">
 
+    <? snippet('banner') ?>
+
     <? snippet('header', ['types' => $types]) ?>
 
     <div class="theatre" id="theatre">
