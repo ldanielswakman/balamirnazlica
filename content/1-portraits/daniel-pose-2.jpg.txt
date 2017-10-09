@@ -1,8 +1,8 @@
-Item-title: 
+Item-title: Title
 
 ----
 
-Caption: 
+Caption: The text is just another one that bites the dust
 
 ----
 

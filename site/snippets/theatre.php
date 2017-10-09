@@ -9,6 +9,7 @@
     <div class="theatre__slide" data-hash="<?= $i ?>">
 
       <figure<?= ecco($isVideo, ' class="figure--video"') ?>>
+
         <img class="owl-lazy" data-src="<?= thumb($item, ['width' => 1600])->url() ?>" alt="" />
 
         <!-- If Video -->
@@ -27,6 +28,17 @@
         <? endif ?>
 
       </figure>
+
+      <div class="theatre__slide--meta">
+        <div class="row">
+          <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3">
+            <h4><?= $item->item_title()->html() ?></h4>
+          </div>
+          <div class="col-xs-10 col-xs-offset-1 col-sm-5">
+            <?= $item->caption()->kirbytext() ?>
+          </div>
+        </div>
+      </div>
 
     </div>
 
