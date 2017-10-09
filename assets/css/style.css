@@ -1629,6 +1629,25 @@ section, .banner, footer {
     margin-bottom: 3rem; }
   section h1:after, .banner h1:after, footer h1:after {
     margin-top: 3rem; }
+  section.category-index .category-index__item, .category-index.banner .category-index__item, footer.category-index .category-index__item {
+    position: relative; }
+  section.category-index .category-index__video-overlay, .category-index.banner .category-index__video-overlay, footer.category-index .category-index__video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-display: flex;
+    -moz-display: flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center; }
+    section.category-index .category-index__video-overlay svg, .category-index.banner .category-index__video-overlay svg, footer.category-index .category-index__video-overlay svg {
+      width: 3rem; }
 
 .theatre {
   position: relative;
@@ -1713,24 +1732,36 @@ section, .banner, footer {
         width: 6rem; }
     .theatre .theatre__slide figure.video--isActive .figure--video__link {
       display: none; }
-    .theatre .theatre__slide .figure--video__wrapper {
+    .theatre .theatre__slide .figure--video__container {
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
+      -webkit-display: flex;
+      -moz-display: flex;
+      display: flex;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center; }
+    .theatre .theatre__slide .figure--video__wrapper {
+      position: relative;
       display: none;
       width: 100%;
       height: 0;
       padding-bottom: 56.25%; }
       .theatre .theatre__slide .figure--video__wrapper iframe {
         position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 3;
         width: 100%;
         height: 100%;
         display: block;
         margin: auto;
         max-width: 100%; }
+    .theatre .theatre__slide figure.video--isActive .figure--video__container {
+      background-color: rgba(25, 25, 20, 0.75); }
     .theatre .theatre__slide figure.video--isActive .figure--video__wrapper {
       display: block; }
   .theatre .owl-nav {

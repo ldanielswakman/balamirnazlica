@@ -61,8 +61,19 @@ function splitString($str) {
 
       <? $i=0; foreach ($p_images as $img): ?>
         <div class="col-xs-6 col-md-4">
+
+          <? $isVideo = ($img->video_url()->isNotEmpty() && preg_match('#(\d+)$#', $img->video_url(), $matches)) ? true : false ?>
+
           <a href="#<?= $i ?>" class="category-index__item" onclick="scrollToTheatre()" style="background-image: url('<?= thumb($img, ['width' => 600])->url() ?>')">
+
+            <? if($isVideo) : ?>
+              <div class="category-index__video-overlay" style="position: absolute; width: 100%; height: 100%;">
+                <? snippet('video-icon-svg') ?>
+              </div>
+            <? endif ?>
+
           </a>
+
         </div>
       <? $i++; endforeach ?>
 

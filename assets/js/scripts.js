@@ -32,8 +32,8 @@ $(document).ready(function(){
     // autoWidth: true,
     nav: true,
     dots: false,
-    autoplay: true,
-    autoplayTimeout: 6000,
+    autoplay: false,
+    // autoplayTimeout: 6000,
     lazyLoad: true,
     URLhashListener: true,
     startPosition: 'URLHash',
@@ -55,7 +55,20 @@ $(document).ready(function() {
   });
 });
 function scrollToTheatre() {
-  $.smoothScroll({ speed: 800, scrollTarget: $('#theatre') });
+  $.smoothScroll({
+    speed: 800,
+    scrollTarget: $('#theatre'),
+    afterScroll: function() {
+
+      // if video, start playing
+      $hash = window.location.hash.replace('#', '');
+      $activeSlide = $('.theatre__slide[data-hash="' + $hash + '"]');
+
+      if ($activeSlide.find('figure').hasClass('figure--video')) {
+        playVideo( $activeSlide.find('figure a') );
+      }
+    }
+  });
 }
 function playVideo($link) {
   $link.closest('figure').addClass('video--isActive');
@@ -75,12 +88,13 @@ function stopVideos() {
 // Close Theatre
 function closeTheatre() {
   $('.theatre--overlay').removeClass('isActive');
+  stopVideos();
 }
 
 
 
 
-// Close Theatre
+// Close Banner
 function closeBanner() {
   $('.banner').addClass('isHidden');
 }

@@ -66,4 +66,20 @@ section {
   h1 {
     @include paragraph-angles($yellow, 2px);
   }
+
+  &.category-index .category-index__item {
+    position: relative;
+  }
+  &.category-index .category-index__video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include prefix(display, flex);
+    @include prefix(justify-content, center);
+    @include prefix(align-items, center);
+
+    svg { width: 3rem; }
+  }
 }

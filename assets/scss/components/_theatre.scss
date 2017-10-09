@@ -86,10 +86,18 @@
     figure.video--isActive .figure--video__link {
       display: none;
     }
-    .figure--video__wrapper {
+    .figure--video__container {
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
+      @include prefix(display, flex);
+      @include prefix(justify-content, center);
+      @include prefix(align-items, center);
+    }
+    .figure--video__wrapper {
+      position: relative;
       display: none;
       width: 100%;
       height: 0;
@@ -97,9 +105,6 @@
 
       iframe {
         position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 3;
         width: 100%;
         height: 100%;
 
@@ -108,8 +113,13 @@
         max-width: 100%;
       }
     }
-    figure.video--isActive .figure--video__wrapper {
-      display: block;
+    figure.video--isActive {
+      .figure--video__container {
+        background-color: rgba($dark, 0.75);
+      }
+      .figure--video__wrapper {
+        display: block;
+      }
     }
   }
 

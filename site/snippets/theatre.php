@@ -9,17 +9,20 @@
     <div class="theatre__slide" data-hash="<?= $i ?>">
 
       <figure<?= ecco($isVideo, ' class="figure--video"') ?>>
-        <img class="owl-lazy" data-src="<?= thumb($item, ['width' => 1600])->url() ?>" alt="<?= $item->item_title()->html() ?>" />
+        <img class="owl-lazy" data-src="<?= thumb($item, ['width' => 1600])->url() ?>" alt="" />
 
         <!-- If Video -->
-        <? if ($isVideo == true) : ?>
+        <? if ($isVideo) : ?>
+          <div class="figure--video__container">
 
-          <a href="javascript:void(0)" onclick="playVideo($(this))" class="figure--video__link">
-            <? snippet('video-icon-svg') ?>
-          </a>
+            <a href="javascript:void(0)" onclick="playVideo($(this))" class="figure--video__link">
+              <? snippet('video-icon-svg') ?>
+            </a>
 
-          <div class="figure--video__wrapper">
-            <iframe src="" data-src="https://player.vimeo.com/video/<?= $matches[1] ?>?color=e9ff15&title=0&byline=0&portrait=0&autoplay=1" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <div class="figure--video__wrapper">
+              <iframe src="" data-src="https://player.vimeo.com/video/<?= $matches[1] ?>?color=e9ff15&title=0&byline=0&portrait=0&autoplay=1" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+
           </div>
         <? endif ?>
 
