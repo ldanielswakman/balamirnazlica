@@ -60,13 +60,14 @@
         <h2 class="c-white"><?= strtoupper($site->title()->html()) ?></h2>
       </div>
 
-      <div class="col-sm-3 col-sm-offset-1">
+      <div class="col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0 col-md-2 u-pb-1">
         <!-- <figure class="js-prlx" style="margin-left: -3rem; margin-top: 3rem; max-width: 65vw;"> -->
         <figure>
           <img src="<?= $p_about->images()->first()->url() ?>" alt="" />  <!-- style="max-width: 150%;" -->
         </figure>
       </div>
-      <div class="col-sm-8" style="position: relative; z-index: 2;">
+
+      <div class="col-sm-offset-1 col-sm-8 col-md-offset-2" style="position: relative; z-index: 2;">
         <?= $p_about->text()->kirbytext() ?>
       </div>
 

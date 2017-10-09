@@ -1105,6 +1105,10 @@ p {
 .row {
   margin: auto; }
 
+@media screen and (min-width: 48em) {
+  .col-sm-offset-0 {
+    margin-left: 0; } }
+
 .loading-mask {
   position: fixed;
   z-index: 5;

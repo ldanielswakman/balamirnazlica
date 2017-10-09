@@ -55,6 +55,11 @@ p {
 .row {
   margin: auto;
 }
+@include tabletAndUp() {
+  .col-sm-offset-0 {
+    margin-left: 0;
+  }
+}
 
 
 
