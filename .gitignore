@@ -29,6 +29,21 @@ Icon
 /assets/avatars/*
 !/assets/avatars/index.html
 
+
+# Error & Uniform Email logs (server)
+# ---------------
+
+error_log
+site/email.log
+
+
+# Kirby Config file (server)
+# ---------------
+
+site/config/config.balamirnazlica.com.php
+site/config/config.localhost.php
+
+
 # Sublime files (local)
 # ---------------
 
@@ -40,10 +55,3 @@ Icon
 # ---------------
 
 /node_modules/
-
-
-# Error & Uniform Email logs (server)
-# ---------------
-
-error_log
-site/email.log
