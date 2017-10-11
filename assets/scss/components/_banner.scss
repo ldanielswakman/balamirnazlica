@@ -14,4 +14,9 @@
   a {
     color: $dark;
   }
+  p {
+    @include tabletAndDown() {
+      font-size: 1rem;
+    }
+  }
 }

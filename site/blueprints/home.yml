@@ -15,22 +15,42 @@ fields:
       <span style="font-weight: normal; padding-left: 0;">(optional)</span>
     type: headline
     numbered: false
-    help: Leave the title/text fields below empty to hide entire banner
+    # help: Leave the title/text fields below empty to hide entire banner
+    width: 2/3
+
+  banner_toggle:
+    label: >
+      <span style="display: inline-block; margin-top: 1.5rem;"></span>
+    type: fieldtoggle
+    width: 1/3
+    options:
+      show: 'Show'
+      hide: 'Hide'
+    show:
+      show: banner_title banner_image banner_text banner_btn_text banner_link
+    hide:
+      hide: banner_title banner_image banner_text banner_btn_text banner_link
 
   banner_title:
-    label: Promotional Banner Title
+    label: Banner Title
     type: text
-
-  banner_text:
-    label: Promotional Banner Text
-    type: textarea
+    width: 1/2
 
   banner_image:
-    label: Promotional Banner Image
+    label: Banner Image
     type: image
     width: 1/2
 
+  banner_text:
+    label: Banner Text
+    type: textarea
+
+  banner_btn_text:
+    label: Banner Button text
+    type: text
+    width: 1/2
+
   banner_link:
-    label: Promotional Banner  Button
+    label: Banner Button link
     type: page
     width: 1/2

@@ -1,5 +1,4 @@
-<? if ($page->banner_title()->isNotEmpty() && $page->banner_text()->isNotEmpty()) : ?>
-
+<? if ($page->banner_toggle() == 'show') : ?>
 <div class="banner isActive u-relative">
 
   <div class="row">
@@ -21,7 +20,8 @@
 
       <? if ($page->banner_link()->isNotEmpty()) : ?>
         <br>
-        <a class="button button--dark button--mirrored">More info</a>
+        <? $btn_text = ($page->banner_btn_text()->isNotEmpty()) ? $page->banner_btn_text()->html() : 'More info' ?>
+        <a class="button button--dark button--mirrored" href="<?= $page->banner_link() ?>"><?= $btn_text ?></a>
       <? endif ?>
 
     </div>

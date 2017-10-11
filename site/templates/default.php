@@ -28,7 +28,7 @@
       </div>
     </div>
 
-    <figure class="u-pincover u-flex-vcenter u-z1">
+    <figure class="u-pincover u-flex-vcenter u-z1 js-prlx" data-prlx-factor="0.15">
       <img src="<?= url('assets/images/apple-eclipse.png') ?>" alt="" />
     </figure>
 

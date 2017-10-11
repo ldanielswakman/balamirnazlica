@@ -1,4 +1,5 @@
 <? $carousel_images = (isset($carousel_images)) ? $carousel_images : array(); ?>
+<? $show_meta = (isset($show_meta)) ? $show_meta : false; ?>
 
 <div class="owl-carousel">
 
@@ -29,16 +30,18 @@
 
       </figure>
 
-      <div class="theatre__slide--meta">
-        <div class="row">
-          <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3">
-            <h4><?= $item->item_title()->html() ?></h4>
-          </div>
-          <div class="col-xs-10 col-xs-offset-1 col-sm-5">
-            <?= $item->caption()->kirbytext() ?>
+      <? if ($show_meta) : ?>
+        <div class="theatre__slide--meta">
+          <div class="row">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3">
+              <h4><?= $item->item_title()->html() ?></h4>
+            </div>
+            <div class="col-xs-10 col-xs-offset-1 col-sm-5">
+              <?= $item->caption()->kirbytext() ?>
+            </div>
           </div>
         </div>
-      </div>
+      <? endif?>
 
     </div>
 

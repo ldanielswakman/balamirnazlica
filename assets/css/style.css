@@ -1385,6 +1385,9 @@ aside {
     opacity: 0; }
   .banner a {
     color: #191914; }
+  @media screen and (max-width: calc(48em - 1px)) {
+    .banner p {
+      font-size: 1rem; } }
 
 .category-index {
   padding: 5rem 0; }

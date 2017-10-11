@@ -23,3 +23,11 @@ Banner-image: cover.jpg
 ----
 
 Banner-link: soaked
+
+----
+
+Banner-btn-text: More info
+
+----
+
+Banner-toggle: hide
