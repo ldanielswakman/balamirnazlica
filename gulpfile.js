@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var rename = require("gulp-rename");
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 
@@ -13,9 +14,9 @@ gulp.task('sass', function() {
 // Clean & minify CSS (after Sass)
 gulp.task('clean_css', ['sass'], function() {
   gulp.src('assets/css/style.css')
-    // Uncomment line below to enable minified CSS
-    // .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('./assets/css/'));
+    .pipe(cleanCSS({compatibility: 'ie9', debug: true}))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('./assets/css'));
 });
 
 // Combine style tasks

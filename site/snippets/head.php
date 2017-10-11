@@ -7,6 +7,8 @@
 
   <title><?= $site->title()->html() ?> | <?= $page->title()->html() ?></title>
   <meta name="description" content="<?= $site->description()->html() ?>">
+  
+  <? snippet('google-analytics') ?>
 
   <?
   $css_assets = (c::get('env') == 'DEV') ? [
@@ -14,7 +16,7 @@
     'assets/css/style.css'
   ] : [
     // production assets
-    'assets/css/style.css'
+    'assets/css/style.min.css'
   ];
   $js_assets = (c::get('env') == 'DEV') ? [
     // local assets
