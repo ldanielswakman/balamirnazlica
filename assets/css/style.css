@@ -1474,9 +1474,9 @@ footer {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
   /* IE6-9 */
-  -webkit-clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
-  -moz-clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%);
-  clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%); }
+  -webkit-clip-path: polygon(0% 10vw, 100% 0%, 100% 100%, 0% 100%);
+  -moz-clip-path: polygon(0% 10vw, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 10vw, 100% 0%, 100% 100%, 0% 100%); }
   footer a {
     color: #191914; }
   footer a[href*="instagram"],
@@ -1497,6 +1497,9 @@ footer {
     background: url("../images/envelope.svg"); }
   footer h4 {
     margin-bottom: 0.5rem; }
+  footer .footer__left {
+    padding-top: 2rem;
+    padding-bottom: 3rem; }
 
 header {
   position: relative;

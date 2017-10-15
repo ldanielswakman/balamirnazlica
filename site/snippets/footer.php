@@ -1,8 +1,7 @@
   <footer id="connect">
     <div class="row">
 
-      <div class="col-xs-12 col-sm-4">
-        <br><br>
+      <div class="col-xs-12 col-sm-4 footer__left">
 
         <?= $site->contact_links()->kirbytext() ?>
 

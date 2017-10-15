@@ -9,7 +9,7 @@ Type: music
 Text: 
 
 (image: soaked_basin.jpg)
-
+<br>
 Two albums & an EP
 
 ----
@@ -24,6 +24,6 @@ Item-descr:
 
 Embeds: 
 
-<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/62140980&amp;color=%23e9ff15&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/62140980&color=%23e9ff15&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
 
-<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1432999&amp;color=%23e9ff15&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+<iframe width="100%" height="400" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1432999&color=%23e9ff15&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false"></iframe>
