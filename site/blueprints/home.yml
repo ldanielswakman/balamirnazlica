@@ -43,7 +43,7 @@ fields:
 
   banner_text:
     label: Banner Text
-    type: textarea
+    type: markdown
 
   banner_btn_text:
     label: Banner Button text

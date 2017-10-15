@@ -9,7 +9,7 @@ fields:
 
   text:
     label: Text
-    type:  textarea
+    type:  markdown
 
   cover_image:
     label: Cover image
@@ -18,5 +18,5 @@ fields:
 
   embeds:
     label: Soundcloud embeds
-    type: textarea
+    type: markdown
     help: Paste the embed codes of Soundcloud here

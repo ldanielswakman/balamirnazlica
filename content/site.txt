@@ -12,8 +12,12 @@ Description: Balamir is an audiovisual artist and continues to work on what he c
 
 Contact-links: 
 
-(link: https://www.instagram.com/balamirnazlica/ text: Instagram popup: yes)
-(email: balamirnazlica@gmail.com text: Email)
+(link: https://www.instagram.com/balamirnazlica/ text: Instagram popup: yes) (email: balamirnazlica@gmail.com text: Email)
+<br>
+
+<div class="u-op30">
+&copy; 2017 Balamir Nazlica
+</div>
 
 ----
 

@@ -7,12 +7,12 @@ fields:
 
   description:
     label: Description
-    type:  textarea
+    type:  markdown
 
   contact_links:
     label: Contact Links
-    type:  textarea
+    type:  markdown
 
   contact_form_text:
     label: Contact Form text
-    type: textarea
+    type: markdown

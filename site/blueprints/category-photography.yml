@@ -24,7 +24,7 @@ fields:
 
   text:
     label: Text
-    type:  textarea
+    type:  markdown
 
   cover_image:
     label: Cover image
