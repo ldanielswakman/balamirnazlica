@@ -6,4 +6,30 @@ footer {
   a {
     color: $dark;
   }
+
+  a[href*="instagram"],
+  a[href*="mailto"] {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+      background: url('../images/instagram.svg');
+      background-size: contain;
+    }
+  }
+  a[href*="mailto"] {
+    &:before {
+      background: url('../images/envelope.svg');
+    }
+  }
+
+  h4 {
+    margin-bottom: 0.5rem;
+  }
 }

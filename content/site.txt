@@ -6,4 +6,19 @@ Author: L Daniel Swakman
 
 ----
 
-Description: This is Kirby's Starterkit.
+Description: Balamir is an audiovisual artist and continues to work on what he calls Unconcealment series.
+
+----
+
+Contact-links: 
+
+(link: https://www.instagram.com/balamirnazlica/ text: Instagram popup: yes)
+(email: balamirnazlica@gmail.com popup: yes text: Email)
+
+----
+
+Contact-form-text: 
+
+#### Get in touch
+
+A bit of text to tell people that this is the way to get in touch w Balamir

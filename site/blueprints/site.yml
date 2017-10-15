@@ -5,10 +5,14 @@ fields:
     label: Title
     type:  text
 
-  author:
-    label: Author
-    type:  text
-
   description:
     label: Description
     type:  textarea
+
+  contact_links:
+    label: Contact Links
+    type:  textarea
+
+  contact_form_text:
+    label: Contact Form text
+    type: textarea

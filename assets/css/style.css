@@ -1105,7 +1105,7 @@ a {
   font-weight: bold; }
 
 p {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.75rem;
   max-width: 40rem;
   opacity: 0.8; }
@@ -1479,6 +1479,24 @@ footer {
   clip-path: polygon(0% 20%, 100% 0%, 100% 100%, 0% 100%); }
   footer a {
     color: #191914; }
+  footer a[href*="instagram"],
+  footer a[href*="mailto"] {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center; }
+    footer a[href*="instagram"]:before,
+    footer a[href*="mailto"]:before {
+      content: "";
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+      background: url("../images/instagram.svg");
+      background-size: contain; }
+  footer a[href*="mailto"]:before {
+    background: url("../images/envelope.svg"); }
+  footer h4 {
+    margin-bottom: 0.5rem; }
 
 header {
   position: relative;
