@@ -10,7 +10,7 @@
 
     <div class="theatre" id="theatre">
 
-      <? snippet('theatre', ['carousel_images' => $carousel_images]) ?>
+      <? snippet('theatre', ['carousel_images' => $carousel_images, 'autoplay' => true]) ?>
 
     </div>
 

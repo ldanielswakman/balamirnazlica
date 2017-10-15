@@ -27,17 +27,22 @@ $(document).ready(function() {
 
 // Owl Carousel
 $(document).ready(function(){
-  $(".owl-carousel").owlCarousel({
-    items: 1,
-    // autoWidth: true,
-    nav: true,
-    dots: false,
-    autoplay: false,
-    // autoplayTimeout: 6000,
-    lazyLoad: true,
-    URLhashListener: true,
-    startPosition: 'URLHash',
-    navText: ['', '']
+  $(".owl-carousel").each(function() {
+    
+    $autoplay = ($(this).attr('data-autoplay') == 'true') ? true : false;
+
+    $(this).owlCarousel({
+      items: 1,
+      // autoWidth: true,
+      nav: true,
+      dots: false,
+      autoplay: $autoplay,
+      autoplayTimeout: 6000,
+      lazyLoad: true,
+      URLhashListener: true,
+      startPosition: 'URLHash',
+      navText: ['', '']
+    });
   });
   $(".owl-carousel").on('changed.owl.carousel', function(event) {
       stopVideos();

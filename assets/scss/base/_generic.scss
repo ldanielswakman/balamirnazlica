@@ -45,6 +45,17 @@ p {
   }
 }
 
+h1.h1--hero {
+  font-size: 2.5rem;
+  color: $yellow;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+
+  @include tabletAndUp() {
+    font-size: 4rem;
+  }
+}
+
 
 
 

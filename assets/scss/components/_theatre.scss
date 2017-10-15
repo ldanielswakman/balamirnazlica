@@ -40,15 +40,23 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        padding-bottom: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         font-size: 0.875rem;
         opacity: 0;
-        @include prefix(transition, all 0.3s ease);
+        @include prefix(transition, all 1s ease);
 
-        @include vertical-gradient(rgba($dark, 0), rgba($dark, 0.6));
+        @include vertical-gradient(rgba($dark, 0), rgba($dark, 1));
 
         p {
           font-size: inherit;
+        }
+      }
+      figure.figure--video + .theatre__slide--meta {
+        max-height: 3rem;
+
+        &:hover {
+          max-height: 100vh;
         }
       }
     }
@@ -151,6 +159,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 4;
     width: 100%;
     height: 100%;
     pointer-events: none;
@@ -159,9 +168,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 20%;
+      width: 15vw;
       height: 100%;
-      pointer-events: none;
+      pointer-events: all;
       opacity: 1;
       @include prefix(transition, all 0.3s ease);
 
@@ -172,6 +181,24 @@
         left: 0;
         width: 100%;
         height: 100%;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 70%;
+        left: 1rem;
+        width: 0.75rem;
+        height: 0.75rem;
+        border-bottom: 1px solid $white;
+        border-left: 1px solid $white;
+        @include prefix(transition, all 0.3s ease);
+        @include prefix(transform-origin, center);
+        @include prefix(transform, rotate(45deg));
+
+        @include tabletAndUp() {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
       }
       &.disabled {
         opacity: 0;
@@ -199,6 +226,11 @@
       &:before {
         @include horizontal-gradient(rgba($light, 0), rgba($light, 0.15));
         @include prefix(transform, skewY(20deg) translateY(-30%));
+      }
+      &:after {
+        left: auto;
+        right: 1rem;
+        @include prefix(transform, rotate(-135deg));
       }
       &:hover:before {
         @include horizontal-gradient(rgba($light, 0), rgba($light, 0.3));

@@ -38,14 +38,12 @@ function splitString($str) {
     <section id="top" class="u-pv0">
 
       <div class="row">
-        <div class="col-xs-11 col-xs-offset-1 col-sm-6 col-sm-offset-1 last-sm u-aligncenter">
+        <div class="col-xs-12 col-sm-offset-1 col-sm-6 col-sm-offset-1 last-sm u-aligncenter">
 
-          <h1 class="c-yellow u-font-4x" style="letter-spacing: 0.2em; text-shadow: 0 0 50px rgba(0, 0, 0, 0.2);">
-            <?= splitString($title = $page->title()->value()) ?>
-          </h1>
+          <h1 class="h1--hero"><?= splitString($title = $page->title()->value()) ?></h1>
 
         </div>
-        <div class="col-xs-11 col-sm-5">
+        <div class="col-xs-12 col-sm-5">
 
           <br><br><br>
           <div class="u-op70"><?= $page->text()->kirbytext() ?></div>

@@ -1,7 +1,8 @@
 <? $carousel_images = (isset($carousel_images)) ? $carousel_images : array(); ?>
 <? $show_meta = (isset($show_meta)) ? $show_meta : false; ?>
+<? $autoplay = (isset($autoplay) && $autoplay == true) ? 'true' : 'false'; ?>
 
-<div class="owl-carousel">
+<div class="owl-carousel" data-autoplay="<?= $autoplay ?>">
 
   <? $i=0; foreach ($carousel_images as $item): ?>
 
@@ -48,10 +49,3 @@
   <? $i++; endforeach ?>
 
 </div>
-
-<? $mw = ($carousel_images->count() > 0) ? 100 / $carousel_images->count() : 100 ?>
-<style>
-  .theatre .owl-dot span {
-    max-width: <?= $mw ?>vw;
-  }
-</style>
