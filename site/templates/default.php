@@ -10,6 +10,32 @@
 
     <div class="theatre" id="theatre">
 
+      <?
+      function getImageFromCategories($item, $categories) {
+        $object = '';
+        foreach($categories as $category) {
+          if(strlen($category->image($item)) > 0) {
+            $object = $category->file($item);
+            break;
+          }
+        }
+        return $object;
+      }
+
+      if($page->slideshow_toggle() == 'pick') {
+
+        // Build carousel images collection random, based on category pages
+        $carousel_images = [];
+        foreach($page->slideshow()->toStructure() as $item) {
+          $carousel_images[] = getImageFromCategories($item, $categories);
+        }
+
+      } else {
+        // Build carousel images collection random, based on category pages
+        $carousel_images = $categories->images()->filterBy('visibility', '!=', 'false')->shuffle()->limit(6);
+      }
+      ?>
+
       <? snippet('theatre', ['carousel_images' => $carousel_images, 'autoplay' => true]) ?>
 
     </div>

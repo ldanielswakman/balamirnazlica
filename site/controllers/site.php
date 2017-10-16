@@ -12,10 +12,7 @@ return function($site, $pages, $page) {
     $types[] = str_replace('category-', '', $type);
   }
 
-  // Build carousel images collection based on category pages
-  $carousel_images = $categories->images()->filterBy('visibility', '!=', 'false')->shuffle()->limit(6);
-
   // Make variables available everywhere
-  return compact('types', 'categories', 'carousel_images');
+  return compact('types', 'categories');
   
 };
