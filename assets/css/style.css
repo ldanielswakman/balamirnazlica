@@ -1359,7 +1359,7 @@ aside {
   left: 0;
   width: 50%;
   height: 120%;
-  opacity: 0.3;
+  opacity: 0.2;
   background: -moz-linear-gradient(left, #fffef3 0%, rgba(255, 254, 243, 0) 100%);
   /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #fffef3 0%, rgba(255, 254, 243, 0) 100%);
@@ -1723,7 +1723,10 @@ section, .banner, footer {
       pointer-events: all; }
     .theatre.theatre--overlay .theatre__slide {
       opacity: 1;
-      height: 95vh; }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh; }
       @media screen and (max-width: calc(48em - 1px)) {
         .theatre.theatre--overlay .theatre__slide {
           height: 95vh; } }
@@ -1847,7 +1850,7 @@ section, .banner, footer {
       position: absolute;
       top: 0;
       left: 0;
-      width: 15vw;
+      width: 10vw;
       height: 100%;
       pointer-events: all;
       opacity: 1;
@@ -1865,9 +1868,10 @@ section, .banner, footer {
         content: "";
         position: absolute;
         top: 70%;
-        left: 1rem;
+        left: 0;
         width: 0.75rem;
         height: 0.75rem;
+        margin: 1rem;
         border-bottom: 1px solid #fffef3;
         border-left: 1px solid #fffef3;
         -webkit-transition: all 0.3s ease;
@@ -1881,6 +1885,8 @@ section, .banner, footer {
         transform: rotate(45deg); }
         @media screen and (min-width: 48em) {
           .theatre .owl-nav .owl-prev:after, .theatre .owl-nav .owl-next:after {
+            top: 50%;
+            margin: 1.5rem;
             width: 1.5rem;
             height: 1.5rem; } }
       .theatre .owl-nav .owl-prev.disabled, .theatre .owl-nav .owl-next.disabled {
@@ -1889,11 +1895,11 @@ section, .banner, footer {
     .theatre .owl-nav .owl-prev {
       cursor: w-resize; }
       .theatre .owl-nav .owl-prev:before {
-        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0.15) 0%, rgba(224, 224, 215, 0) 100%);
+        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0.1) 0%, rgba(224, 224, 215, 0) 100%);
         /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0.15) 0%, rgba(224, 224, 215, 0) 100%);
+        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0.1) 0%, rgba(224, 224, 215, 0) 100%);
         /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(224, 224, 215, 0.15) 0%, rgba(224, 224, 215, 0) 100%);
+        background: linear-gradient(to right, rgba(224, 224, 215, 0.1) 0%, rgba(224, 224, 215, 0) 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
         /* IE6-9 */
@@ -1901,11 +1907,11 @@ section, .banner, footer {
         -moz-transform: skewY(20deg) translateY(0);
         transform: skewY(20deg) translateY(0); }
       .theatre .owl-nav .owl-prev:hover:before {
-        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0.3) 0%, rgba(224, 224, 215, 0) 100%);
+        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0.2) 0%, rgba(224, 224, 215, 0) 100%);
         /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0.3) 0%, rgba(224, 224, 215, 0) 100%);
+        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0.2) 0%, rgba(224, 224, 215, 0) 100%);
         /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(224, 224, 215, 0.3) 0%, rgba(224, 224, 215, 0) 100%);
+        background: linear-gradient(to right, rgba(224, 224, 215, 0.2) 0%, rgba(224, 224, 215, 0) 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
         /* IE6-9 */ }
@@ -1914,11 +1920,11 @@ section, .banner, footer {
       right: 0;
       cursor: e-resize; }
       .theatre .owl-nav .owl-next:before {
-        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.15) 100%);
+        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.1) 100%);
         /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.15) 100%);
+        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.1) 100%);
         /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.15) 100%);
+        background: linear-gradient(to right, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.1) 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
         /* IE6-9 */
@@ -1927,16 +1933,16 @@ section, .banner, footer {
         transform: skewY(20deg) translateY(-30%); }
       .theatre .owl-nav .owl-next:after {
         left: auto;
-        right: 1rem;
+        right: 0;
         -webkit-transform: rotate(-135deg);
         -moz-transform: rotate(-135deg);
         transform: rotate(-135deg); }
       .theatre .owl-nav .owl-next:hover:before {
-        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.3) 100%);
+        background: -moz-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.2) 100%);
         /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.3) 100%);
+        background: -webkit-linear-gradient(left, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.2) 100%);
         /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.3) 100%);
+        background: linear-gradient(to right, rgba(224, 224, 215, 0) 0%, rgba(224, 224, 215, 0.2) 100%);
         /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=1 );
         /* IE6-9 */ }
