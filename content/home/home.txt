@@ -37,15 +37,13 @@ Banner-toggle: hide
 Slideshow: 
 
 - 
+  image: blue-door.jpg
+- 
   image: francesco-albano.jpg
 - 
   image: unconcealment-iii.jpg
 - 
-  image: >
-    44158f_7fc10d8542a54b0a9cd21a592259ffe3.jpg
-- 
-  image: >
-    44158f_da281bfba3ff43a5a687fd96e6e636f5.jpg
+  image: portland-maine-sea-shore.jpg
 - 
   image: stasia.jpg
 
