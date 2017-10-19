@@ -1698,7 +1698,8 @@ section, .banner, footer {
 
 .theatre {
   position: relative;
-  color: #e0e0d7; }
+  color: #e0e0d7;
+  z-index: 3; }
   .theatre.theatre--overlay {
     position: fixed;
     top: 0;

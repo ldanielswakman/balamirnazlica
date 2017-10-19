@@ -1,6 +1,7 @@
 .theatre {
   position: relative;
   color: $light;
+  z-index: 3;
 
   &.theatre--overlay {
     position: fixed;
