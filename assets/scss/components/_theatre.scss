@@ -98,60 +98,43 @@
         width: 80vw;
       }
     }
-    .figure--video__link {
+
+    // Video interaction
+    .owl-video-wrapper {
       position: absolute;
       top: 0;
       left: 0;
+      background: none;
       @include prefix(display, flex);
       @include prefix(justify-content, center);
       @include prefix(align-items, center);
       width: 100%;
       height: 100%;
-      cursor: url('../images/play-icon.png'), pointer;
 
-      &:hover svg {
-        display: none;
+      &:hover .owl-video-play-icon {
+        opacity: 0;
+        cursor: url('../images/play-icon.png'), pointer;
       }
-      svg {
-        width: 6rem;
-      }
-    }
-    figure.video--isActive .figure--video__link {
-      display: none;
-    }
-    .figure--video__container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      @include prefix(display, flex);
-      @include prefix(justify-content, center);
-      @include prefix(align-items, center);
-    }
-    .figure--video__wrapper {
-      position: relative;
-      display: none;
-      width: 100%;
-      height: 0;
-      padding-bottom: 56.25%; // 16:9 aspect ratio
-
-      iframe {
+      .owl-video-play-icon {
         position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 100%;
+        margin: 0;
+        background: url('../images/play-icon.png');
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .owl-video-frame {
+        height: 0;
+        padding-bottom: 56.25%; // 16:9 aspect ratio
 
-        display: block;
-        margin: auto;
-        max-width: 100%;
-      }
-    }
-    figure.video--isActive {
-      .figure--video__container {
-        background-color: rgba($dark, 0.75);
-      }
-      .figure--video__wrapper {
-        display: block;
+        iframe {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }

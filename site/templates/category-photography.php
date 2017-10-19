@@ -57,7 +57,7 @@ function splitString($str) {
 
     <div class="row" style="padding: 1rem;">
 
-      <? $i=0; foreach ($p_images as $img): ?>
+      <? $i=1; foreach ($p_images as $img): ?>
         <div class="col-xs-6 col-md-4">
 
           <? $isVideo = ($img->video_url()->isNotEmpty() && preg_match('#(\d+)$#', $img->video_url(), $matches)) ? true : false ?>

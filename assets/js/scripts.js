@@ -36,6 +36,7 @@ $(document).ready(function(){
       // autoWidth: true,
       nav: true,
       dots: false,
+      video: true,
       autoplay: $autoplay,
       autoplayTimeout: 6000,
       lazyLoad: true,
@@ -78,13 +79,22 @@ function scrollToTheatre() {
 function playVideo($link) {
   $link.closest('figure').addClass('video--isActive');
   $iframe = $link.closest('figure').find('iframe');
+
   if($iframe) {
     $iframe.attr('src', $iframe.attr('data-src'));
   }
+
+  // disable autoplay when video is playing
+  console.log('disabling autopplay');
+  $(this).closest('.owl-carousel').owlCarousel({ autoplay: false });
 }
+
 function stopVideos() {
   $('#theatre').find('figure').removeClass('video--isActive');
   $('#theatre').find('iframe').attr('src', '');
+
+  // restart disabled autoplay when video stops
+  // $('.owl-carousel[data-autoplay="true"]').reinit({ autoplay: true });
 }
 
 
