@@ -16,7 +16,7 @@ Contact-links:
 <br>
 
 <div class="u-op30">
-&copy; 2017 Balamir Nazlica
+© 2017 Balamir Nazlica
 </div>
 
 ----
@@ -26,3 +26,7 @@ Contact-form-text:
 #### Get in touch
 
 A bit of text to tell people that this is the way to get in touch w Balamir
+
+----
+
+Meta-image: meta-image.jpg
