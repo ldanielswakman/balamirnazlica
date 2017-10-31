@@ -1750,6 +1750,7 @@ section, .banner, footer {
         position: absolute;
         left: 0;
         bottom: 0;
+        z-index: 2;
         width: 100%;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
@@ -1829,11 +1830,14 @@ section, .banner, footer {
         background-repeat: no-repeat; }
       .theatre .theatre__slide .owl-video-wrapper .owl-video-frame {
         height: 0;
-        padding-bottom: 56.25%; }
+        padding-bottom: 56.25%;
+        background-color: black; }
         .theatre .theatre__slide .owl-video-wrapper .owl-video-frame iframe {
           position: absolute;
           width: 100%;
           height: 100%; }
+  .theatre .owl-video-playing .figure--video img {
+    display: none; }
   .theatre .owl-nav {
     position: absolute;
     top: 0;

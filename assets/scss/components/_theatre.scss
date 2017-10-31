@@ -43,6 +43,7 @@
         position: absolute;
         left: 0;
         bottom: 0;
+        z-index: 2;
         width: 100%;
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
@@ -130,6 +131,7 @@
       .owl-video-frame {
         height: 0;
         padding-bottom: 56.25%; // 16:9 aspect ratio
+        background-color: black;
 
         iframe {
           position: absolute;
@@ -138,6 +140,9 @@
         }
       }
     }
+  }
+  .owl-video-playing .figure--video img {
+    display: none;
   }
 
 
