@@ -9,6 +9,24 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Maison Neue';
+  src: url('../fonts/maisonneuebook.woff') format('woff'),
+    url('../fonts/maisonneuebook.ttf') format('truetype'),
+    url('../fonts/maisonneuebook.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Maison Neue';
+  src: url('../fonts/maisonneuedemi.woff') format('woff'),
+    url('../fonts/maisonneuedemi.ttf') format('truetype'),
+    url('../fonts/maisonneuedemi.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
 
 $type_headline: 'Prophet';
 $type_text: 'Maison Neue';

@@ -67,7 +67,7 @@
         <h3><?= $type ?> //</h3>
         <div class="type-preview__list">
         <? foreach ($categories->filterBy('template', 'category-' . $type) as $cat): ?>
-          <a href="<?= $cat->url() ?>"><?= $cat->title() ?></a>
+          <a href="<?= $cat->url() ?>"><?= strtolower($cat->title()) ?></a>
         <? endforeach ?>
         </div>
       </div>
