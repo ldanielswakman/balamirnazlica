@@ -9,7 +9,7 @@
 
     <div class="gradient-angle"></div>
 
-    <div class="u-ph0 col-xs-10 col-sm-6 <? ecco($key % 2 !== 0, ' last-sm col-xs-offset-2 col-sm-offset-1') ?>">
+    <div class="u-relative u-ph0 col-xs-10 col-sm-6 <? ecco($key % 2 !== 0, ' last-sm col-xs-offset-2 col-sm-offset-1') ?>">
 
       <? $img = $images->shuffle()->first() ?>
       <figure>
@@ -19,6 +19,9 @@
           <img src="http://via.placeholder.com/800x400" alt="" />
         <? endif?>
       </figure>
+        <div class="section--category__arrow">
+          <img src="<?= url('assets/images/arrow-right-black.png') ?>" alt="" />
+        </div>
 
     </div>
 

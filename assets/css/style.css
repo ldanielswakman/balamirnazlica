@@ -1641,13 +1641,48 @@ section, .banner, footer {
       section.section--category .section--category__p:after, .section--category.banner .section--category__p:after, footer.section--category .section--category__p:after {
         margin-top: 3rem; }
     section.section--category figure img, .section--category.banner figure img, footer.section--category figure img {
-      -webkit-clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
-      -moz-clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%);
-      clip-path: polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%); }
+      -webkit-clip-path: polygon(0% 0%, 100% 8%, 100% 88%, 0% 100%);
+      -moz-clip-path: polygon(0% 0%, 100% 8%, 100% 88%, 0% 100%);
+      clip-path: polygon(0% 0%, 100% 8%, 100% 88%, 0% 100%); }
     section.section--category.section--alt figure img, .section--category.section--alt.banner figure img, footer.section--category.section--alt figure img {
-      -webkit-clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
-      -moz-clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
-      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%); }
+      -webkit-clip-path: polygon(0% 8%, 100% 0%, 100% 100%, 0% 88%);
+      -moz-clip-path: polygon(0% 8%, 100% 0%, 100% 100%, 0% 88%);
+      clip-path: polygon(0% 8%, 100% 0%, 100% 100%, 0% 88%); }
+    section.section--category .section--category__arrow, .section--category.banner .section--category__arrow, footer.section--category .section--category__arrow {
+      position: absolute;
+      bottom: 9.5%;
+      right: 0;
+      -webkit-display: flex;
+      -moz-display: flex;
+      display: flex;
+      -webkit-justify-content: center;
+      -moz-justify-content: center;
+      justify-content: center;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      align-items: center;
+      width: 20%;
+      height: 12%;
+      padding: 0 3%;
+      background-color: #e9ff15;
+      -webkit-clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
+      -moz-clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
+      clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%); }
+      section.section--category .section--category__arrow img, .section--category.banner .section--category__arrow img, footer.section--category .section--category__arrow img {
+        width: 100%;
+        -webkit-transform: scaleY(-1);
+        -moz-transform: scaleY(-1);
+        transform: scaleY(-1); }
+    section.section--category.section--alt .section--category__arrow, .section--category.section--alt.banner .section--category__arrow, footer.section--category.section--alt .section--category__arrow {
+      right: auto;
+      left: 0;
+      -webkit-clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%);
+      -moz-clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%);
+      clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%); }
+      section.section--category.section--alt .section--category__arrow img, .section--category.section--alt.banner .section--category__arrow img, footer.section--category.section--alt .section--category__arrow img {
+        -webkit-transform: scaleY(1);
+        -moz-transform: scaleY(1);
+        transform: scaleY(1); }
   section .section--category__title, .banner .section--category__title, footer .section--category__title {
     position: absolute;
     top: 0;

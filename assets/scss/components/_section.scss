@@ -30,10 +30,39 @@ section {
       @include paragraph-angles();
     }
     figure img {
-      @include prefix(clip-path, polygon(0% 0%, 90% 0%, 100% 100%, 0% 100%));
+      @include prefix(clip-path, polygon(0% 0%, 100% 8%, 100% 88%, 0% 100%));
     }
     &.section--alt figure img {
-    @include prefix(clip-path, polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%));
+    @include prefix(clip-path, polygon(0% 8%, 100% 0%, 100% 100%, 0% 88%));
+    }
+
+
+    .section--category__arrow {
+      position: absolute;
+      bottom: 9.5%;
+      right: 0;
+      @include prefix(display, flex);
+      @include prefix(justify-content, center);
+      @include prefix(align-items, center);
+      width: 20%;
+      height: 12%;
+      padding: 0 3%;
+      background-color: $yellow;
+      @include prefix(clip-path, polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%));
+
+      img {
+        width: 100%;
+        @include prefix(transform, scaleY(-1));
+      }
+    }
+    &.section--alt .section--category__arrow {
+      right: auto;
+      left: 0;
+      @include prefix(clip-path, polygon(0% 0%, 100% 20%, 100% 100%, 0% 80%));
+
+      img {
+        @include prefix(transform, scaleY(1));
+      }
     }
   }
   
