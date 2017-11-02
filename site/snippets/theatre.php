@@ -22,6 +22,14 @@
 
       <? if ($show_meta) : ?>
         <div class="theatre__slide--meta">
+
+          <? if (strlen($item->caption()) > 40): ?>
+            <a href="javascript:void(0)" onclick="$(this).closest('.theatre__slide--meta').toggleClass('isExpanded')" class="a--toggle">
+              <span class="collapsed">read more</span>
+              <span class="expanded">close</span>
+            </a>
+          <? endif ?>
+
           <div class="row">
             <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3">
               <h4><?= $item->item_title()->html() ?></h4>
