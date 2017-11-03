@@ -52,7 +52,7 @@
         opacity: 0;
         @include prefix(transition, all 1s ease);
 
-        @include vertical-gradient(rgba($dark, 0), rgba($dark, 1));
+        @include vertical-gradient(rgba($dark, 0.6), rgba($dark, 1));
 
         @include tabletAndUp() {
           bottom: 0;
@@ -64,7 +64,7 @@
 
         .a--toggle {
           position: absolute;
-          bottom: 0.5rem;
+          bottom: 1rem;
           left: 0;
           z-index: 2;
           width: 100%;

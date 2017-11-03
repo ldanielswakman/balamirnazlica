@@ -1803,9 +1803,9 @@ section, .banner, footer {
         -webkit-transition: all 1s ease;
         -moz-transition: all 1s ease;
         transition: all 1s ease;
-        background: -moz-linear-gradient(top, rgba(25, 25, 20, 0) 0%, #191914 100%);
-        background: -webkit-linear-gradient(top, rgba(25, 25, 20, 0) 0%, #191914 100%);
-        background: linear-gradient(to bottom, rgba(25, 25, 20, 0) 0%, #191914 100%);
+        background: -moz-linear-gradient(top, rgba(25, 25, 20, 0.6) 0%, #191914 100%);
+        background: -webkit-linear-gradient(top, rgba(25, 25, 20, 0.6) 0%, #191914 100%);
+        background: linear-gradient(to bottom, rgba(25, 25, 20, 0.6) 0%, #191914 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$start', endColorstr='$end',GradientType=0 ); }
         @media screen and (min-width: 48em) {
           .theatre.theatre--overlay .theatre__slide .theatre__slide--meta {
@@ -1814,7 +1814,7 @@ section, .banner, footer {
           font-size: inherit; }
         .theatre.theatre--overlay .theatre__slide .theatre__slide--meta .a--toggle {
           position: absolute;
-          bottom: 0.5rem;
+          bottom: 1rem;
           left: 0;
           z-index: 2;
           width: 100%;

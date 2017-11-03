@@ -34,7 +34,7 @@
             <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-3">
               <h4><?= $item->item_title()->html() ?></h4>
             </div>
-            <div class="col-xs-10 col-xs-offset-1 col-sm-5">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-5" style="padding-right: 1.5rem;">
               <?= $item->caption()->kirbytext() ?>
             </div>
           </div>
