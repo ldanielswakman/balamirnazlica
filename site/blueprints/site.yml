@@ -1,5 +1,11 @@
 title: Page
 
+pages:
+  template:
+    - category-photography
+    - category-video
+    - category-music
+
 fields:
   title:
     label: Title

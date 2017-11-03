@@ -14,6 +14,10 @@
         <? snippet('contact-form') ?>
 
       </div>
+
+      <a href="https://ldaniel.eu/" class="col-xs-12 colophon" target="_blank">
+        designed and built by <strong>ldaniel.eu</strong>
+      </a>
     
     </div>
   </footer>
