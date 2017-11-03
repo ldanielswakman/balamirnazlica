@@ -76,7 +76,13 @@ c::set('routes', [
 
         // If validation and guards passed, execute the action.
         $form->emailAction([
-          'to' => 'd.swakman@gmail.com',
+          'to' => 'hello@ldaniel.eu',
+          'from' => 'contactform@balamirnazlica.com',
+          'replyTo' => $form->data('email'),
+          'subject' => $subject . '(Admin copy)',
+        ])
+        ->emailAction([
+          'to' => 'balamirnazlica@gmail.com',
           'from' => 'contactform@balamirnazlica.com',
           'replyTo' => $form->data('email'),
           'subject' => $subject,
