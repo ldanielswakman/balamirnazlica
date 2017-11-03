@@ -22,11 +22,11 @@ Banner-image: cover.jpg
 
 ----
 
-Banner-link: soaked
+Banner-link: https://ldaniel.eu
 
 ----
 
-Banner-btn-text: More info
+Banner-btn-text: Check out this designer dude!
 
 ----
 
@@ -40,8 +40,6 @@ Slideshow:
   image: blue-door.jpg
 - 
   image: francesco-albano.jpg
-- 
-  image: unconcealment-iii.jpg
 - 
   image: portland-maine-sea-shore.jpg
 - 
