@@ -36,7 +36,7 @@ fields:
       image:
         label: Image
         type: select
-        options: http://localhost/balamirnazlica/api-images
+        options: http://www.balamirnazlica.com/api-images
 
   slideshow_random:
     type: checkbox
