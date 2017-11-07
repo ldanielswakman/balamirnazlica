@@ -33,3 +33,7 @@ fields:
 
   item_descr:
     extends: item-descr
+
+  metadata:
+    extends: page-meta
+    

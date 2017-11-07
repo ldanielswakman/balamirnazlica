@@ -9,7 +9,7 @@ fields:
     label: Title
     type:  text
 
-  headline1:
+  headline_slideshow:
     label: Opening slideshow
     type: headline
     numbered: false
@@ -42,7 +42,7 @@ fields:
     type: checkbox
     text: Slideshow images in random order?
 
-  headline2:
+  headline_banner:
     label: >
       Promotional banner
       <span style="font-weight: normal; padding-left: 0;">(optional)</span>
@@ -87,3 +87,6 @@ fields:
     label: Banner Button link
     type: page
     width: 1/2
+
+  metadata:
+    extends: page-meta

@@ -15,6 +15,10 @@ fields:
     label: Description
     type:  markdown
 
+  keywords:
+    label: Keywords
+    type:  tags
+
   meta_image:
     label: >
       Meta image <i style="font-weight: normal;">(Shows when you <a href="https://css-tricks.com/essential-meta-tags-social-media/" target="_blank" style="text-decoration: underline;">share a link of the site on social media</a>)</i>

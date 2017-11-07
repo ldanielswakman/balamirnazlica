@@ -7,3 +7,15 @@ Text: portrait: any likeness of a person; a painting of a person's face; a word 
 ----
 
 Cover-image: 
+
+----
+
+Meta-title: 
+
+----
+
+Meta-description: 
+
+----
+
+Meta-keywords: 

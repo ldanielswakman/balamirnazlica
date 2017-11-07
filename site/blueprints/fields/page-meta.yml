@@ -1,0 +1,24 @@
+type: group
+fields:
+  headline_seo:
+    label: SEO Section
+    type: headline
+    help: This content doesn't show up on the page, but can be used for SEO optimisation
+    numbered: false
+
+  meta_title:
+    label: Meta Title
+    type: text
+    help: (Shows up as page title in browser; uses page title if left empty)
+
+  meta_description:
+    label: Meta Description
+    type: textarea
+    buttons:
+    help: (Shows up as page description in Google searches; uses site description if left empty)
+
+  meta_keywords:
+    label: Meta Keywords
+    type: tags
+    help: (Doesn't show up anywhere)
+    
