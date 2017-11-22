@@ -6,12 +6,8 @@ Caption:
 
 ----
 
-Video-url: 
-
-----
-
 Visibility: true
 
 ----
 
-Sort: 16
+Sort: 12

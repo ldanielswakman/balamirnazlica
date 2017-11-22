@@ -13,3 +13,7 @@ Video-items:
   video_url: https://vimeo.com/126997863
   caption: ""
   visibility: 'true'
+
+----
+
+Cover-image: 

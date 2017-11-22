@@ -18,7 +18,7 @@ Banner-text: Where I please. Being the first in the Irish Sea. Wrapping your fin
 
 ----
 
-Banner-image: cover.jpg
+Banner-image: 
 
 ----
 
@@ -37,13 +37,17 @@ Banner-toggle: hide
 Slideshow: 
 
 - 
-  image: blue-door.jpg
+  image: gavin-marcus.jpg
 - 
-  image: francesco-albano.jpg
+  image: can-tatliparmak.png
+- 
+  image: blue-door.jpg
 - 
   image: portland-maine-sea-shore.jpg
 - 
   image: stasia.jpg
+- 
+  image: francesco-albano.jpg
 
 ----
 
@@ -52,3 +56,15 @@ Slideshow-random: 1
 ----
 
 Slideshow-toggle: pick
+
+----
+
+Meta-title: 
+
+----
+
+Meta-description: Landing page of the audio visual artist Balamir Nazlica
+
+----
+
+Meta-keywords: 

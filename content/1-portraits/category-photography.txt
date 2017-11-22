@@ -6,7 +6,7 @@ Text: portrait: any likeness of a person; a painting of a person's face; a word 
 
 ----
 
-Cover-image: 
+Cover-image: gavin-marcus.jpg
 
 ----
 
@@ -14,8 +14,8 @@ Meta-title:
 
 ----
 
-Meta-description: 
+Meta-description: Landscape, portrait photography of audio visual artist Balamir Nazlica
 
 ----
 
-Meta-keywords: 
+Meta-keywords: Portrait photography,headshots,Photography,Photographer,Professional Photographer,artist,Portrait Photography
