@@ -20,3 +20,6 @@ fields:
     label: Soundcloud embeds
     type: markdown
     help: Paste the embed codes of Soundcloud here
+    
+  metadata:
+    extends: page-meta
