@@ -60,6 +60,7 @@ $(document).ready(function() {
     scrollToTheatre();
   });
 });
+
 function scrollToTheatre() {
   $.smoothScroll({
     speed: 800,
@@ -71,22 +72,20 @@ function scrollToTheatre() {
       $activeSlide = $('.theatre__slide[data-hash="' + $hash + '"]');
 
       if ($activeSlide.find('figure').hasClass('figure--video')) {
-        playVideo( $activeSlide.find('figure a') );
+        playVideo( $activeSlide.find('figure') );
       }
     }
   });
 }
-function playVideo($link) {
-  $link.closest('figure').addClass('video--isActive');
-  $iframe = $link.closest('figure').find('iframe');
 
-  if($iframe) {
-    $iframe.attr('src', $iframe.attr('data-src'));
-  }
+function playVideo($figure) {
+
+  console.log('play video...');
+  $figure.find('.owl-video-play-icon').click();
 
   // disable autoplay when video is playing
-  console.log('disabling autopplay');
-  $(this).closest('.owl-carousel').owlCarousel({ autoplay: false });
+  console.log('disabling carousel autoplay');
+  $figure.closest('.owl-carousel').owlCarousel({ autoplay: false });
 }
 
 function stopVideos() {
