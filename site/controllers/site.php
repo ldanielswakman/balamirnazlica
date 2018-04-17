@@ -3,7 +3,7 @@
 return function($site, $pages, $page) {
 
   // Retrieve all category pages
-  $categories = $pages->visible()->filterBy('template', '*=', 'category')->visible();
+  $categories = $pages->visible()->filterBy('template', '*=', 'category');
   
   // Retrieve all page types from pages
   $types_slug = $categories->pluck('template', ',', true);

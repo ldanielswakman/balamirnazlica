@@ -1,10 +1,9 @@
-title: Page
-
 pages:
   template:
     - category-photography
     - category-video
     - category-music
+    - page
 
 fields:
   title:

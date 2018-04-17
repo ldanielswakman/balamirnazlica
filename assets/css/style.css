@@ -1546,12 +1546,13 @@ header {
     text-align: center; }
   header .header__col-menu {
     margin: 1.5rem 0; }
-    header .header__col-menu a + a {
-      margin-left: 1rem; }
     @media screen and (min-width: 48em) {
       header .header__col-menu {
         margin: 0;
         text-align: left; } }
+  header .header__col-menu a + a,
+  header .header__col-actions a + a {
+    margin-left: 1rem; }
   @media screen and (min-width: 48em) {
     header .header__col-actions {
       text-align: right; } }
@@ -1603,10 +1604,16 @@ nav {
     nav.is_stuck ul a:hover {
       color: #191914; }
 
-section, .banner, footer {
+
+section,
+.banner,
+footer {
   padding: calc(1rem + 2vh + 2vw); }
   @media screen and (min-width: 769px) {
-    section, .banner, footer {
+    
+    section,
+    .banner,
+    footer {
       padding: calc(6rem + 3vh + 3vw); } }
   section.section--category, .section--category.banner, footer.section--category {
     padding-left: 0;

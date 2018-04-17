@@ -15,13 +15,15 @@ header {
   .header__col-menu {
     margin: 1.5rem 0;
 
-    a + a {
-      margin-left: 1rem;
-    }
-
     @include tabletAndUp() {
       margin: 0;
       text-align: left;
+    }
+  }
+  .header__col-menu,
+  .header__col-actions {
+    a + a {
+      margin-left: 1rem;
     }
   }
   .header__col-actions {

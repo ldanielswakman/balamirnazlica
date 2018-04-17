@@ -8,37 +8,39 @@
 
     <? snippet('header', ['types' => $types]) ?>
 
-    <div class="theatre" id="theatre">
+    <? if($page->isHomepage() || $page->is($categories)) : ?>
+      <div class="theatre" id="theatre">
 
-      <?
-      function getImageFromCategories($item, $categories) {
-        $object = '';
-        foreach($categories as $category) {
-          if(strlen($category->image($item)) > 0) {
-            $object = $category->file($item);
-            break;
+        <?
+        function getImageFromCategories($item, $categories) {
+          $object = '';
+          foreach($categories as $category) {
+            if(strlen($category->image($item)) > 0) {
+              $object = $category->file($item);
+              break;
+            }
           }
-        }
-        return $object;
-      }
-
-      if($page->slideshow_toggle() == 'pick') {
-
-        // Build carousel images collection random, based on category pages
-        $carousel_images = [];
-        foreach($page->slideshow()->toStructure() as $item) {
-          $carousel_images[] = getImageFromCategories($item, $categories);
+          return $object;
         }
 
-      } else {
-        // Build carousel images collection random, based on category pages
-        $carousel_images = $categories->images()->filterBy('visibility', '!=', 'false')->shuffle()->limit(6);
-      }
-      ?>
+        if($page->slideshow_toggle() == 'pick') {
 
-      <? snippet('theatre', ['carousel_images' => $carousel_images, 'autoplay' => true]) ?>
+          // Build carousel images collection random, based on category pages
+          $carousel_images = [];
+          foreach($page->slideshow()->toStructure() as $item) {
+            $carousel_images[] = getImageFromCategories($item, $categories);
+          }
 
-    </div>
+        } else {
+          // Build carousel images collection random, based on category pages
+          $carousel_images = $categories->images()->filterBy('visibility', '!=', 'false')->shuffle()->limit(6);
+        }
+        ?>
+
+        <? snippet('theatre', ['carousel_images' => $carousel_images, 'autoplay' => true]) ?>
+
+      </div>
+      <? endif ?>
 
   </div>
 
