@@ -10,27 +10,27 @@ About-text: Balamir is an audiovisual artist and continues to work on what he ca
 
 ----
 
-Banner-title: Promotional Title!
+Banner-title: Milli Reasurans Hosting Unconcealment VIII
 
 ----
 
-Banner-text: Where I please. Being the first in the Irish Sea. Wrapping your fingers 'round my neck. I got a message I can't read. Im Looking Away BECAUSE! i did And you can't. Spinning around as you gaze at the sun. Rewritten by machine and new technology,. This isn't happening. Video killed the radio star.. I walk through walls. I'm not here. That's not me. What did you tell them?
+Banner-text: Milli Reasurans Sanat Galerisi will host a new solo exhibition entitled “The joy of hiding” by Basak Bugay, between 5 April-5 May2018. The exhibition will also feature a short video portrait of Basak Bugay, filmed by Balamir Nazlıca. Nazlıca is a photographer, video artist and composer, filming video portraits of contemporary artists in their studios under the name of “Unconcealment”. Basak’s portrait will aim to see through the eyes of the artist and his mood in the moment of his artistic calling without any intervention. “Unconcealment” films of Nazlıca presents the poetic journey of the artists, unconcealing their artistic spirit.
 
 ----
 
-Banner-image: 
+Banner-image: basak-bugay.jpg
 
 ----
 
-Banner-link: https://ldaniel.eu
+Banner-link: http://www.basakbugay.com
 
 ----
 
-Banner-btn-text: Check out this designer dude!
+Banner-btn-text: For more information...
 
 ----
 
-Banner-toggle: hide
+Banner-toggle: show
 
 ----
 
@@ -48,6 +48,8 @@ Slideshow:
   image: stasia.jpg
 - 
   image: francesco-albano.jpg
+- 
+  image: basak-bugay-final.jpg
 
 ----
 

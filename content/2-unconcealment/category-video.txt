@@ -2,7 +2,7 @@ Title: Unconcealment
 
 ----
 
-Text: Unconcealment is a short film about the calling of Francesco Albano. Filmed by Balamir Nazlica in the studio of Francesco Albano unconcealment is an attempt to see through the eyes of an artist and his mood in the moment of his artistic calling.
+Text: Unconcealment films are short video portraits of contemporary artists. Unconcealment series, stands out from other films by its image poetry technique which allows the viewer to fully experience the film and enjoy a unqiue experience such as one would with a painting.
 
 ----
 
@@ -17,3 +17,15 @@ Video-items:
 ----
 
 Cover-image: 
+
+----
+
+Meta-title: Video portraits of various artists by cinematographer Balamir Nazlica
+
+----
+
+Meta-description: Cinematographer Balamir Nazlica resides in Istanbul, Turkey and has been working on developing his unique series called Unconcealment. Check out the video portraits of various artists including legendary Mehmet Aksoy.  Watch videos and get detailed information about each film.
+
+----
+
+Meta-keywords: balamir nazlica,mehmet aksoy,hanefi yeter,salesman tekcan,portraits,video,cinematography,short films,contemporary art,poetic images,poetry,unconcealment,directing,producing,storytelling,imagery
