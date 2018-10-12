@@ -30,12 +30,18 @@ Banner-btn-text: For more information...
 
 ----
 
-Banner-toggle: show
+Banner-toggle: hide
 
 ----
 
 Slideshow: 
 
+- 
+  image: alona.jpg
+- 
+  image: black-and-white-cover-alternative.jpg
+- 
+  image: nedim-pose-2-black-and-white.jpg
 - 
   image: gavin-marcus.jpg
 - 
