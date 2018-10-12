@@ -6,7 +6,7 @@
 
   <? $i=1; foreach ($carousel_images as $item): ?>
 
-    <? $isVideo = ($item->video_url()->isNotEmpty() && preg_match('#(\d+)$#', $item->video_url(), $matches)) ? true : false ?>
+    <? $isVideo = ($item && $item->video_url()->isNotEmpty() && preg_match('#(\d+)$#', $item->video_url(), $matches)) ? true : false ?>
 
     <div class="theatre__slide" data-hash="<?= $i ?>">
 
