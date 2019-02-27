@@ -10,23 +10,30 @@ About-text: Balamir is an audiovisual artist and continues to work on what he ca
 
 ----
 
-Banner-title: Milli Reasurans Hosting Unconcealment VIII
+Banner-title: Unconcealment Music Album
 
 ----
 
-Banner-text: Milli Reasurans Sanat Galerisi will host a new solo exhibition entitled “The joy of hiding” by Basak Bugay, between 5 April-5 May2018. The exhibition will also feature a short video portrait of Basak Bugay, filmed by Balamir Nazlıca. Nazlıca is a photographer, video artist and composer, filming video portraits of contemporary artists in their studios under the name of “Unconcealment”. Basak’s portrait will aim to see through the eyes of the artist and his mood in the moment of his artistic calling without any intervention. “Unconcealment” films of Nazlıca presents the poetic journey of the artists, unconcealing their artistic spirit.
+Banner-text: 
+
+Hi,
+
+Thank you for visiting my official website. You can skip the description below and click on (link: https://itunes.apple.com/tr/artist/balamir-nazlıca/1438723766?l=tr text: Listen) to jump to Unconcealment album. If not keep reading...
+Unconcealment is my third album and it is probably the most ambitious music adventure so far. 
+You can also (link: http://balamirnazlica.com/unconcealment text: Watch) the videos in the Video section. 
+Please subscribe to mailing list if you would like to hear more in the future...
 
 ----
 
-Banner-image: basak-bugay.jpg
+Banner-image: unconcealment-kapak.jpg
 
 ----
 
-Banner-link: http://www.basakbugay.com
+Banner-link: https://goo.gl/rDmJAh
 
 ----
 
-Banner-btn-text: For more information...
+Banner-btn-text: Listen
 
 ----
 
@@ -37,9 +44,11 @@ Banner-toggle: hide
 Slideshow: 
 
 - 
-  image: alona.jpg
+  image: koray-aris.jpg
 - 
-  image: black-and-white-cover-alternative.jpg
+  image: balamir-nazlica-portrait.jpg
+- 
+  image: alona.jpg
 - 
   image: nedim-pose-2-black-and-white.jpg
 - 
@@ -47,15 +56,17 @@ Slideshow:
 - 
   image: can-tatliparmak.png
 - 
-  image: blue-door.jpg
-- 
-  image: portland-maine-sea-shore.jpg
-- 
   image: stasia.jpg
 - 
   image: francesco-albano.jpg
 - 
-  image: basak-bugay-final.jpg
+  image: daniel-pose-2.jpg
+- 
+  image: kutsal-denemeler2.jpg
+- 
+  image: unconcealment-kapak.jpg
+- 
+  image: mehmet-aksoy-pose-3.jpg
 
 ----
 
