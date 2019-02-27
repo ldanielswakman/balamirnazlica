@@ -40,10 +40,12 @@
 </head>
 <body class="page--<?= $page->template() ?>">
 
+  <? if(c::get('env') !== 'DEV') : ?>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ3KWKK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  <? endif ?>
+
   <div class="loading-mask">
     <? snippet('r-svg') ?>
   </div>
-
-  <!-- <header>
-    <? // snippet('menu') ?>
-  </header> -->
