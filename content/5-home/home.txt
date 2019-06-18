@@ -10,26 +10,22 @@ About-text: Balamir is an audiovisual artist and continues to work on what he ca
 
 ----
 
-Banner-title: Unconcealment Music Album
+Banner-title: Up and High EP
 
 ----
 
 Banner-text: 
 
-Hi,
-
-Thank you for visiting my official website. You can skip the description below and click on (link: https://itunes.apple.com/tr/artist/balamir-nazlıca/1438723766?l=tr text: Listen) to jump to Unconcealment album. If not keep reading...
-Unconcealment is my third album and it is probably the most ambitious music adventure so far. 
-You can also (link: http://balamirnazlica.com/unconcealment text: Watch) the videos in the Video section. 
-Please subscribe to mailing list if you would like to hear more in the future...
+Up and High EP is now live on all music digital platforms! Up and High is a  colorful, synth-laden dark indie pop EP with Emre Nisanci as the producer. Selin Sumbultepe and Cihan Murtezaoglu added great craftmenship to these love songs. 
+New video shoot is on it's way and we will be sharing it as soon as it is live!
 
 ----
 
-Banner-image: unconcealment-kapak.jpg
+Banner-image: up-and-high-album-cover.jpg
 
 ----
 
-Banner-link: https://goo.gl/rDmJAh
+Banner-link: http://www.balamirnazlica.com/music
 
 ----
 
@@ -37,12 +33,14 @@ Banner-btn-text: Listen
 
 ----
 
-Banner-toggle: hide
+Banner-toggle: show
 
 ----
 
 Slideshow: 
 
+- 
+  image: uncle.jpg
 - 
   image: koray-aris.jpg
 - 
@@ -64,9 +62,9 @@ Slideshow:
 - 
   image: kutsal-denemeler2.jpg
 - 
-  image: unconcealment-kapak.jpg
-- 
   image: mehmet-aksoy-pose-3.jpg
+- 
+  image: buse-final.jpg
 
 ----
 
