@@ -24,11 +24,14 @@ Item-descr:
 Embeds: 
 
 <iframe src="https://open.spotify.com/embed/album/6Yosc3qm2h15kRxyb9blTK" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
+<iframe allow="autoplay *; encrypted-media *;" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/up-and-high-ep/1466672647?app=music" height="450" frameborder="0"></iframe>
 <iframe src="https://open.spotify.com/embed/album/7ipNqsnJjRkLEE9LBsWhVV" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
+<iframe allow="autoplay *; encrypted-media *;" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/unconcealment/1438723765?app=music" height="450" frameborder="0"></iframe>
+<iframe src="https://open.spotify.com/embed/album/5fFzjr6UjR3zEMcB7C86LT" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<iframe allow="autoplay *; encrypted-media *;" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/wanted/943988519?app=music" height="450" frameborder="0"></iframe>
 <iframe src="https://open.spotify.com/embed/album/7t4T60GLoGuiJiSygRNI6s" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-
+<iframe allow="autoplay *; encrypted-media *;" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/aftermath/597093010?app=music" height="450" frameborder="0"></iframe>
+<iframe allow="autoplay *; encrypted-media *;" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/into-the-light-ep/369661708?app=music" height="450" frameborder="0"></iframe>
 <iframe src="https://open.spotify.com/embed/album/4mVPsKykVNtS6vKJ3YdLeh" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 ----

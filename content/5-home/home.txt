@@ -33,7 +33,7 @@ Banner-btn-text: Listen
 
 ----
 
-Banner-toggle: show
+Banner-toggle: hide
 
 ----
 

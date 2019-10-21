@@ -6,8 +6,4 @@ Caption:
 
 ----
 
-Visibility: true
-
-----
-
-Sort: 11
+Visibility: false
