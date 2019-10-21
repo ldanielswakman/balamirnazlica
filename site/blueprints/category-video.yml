@@ -12,8 +12,9 @@ files:
       type: textarea
       buttons: 
     video_url:
-      label: Vimeo URL
+      label: Video URL
       type: url
+      help: Use the full video URL; ONLY Vimeo or Youtube will work.
     visibility:
       label: Visible?
       type: toggle
