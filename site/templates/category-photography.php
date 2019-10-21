@@ -60,11 +60,14 @@ function splitString($str) {
       <? $i=1; foreach ($p_images as $img): ?>
         <div class="col-xs-6 col-md-4">
 
-          <? $isVideo = ($img->video_url()->isNotEmpty() && preg_match('#(\d+)$#', $img->video_url(), $matches)) ? true : false ?>
+          <?php
+          $isVimeo = ($img->video_url()->isNotEmpty() && preg_match('#(\d+)$#', $img->video_url())) ? true : false;
+          $isYoutube = ($img->video_url()->isNotEmpty() && preg_match('/youtube.com/', $img->video_url())) ? true : false;
+          ?>
 
           <a href="#<?= $i ?>" class="category-index__item" onclick="scrollToTheatre()" style="background-image: url('<?= thumb($img, ['width' => 600])->url() ?>')">
 
-            <? if($isVideo) : ?>
+            <? if($isVimeo || $isYoutube) : ?>
               <div class="category-index__video-overlay" style="position: absolute; width: 100%; height: 100%;">
                 <? snippet('video-icon-svg') ?>
               </div>
