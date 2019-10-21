@@ -1,21 +1,28 @@
-<? $carousel_images = (isset($carousel_images)) ? $carousel_images : array(); ?>
-<? $show_meta = (isset($show_meta)) ? $show_meta : false; ?>
-<? $autoplay = (isset($autoplay) && $autoplay == true) ? 'true' : 'false'; ?>
+<?php
+$carousel_images = (isset($carousel_images)) ? $carousel_images : array();
+$show_meta = (isset($show_meta)) ? $show_meta : false;
+$autoplay = (isset($autoplay) && $autoplay == true) ? 'true' : 'false';
+?>
 
 <div class="owl-carousel" data-autoplay="<?= $autoplay ?>">
 
   <? $i=1; foreach ($carousel_images as $item): ?>
 
-    <? $isVideo = ($item && $item->video_url()->isNotEmpty() && preg_match('#(\d+)$#', $item->video_url(), $matches)) ? true : false ?>
+    <?php
+    $isVimeo = ($item && $item->video_url()->isNotEmpty() && preg_match('#(\d+)$#', $item->video_url(), $matches)) ? true : false;
+    $isYoutube = ($item && $item->video_url()->isNotEmpty() && preg_match('/youtube.com/', $item->video_url())) ? true : false;
+    ?>
 
     <div class="theatre__slide" data-hash="<?= $i ?>">
 
       <figure class="figure--video">
         <img class="owl-lazy" data-src="<?= thumb($item, ['width' => 1600])->url() ?>" alt="" />
 
-        <? if ($isVideo == true) : ?>
+        <? if ($isVimeo == true) : ?>
           <? $video_url = 'https://player.vimeo.com/video/' . $matches[1] . '?color=e9ff15&title=0&byline=0&portrait=0&autoplay=1'; ?>
           <a class="owl-video" href="<?= $video_url ?>"></a>
+        <? elseif ($isYoutube == true) : ?>
+          <a class="owl-video" href="<?= $item->video_url() . '?autoplay=1' ?>"></a>
         <? endif ?>
 
       </figure>
