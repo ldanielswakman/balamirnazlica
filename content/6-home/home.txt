@@ -1,0 +1,84 @@
+Title: Home
+
+----
+
+Quote: The atmospheric tunes were punctuated by pianos and exciting synthesized bass
+
+----
+
+About-text: Balamir is an audiovisual artist and continues to work on what he calls Unconcealment series
+
+----
+
+Banner-title: Up and High EP
+
+----
+
+Banner-text: Up and High EP is now live on all music digital platforms! Up and High is a  colorful, synth-laden dark indie pop EP.
+
+----
+
+Banner-image: up-and-high-album-cover.jpg
+
+----
+
+Banner-link: http://balamirnazlica.com/music-video
+
+----
+
+Banner-btn-text: Watch
+
+----
+
+Banner-toggle: show
+
+----
+
+Slideshow: 
+
+- 
+  image: alona.jpg
+- 
+  image: koray-aris.jpg
+- 
+  image: balamir-nazlica-portrait.jpg
+- 
+  image: nedim-pose-2-black-and-white.jpg
+- 
+  image: gavin-marcus.jpg
+- 
+  image: can-tatliparmak.png
+- 
+  image: stasia.jpg
+- 
+  image: francesco-albano.jpg
+- 
+  image: daniel-pose-2.jpg
+- 
+  image: kutsal-denemeler2.jpg
+- 
+  image: mehmet-aksoy-pose-3.jpg
+- 
+  image: buse-final.jpg
+- 
+  image: uncle.jpg
+
+----
+
+Slideshow-random: 1
+
+----
+
+Slideshow-toggle: pick
+
+----
+
+Meta-title: 
+
+----
+
+Meta-description: Landing page of the audio visual artist Balamir Nazlica
+
+----
+
+Meta-keywords: 

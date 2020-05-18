@@ -1,0 +1,17 @@
+Item-title: Up and high Teaser
+
+----
+
+Caption: Up and High Teaser
+
+----
+
+Video-url: https://www.youtube.com/watch?v=_W97WUkmjIs
+
+----
+
+Visibility: true
+
+----
+
+Sort: 2

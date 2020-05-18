@@ -1,0 +1,17 @@
+Item-title: Street Trumpet Player
+
+----
+
+Caption: 
+
+----
+
+Video-url: 
+
+----
+
+Visibility: true
+
+----
+
+Sort: 24
