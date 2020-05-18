@@ -3,26 +3,18 @@ var rename = require("gulp-rename");
 var sass = require('gulp-sass');
 var cleanCSS = require('gulp-clean-css');
 
-// Concatenate Sass task
-// gulp.src('assets/scss/**/*.scss')
-gulp.task('sass', function() {
-  gulp.src('assets/scss/style.scss')
+function style() {
+  return gulp.src('assets/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./assets/css/'));
-});
-
-// Clean & minify CSS (after Sass)
-gulp.task('clean_css', ['sass'], function() {
-  gulp.src('assets/css/style.css')
+    .pipe(gulp.dest('assets/css/'))
     .pipe(cleanCSS({compatibility: 'ie9', debug: true}))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./assets/css'));
-});
+    .pipe(gulp.dest('assets/css'));
+}
 
-// Combine style tasks
-gulp.task('styles', ['sass', 'clean_css']);
+function watch() {
+  gulp.watch('assets/scss/**/*.scss', style);
+}
 
-// Watch task
-gulp.task('default',function() {
-    gulp.watch('assets/scss/**/*.scss',['styles']);
-});
+exports.style = style;
+exports.default = watch;
