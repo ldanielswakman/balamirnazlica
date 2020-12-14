@@ -1,4 +1,4 @@
-<form class="contact-form" action="<?= $page->url() ?>/contactform_post" method="POST">
+<form class="contact-form" action="<?= $site->url() ?>/contactform_post" method="POST">
 
   <div class="contact-form__content">
 
