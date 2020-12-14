@@ -30,12 +30,16 @@ Banner-btn-text: Watch
 
 ----
 
-Banner-toggle: show
+Banner-toggle: hide
 
 ----
 
 Slideshow: 
 
+- 
+  image: berdan-final-small-size.jpg
+- 
+  image: evren-baykal-small-size.jpg
 - 
   image: alona.jpg
 - 
@@ -45,7 +49,11 @@ Slideshow:
 - 
   image: nedim-pose-2-black-and-white.jpg
 - 
+  image: ezgi-version-iii-fantasy-copy.jpg
+- 
   image: gavin-marcus.jpg
+- 
+  image: berdan-medusa-final.jpg
 - 
   image: can-tatliparmak.png
 - 
