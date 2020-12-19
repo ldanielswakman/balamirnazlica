@@ -7,6 +7,9 @@
   <? snippet('head-meta') ?>
   
   <? snippet('google-analytics') ?>
+  
+  <!--  Mailchimp form embed code  -->
+  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/e029fc2edb8453bc85d5b4fad/d3a3b8e036edf52757e12021b.js");</script>
 
   <?
   $css_assets = (c::get('env') == 'DEV') ? [
